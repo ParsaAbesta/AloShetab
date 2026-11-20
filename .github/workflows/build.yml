@@ -1,0 +1,73 @@
+name: build-aloshetab
+on:
+  push:
+    paths: ["alo_shetab_release_v5.0.zip", ".github/workflows/build.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Unzip release
+        run: unzip -o alo_shetab_release_v5.0.zip -d .
+
+      - name: Write Dockerfile
+        run: |
+          cat > Dockerfile <<'EOF_DOCKER'
+          FROM node:22-alpine AS deps
+          WORKDIR /app
+          RUN apk add --no-cache openssl
+          COPY package.json ./
+          RUN npm install --legacy-peer-deps
+
+          FROM node:22-alpine AS builder
+          WORKDIR /app
+          RUN apk add --no-cache openssl
+          COPY --from=deps /app/node_modules ./node_modules
+          COPY . .
+          ENV DATABASE_URL=file:/tmp/build.db
+          RUN npx prisma generate && npx prisma db push --accept-data-loss \
+              && npm run build
+
+          FROM node:22-alpine AS runner
+          WORKDIR /app
+          RUN apk add --no-cache openssl \
+              && addgroup -S alo && adduser -S alo -G alo \
+              && mkdir -p /app/db && chown -R alo:alo /app
+
+          ENV NODE_ENV=production
+          ENV PORT=3000
+          ENV HOSTNAME=0.0.0.0
+          ENV DATABASE_URL=file:/app/db/custom.db
+
+          COPY --from=builder --chown=alo:alo /app/.next/standalone ./
+          COPY --from=builder --chown=alo:alo /app/.next/static ./.next/static
+          COPY --from=builder --chown=alo:alo /app/public ./public
+          COPY --from=builder --chown=alo:alo /app/prisma ./prisma
+          COPY --from=builder --chown=alo:alo /app/scripts/seed104.mjs ./scripts/seed104.mjs
+          COPY --from=builder --chown=alo:alo /app/scripts/catalog104_enriched.json ./scripts/catalog104_enriched.json
+          COPY --from=builder --chown=alo:alo /app/download/alo_shetab_services_rates_1405-08-24.json ./download/alo_shetab_services_rates_1405-08-24.json
+          COPY --from=builder --chown=alo:alo /app/package.json ./package.json
+          COPY --from=builder --chown=alo:alo /app/node_modules/prisma ./node_modules/prisma
+          COPY --from=builder --chown=alo:alo /app/node_modules/@prisma ./node_modules/@prisma
+          COPY --from=builder --chown=alo:alo /app/node_modules/.bin/prisma ./node_modules/.bin/prisma
+
+          USER alo
+          EXPOSE 3000
+          VOLUME ["/app/db"]
+
+          CMD ["sh", "-c", "npx prisma db push --accept-data-loss && if [ \"$SEED_ON_START\" = \"true\" ]; then node scripts/seed104.mjs || echo 'seed skipped'; fi; node server.js"]
+          EOF_DOCKER
+          echo "Dockerfile lines: $(wc -l < Dockerfile)"
+
+      - name: Build image
+        run: docker build -t ghcr.io/parsaabesta/aloshetab:5.0.0 .
+
+      - name: Push to GHCR
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u parsaabesta --password-stdin
+          docker push ghcr.io/parsaabesta/aloshetab:5.0.0 
