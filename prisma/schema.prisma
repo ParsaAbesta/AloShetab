@@ -1,0 +1,598 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ─── خدمات ────────────────────────────────────────────────
+model Service {
+  id            String      @id @default(cuid())
+  key           String      @unique
+  nameFa        String
+  nameEn        String
+  descFa        String
+  descEn        String
+  icon          String      @default("wrench")
+  baseRate      Int         @default(0) // تومان (نرخ الو شتاب = ۹۹٪ بالاترین بازار)
+  remoteCapable Boolean     @default(true)
+  isMisc        Boolean     @default(false) // متفرقه
+  category      String      @default("سایر خدمات روزمره") // دستهٔ کاتالوگ رسمی
+  percentValue  Float? // خدمات کارمزد درصدی (مثلاً ۰٫۴۹٪ کارمزد معامله) — null یعنی نرخ ثابت
+  active        Boolean     @default(true)
+  sortOrder     Int         @default(0)
+  edition       String      @default("IRAN") // IRAN (نسخهٔ ایران v1) | WORLD (نسخهٔ جهانی v2.0)
+  currency      String      @default("IRT") // IRT (تومان) | USD (دلار)
+  aiGenerated   Boolean     @default(false) // ساخته‌شدهٔ هوش مصنوعی از جستجوی خالی
+  pendingReview Boolean     @default(false) // در انتظار تأیید پشتیبانی
+  requestedBy   String? // تماس درخواست‌دهندهٔ خدمت
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  orderItems    OrderItem[]
+  details       ServiceDetail[]
+}
+
+// ─── مشتری ────────────────────────────────────────────────
+model Customer {
+  id         String  @id @default(cuid())
+  fullName   String
+  nationalId String  @unique // هر کد ملی = یک کد معرف یکتا
+  mobile     String
+  landline   String?
+  address    String
+  plaque     String? // پلاک — پیام ۱۱: ثبت دقیق آدرس الزامی است
+  floor      String? // طبقه
+  unit       String? // واحد
+  postalCode String? // کد پستی — اختیاری ولی ترجیحاً ثبت می‌شود
+  lat        Float?
+  lng        Float?
+  createdAt  DateTime @default(now())
+  orders     Order[]  @relation("OrderCustomer")
+  referred   Order[]  @relation("OrderReferrer")
+}
+
+// ─── سفارش ────────────────────────────────────────────────
+model Order {
+  id             String     @id @default(cuid())
+  code           String     @unique // AS-XXXXXX
+  customerId     String
+  customer       Customer   @relation("OrderCustomer", fields: [customerId], references: [id])
+  mode           String     @default("ONSITE") // ONSITE | REMOTE
+  status         String     @default("PENDING_PAYMENT")
+  // PENDING_PAYMENT | PAID | SCHEDULED | IN_PROGRESS | EXPERT_REVIEW | DONE | CANCELLED
+  weekFactor     Float      @default(1)
+  hourFactor     Float      @default(1)
+  dayFactor      Float      @default(1)
+  modeFactor     Float      @default(1)
+  subtotal       Int        @default(0) // مجموع نرخ پایه × تعداد
+  grossTotal     Int        @default(0) // subtotal × ضرایب
+  serviceMarkup  Int        @default(0) // پلن ۳۳٪ میز خدمات (فقط خدمات — از میز کالا حذف شده)
+  discount       Int        @default(0) // تخفیف معرف (روی مبلغ پس از افزودنی پلن ۳۳٪)
+  total          Int        @default(0) // مبلغ نهایی (تومان) — حداقل = ۵٬۰۰۰٬۰۰۰ تومان (پیام ۱۲)
+  minInvoiceAdj  Int        @default(0) // تعدیل به حداقل فاکتور (پیام ۱۲)
+  referralCode   String? // کد ملی معرف
+  referrerId     String?
+  referrer       Customer?  @relation("OrderReferrer", fields: [referrerId], references: [id])
+  needsExpertise Boolean    @default(false) // متفرقه نیاز به کارشناسی
+  miscNotes      String? // توضیحات متفرقه / نیازها
+  aiPrice        Int? // قیمت پیشنهادی هوش مصنوعی برای متفرقه
+  partsTotal     Int        @default(0) // جمع خرید قطعات (تومان)
+  paidAt         DateTime?
+  scheduledAt    DateTime?
+  doneAt         DateTime?
+  settledAt      DateTime?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  items          OrderItem[]
+  payments       Payment[]
+  rating         Rating?
+  referral       Referral?
+  events         OrderEvent[]
+  parts          OrderPart[]
+}
+
+model OrderItem {
+  id           String    @id @default(cuid())
+  orderId      String
+  order        Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  serviceId    String
+  service      Service   @relation(fields: [serviceId], references: [id])
+  qty          Int       @default(1)
+  baseRate     Int // نرخ پایهٔ لحظهٔ ثبت
+  lineTotal    Int       // baseRate × qty
+  workerId     String?
+  worker       Worker?   @relation(fields: [workerId], references: [id])
+  itemAmount   Int? // سهم این قلم از کل پرداختی (پس از ضرایب)
+  detailIds    String? // JSON آرایهٔ شناسهٔ ریز جزئیات انتخابی
+  detailsExtra Int     @default(0) // جمع قیمت ریز جزئیات × تعداد (تومان/دلار)
+  workerShare  Int? // سهم مجری (محرمانه — فقط سمت سرور)
+  companyShare Int? // سهم شرکت (محرمانه — فقط سمت سرور)
+  settledAt    DateTime?
+  createdAt    DateTime  @default(now())
+}
+
+// ─── رویداد خط زمانی سفارش ────────────────────────────────
+model OrderEvent {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  status    String
+  noteFa    String
+  noteEn    String
+  createdAt DateTime @default(now())
+}
+
+// ─── پرداخت ───────────────────────────────────────────────
+model Payment {
+  id          String    @id @default(cuid())
+  orderId     String
+  order       Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  method      String    // GATEWAY | CARD_TRANSFER
+  status      String    @default("PENDING") // PENDING | SUCCESS | FAILED | AWAITING_ADMIN
+  amount      Int
+  cardMask    String? // نمایشی: ****-4550
+  rrn         String? // شماره پیگیری/رسید
+  createdAt   DateTime  @default(now())
+  confirmedAt DateTime?
+}
+
+// ─── همکار / انجام‌دهنده ───────────────────────────────────
+model Worker {
+  id         String      @id @default(cuid())
+  fullName   String
+  nationalId String      @unique
+  mobile     String
+  city       String
+  field      String // رشتهٔ تخصصی
+  resume     String? // سوابق
+  status     String      @default("PENDING") // PENDING | APPROVED | REJECTED
+  level      String      @default("BRONZE") // BRONZE | SILVER | GOLD
+  points     Int         @default(0) // امتیاز تجمعی
+  createdAt  DateTime    @default(now())
+  orderItems OrderItem[]
+}
+
+// ─── امتیازدهی مشتری (۵ مهارت + ۵ اخلاق) ──────────────────
+model Rating {
+  id        String   @id @default(cuid())
+  orderId   String   @unique
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  skill     Int // 0..5
+  ethics    Int // 0..5
+  comment   String?
+  createdAt DateTime @default(now())
+}
+
+// ─── معرفی (Referral) ─────────────────────────────────────
+model Referral {
+  id         String    @id @default(cuid())
+  orderId    String    @unique
+  order      Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  referrerNat String // کد ملی معرف
+  amount     Int       @default(0) // ۱/۶ مبلغ دریافتی
+  paid       Boolean   @default(false)
+  paidAt     DateTime?
+  createdAt  DateTime  @default(now())
+}
+
+// ─── نرخ روزهای خاص (ادمین ثبت می‌کند) ─────────────────────
+model DayRate {
+  id         String @id @default(cuid())
+  date       String @unique // ISO: yyyy-mm-dd (میلادی زیربنایی)
+  labelFa    String
+  labelEn    String @default("")
+  multiplier Float  @default(1)
+}
+
+// ─── تنظیمات (key/value) ──────────────────────────────────
+model Setting {
+  key   String @id
+  value String
+}
+
+// ─── صف گزارش ایمیل ───────────────────────────────────────
+model ReportItem {
+  id        String    @id @default(cuid())
+  type      String // ORDER | PAYMENT | STATUS | RATING | WORKER | REFERRAL | CONTACT | SYSTEM
+  title     String
+  body      String
+  emails    String // جدا‌شده با کاما
+  sent      Boolean   @default(false)
+  sentAt    DateTime?
+  createdAt DateTime  @default(now())
+}
+
+// ─── پیام «ارتباط با ما» ──────────────────────────────────
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  subject   String?
+  message   String
+  handled   Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+// ─── لاگ فعالیت‌ها ────────────────────────────────────────
+model ActivityLog {
+  id        String   @id @default(cuid())
+  actor     String // CUSTOMER | ADMIN | SYSTEM
+  action    String
+  detail    String?
+  createdAt DateTime @default(now())
+}
+
+// ─── هلدینگ: میز محصولات ──────────────────────────────────
+model Product {
+  id        String  @id @default(cuid())
+  key       String  @unique
+  nameFa    String
+  nameEn    String
+  descFa    String
+  descEn    String
+  price     Int // پیام ۱۲: قیمت نمایشی میز کالا = همان قیمت مرجع (بدون افزودنی؛ افزودنی در صفحهٔ پرداخت)
+  icon      String  @default("package")
+  warranty  String? // مثلاً «۱۸ ماه گارانتی»
+  active    Boolean @default(true)
+  sortOrder Int     @default(0)
+  // ─── پیام ۱۱: دو بخش میز محصولات + موتور قیمت‌گذاری انباری ───
+  section      String  @default("GOODS") // SOFTWARE | GOODS
+  category     String  @default("سایر") // laptop | monitor | mouse | refrigerator | washer | tv | cooler | heater | ...
+  brand        String?
+  model        String?
+  basePrice    Int     @default(0) // قیمت انبار/مرجع (بدون افزودنی)
+  baseSource   String? // نام مرجع قیمت (کامپیوتر افق، دیجی‌کالا، ...)
+  sourceUrl    String? // لینک کالا در مرجع
+  priceDate    String? // تاریخ شمسی ثبت قیمت مرجع
+  refPrice     Int? // قیمت ثبت‌شده در سایت‌های مرجع (دیجی‌کالا/اسنپ)
+  refSource    String?
+  priceRule    String  @default("MANUAL") // BASE+33% | SITE+15% | MANUAL
+  priceStatus  String  @default("ACTIVE") // ACTIVE | PENDING_REVIEW | FROZEN
+  priceUpdatedAt DateTime?
+  stock        Int     @default(5)
+  warehouseId  String?
+  warehouse    Warehouse? @relation(fields: [warehouseId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  orderItems ProductOrder[]
+  priceProposals ProductPriceProposal[]
+  offers     ProductOffer[]
+}
+
+// ─── پیام ۱۳: فروشگاه‌ها (متمایز از انبارها) ────────────────
+// «لیست تمام فروشگاه‌ها در پنل ادمین گذاشته شود» — دیجی‌کالا، اسنپ و ...
+// فروش به بالاترین قیمت ارائه‌شده / خرید و تأمین موجودی از پایین‌ترین قیمت توافقی
+model Store {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  nameFa      String
+  nameEn      String   @default("")
+  kind        String   @default("ONLINE") // ONLINE | MARKETPLACE | PRICE_AGGREGATOR | PHYSICAL | SERVICE
+  website     String?
+  phone       String?
+  address     String?
+  city        String   @default("تهران")
+  feedType    String   @default("NONE") // TGJU | DIGIKALA | TOROB | SNAPP_MARKET | NONE — اتصال لحظه‌ای
+  feedQueryTemplate String? // قالب جستجوی لحظه‌ای، مثلاً https://api.digikala.com/v1/product/search/?q={q}
+  priceMode   String   @default("MANUAL") // LIVE | MANUAL
+  lastSyncAt  DateTime?
+  lastSyncStatus String @default("NEVER") // OK | CHALLENGED | UNREACHABLE | NO_MATCH | NEVER | ERROR
+  lastSyncNote   String?
+  active      Boolean  @default(true)
+  verified    Boolean  @default(false)
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  offers      ProductOffer[]
+}
+
+// ─── پیام ۱۳: پیشنهاد قیمت هر فروشگاه/انبار برای هر کالا ────
+// offeredPrice = «همانی که در سایت فروشگاه گذاشته شده» (قیمت ارائه‌شده)
+// negotiatedPrice = قیمت توافقی خرید/تأمین موجودی (محرمانه داخلی — پنل ادمین)
+// پیام ۱۴ (v3.0): side = STORE (فروشگاه — پایهٔ «فروش به گران‌ترین فروشگاه»)
+//                  یا WAREHOUSE (انبار — پایهٔ «خرید از ارزان‌ترین انبار»)
+// stockQty = موجودی ثبت‌شدهٔ انبار در لحظهٔ استعلام (فقط side=WAREHOUSE)
+model ProductOffer {
+  side          String   @default("STORE") // STORE | WAREHOUSE — پیام ۱۴
+  stockQty      Int? // موجودی انبار در لحظهٔ استعلام — پیام ۱۴
+  id            String   @id @default(cuid())
+  productId     String
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  storeId       String?
+  store         Store?   @relation(fields: [storeId], references: [id])
+  storeName     String // نام فروشگاه (اگر ثبت نشده باشد نام آزاد)
+  sourceUrl     String?
+  offeredPrice  Int // قیمت ارائه‌شده در سایت فروشگاه (تومان) — پایهٔ «فروش به بالاترین»
+  negotiatedPrice Int? // قیمت توافقی خرید (تومان) — پایهٔ «خرید از پایین‌ترین توافقی»
+  currency      String   @default("IRT")
+  fetchedAt     DateTime // لحظهٔ ثبت/دریافت قیمت — «قیمت‌ها از بروزترین‌ها بروز شود»
+  fetchedShamsi String // تاریخ شمسی قیمت — گیت تازگی (بعد از ۱۴۰۵/۰۸/۱۰)
+  source        String   @default("MANUAL") // LIVE_FEED | MANUAL | EXPERT
+  active        Boolean  @default(true)
+  note          String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([productId, active])
+}
+
+// ─── پیام ۱۳: نرخ‌های لحظه‌ای مرجع (سایت نوسان قیمت) ─────────
+model LiveQuote {
+  id         String   @id @default(cuid())
+  slug       String   @unique // price_dollar_rl | price_eur | sekee | gerami | geram18 | ...
+  titleFa    String
+  price      Int // به تومان (سایت مرجع ریال می‌دهد — ÷۱۰ ذخیره می‌شود)
+  prevPrice  Int?
+  percentChange Float?
+  fetchedAt  DateTime
+  source     String   @default("TGJU")
+  createdAt  DateTime @default(now())
+}
+
+// ─── پیام ۱۱: انبارها و مراجع قیمت ─────────────────────────
+model Warehouse {
+  id            String    @id @default(cuid())
+  key           String    @unique
+  nameFa        String
+  nameEn        String    @default("")
+  kind          String    @default("GOODS") // COMPUTER | APPLIANCE | MARKETPLACE | SERVICES | PRICE_AGGREGATOR
+  website       String?
+  phone         String?
+  address       String?
+  city          String    @default("تهران")
+  linkTemplate  String? // قالب لینک کالا: https://...?q={q}
+  active        Boolean   @default(true)
+  priceListFresh Boolean  @default(true) // بروز بودن لیست قیمت
+  verified      Boolean   @default(false) // تأیید فعال بودن مجموعه + اطلاعات تماس
+  verifiedAt    DateTime?
+  notes         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  products      Product[]
+}
+
+model ProductOrder {
+  id         String   @id @default(cuid())
+  code       String   @unique // ASP-XXXXXX
+  productId  String
+  product    Product  @relation(fields: [productId], references: [id])
+  qty        Int      @default(1)
+  unitPrice  Int
+  total      Int
+  fullName   String
+  mobile     String
+  address    String
+  // ─── پیام ۱۱: آدرس دقیق + بازهٔ زمانی + سفارش خدمات کنار خرید ───
+  plaque     String? // پلاک — الزامی
+  floor      String? // طبقه — الزامی
+  unit       String? // واحد — الزامی
+  postalCode String? // کد پستی — اختیاری/ترجیحی
+  leadTimeDays String @default("3-7") // بازهٔ روزهای رسیدگی کالا (۳ تا ۷ روز)
+  paySheba   Boolean  @default(false) // فاکتور ≥ حداقل ۵م تومان → دریافت با شبا/پل
+  // ─── پیام ۱۲: ریزدیسکی صفحهٔ پرداخت (قیمت مرجع + افزودنی + پیک + حداقل فاکتور) ──
+  listTotal      Int   @default(0) // جمع قیمت فروش پایه (گران‌ترین فروشگاه) × تعداد — بدون افزودنی
+  markupPct      Float @default(0.30) // جمع افزودنی پرداخت (سهم کارشناس + افزایش قیمت) — پیام ۱۴
+  expertSharePct  Float @default(0.18) // سهم کارشناس — ۱۶٫۵ تا ۲۰ درصد یا بیشتر — پیام ۱۴
+  platformMarginPct Float @default(0.12) // افزایش قیمت پلتفرم — ۱۰ تا ۱۶٫۵ درصد — پیام ۱۴
+  markupAmount   Int   @default(0) // مبلغ افزودنی پرداخت (کارشناس + پلتفرم) — تا v3.1؛ در v3.2 صفر
+  // ─── پیام ۱۷ (v3.2): پلن خرید و فروش میز کالا ──
+  purchaseAmount Int    @default(0) // خرید از ارزان‌ترین انبار (پایین‌ترین قیمت توافقی) × تعداد
+  referrerCode   String? // کد ملی معرف (اختیاری) — پورسانت ۲۰٪ سود کالا فقط فاکتور اول (V4.0)
+  firstInvoice   Boolean @default(false) // اولین فاکتور خرید مشتری معرفی‌شده؟ (V4.1: تشخیص یکپارچه بین دو میز)
+  referralAmount Int    @default(0) // پیام ۱۹ (V4.1): پورسانت معرف کالا — هنگام تسویهٔ تحویل ثبت می‌شود (محرمانه)
+  referralPaid   Boolean @default(false) // پیام ۱۹ (V4.1): واریز به معرف (تب «معرفی‌ها»)
+  referralPaidAt DateTime?
+  courierFee     Int   @default(0) // هزینهٔ ارسال و بسته‌بندی (پیک)
+  minInvoiceAdj  Int   @default(0) // تعدیل به حداقل فاکتور ۵٬۰۰۰٬۰۰۰ تومان
+  notes      String?
+  status     String   @default("PENDING") // PENDING | CONFIRMED | SENT | DELIVERED | CANCELLED
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  services   ProductOrderService[]
+  stages     InvoiceStage[]
+  coordinations CoordinationLog[]
+}
+
+// ─── پیام ۱۱: سفارش خدمات (نصب، راه‌اندازی و ...) کنار سفارش خرید ──
+model ProductOrderService {
+  id             String @id @default(cuid())
+  productOrderId String
+  productOrder   ProductOrder @relation(fields: [productOrderId], references: [id], onDelete: Cascade)
+  title          String
+  price          Int     @default(0) // تومان
+  qty            Int     @default(1)
+  createdAt      DateTime @default(now())
+}
+
+// ─── پیام ۱۱: پیشنهاد قیمت (کارشناس/گزارش روزانه) → تأیید ادمین ──
+model ProductPriceProposal {
+  id         String  @id @default(cuid())
+  productId  String
+  product    Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  oldPrice   Int
+  newPrice   Int
+  basePrice  Int? // قیمت انبار لحاظ‌شده
+  rule       String? // BASE+33% | SITE+15% | MANUAL
+  reason     String?
+  source     String  @default("EXPERT") // EXPERT | DAILY_REPORT | CALENDAR
+  status     String  @default("PENDING") // PENDING | APPROVED | REJECTED
+  proposedBy String  @default("EXPERT")
+  decidedBy  String?
+  decidedAt  DateTime?
+  appliedAt  DateTime?
+  createdAt  DateTime @default(now())
+}
+
+// ─── پیام ۱۱: گزارش روزانهٔ قیمت‌ها برای ادمین ───────────────
+model DailyPriceReport {
+  id         String   @id @default(cuid())
+  dateKey    String   @unique // yyyy-mm-dd به وقت تهران
+  dateShamsi String
+  itemsJson  String
+  itemCount  Int      @default(0)
+  status     String   @default("PENDING") // PENDING | APPROVED | APPLIED | REJECTED
+  approvedBy String?
+  approvedAt DateTime?
+  createdAt  DateTime @default(now())
+}
+
+// ─── پیام ۱۱: مراحل فاکتور (ثبت اجباری ادمین) ──────────────
+model InvoiceStage {
+  id             String   @id @default(cuid())
+  orderId        String? // سفارش خدمات AS-…
+  productOrderId String? // سفارش کالا ASP-…
+  stage          String // PAID_FROM_ACCOUNT | PAID_TO_ACCOUNT | COORDINATION_PHONE | OPERATOR_INFO | ADDRESS_CONFIRMED | WAREHOUSE_PRICE | SITE_PRICE | HANDED_TO_COURIER | DEPOSITED_TO_ACCOUNT | DONE
+  amount         Int?
+  accountRef     String? // شماره حساب/کارت طرف
+  toName         String? // واریز به نام ...
+  operator       String? // مشخصات اپراتور
+  note           String?
+  doneBy         String   @default("ADMIN")
+  createdAt      DateTime @default(now())
+  productOrder   ProductOrder? @relation(fields: [productOrderId], references: [id])
+}
+
+// ─── پیام ۱۱: هماهنگی دستی → انتقال به اتوماسیون پس از تأیید ──
+model CoordinationLog {
+  id                String    @id @default(cuid())
+  orderId           String?
+  productOrderId    String?
+  kind              String    @default("CALL") // CALL | SCHEDULE | PAYMENT | OTHER
+  summary           String
+  handledBy         String    @default("ADMIN")
+  manual            Boolean   @default(true)
+  eligible          Boolean   @default(false) // واجد انتقال به اتوماسیون
+  ownerApproved     Boolean   @default(false)
+  adminApproved     Boolean   @default(false)
+  movedToAutomation Boolean   @default(false)
+  movedAt           DateTime?
+  createdAt         DateTime  @default(now())
+  productOrder      ProductOrder? @relation(fields: [productOrderId], references: [id])
+}
+
+// ─── پیام ۱۱: حسابدار هوشمند — گزارش شبانهٔ حسابرسی ─────────
+model AuditReport {
+  id               String    @id @default(cuid())
+  dateKey          String
+  dateShamsi       String
+  totalsJson       String
+  anomaliesJson    String
+  anomalyCount     Int       @default(0)
+  status           String    @default("OK") // OK | ANOMALY_FROZEN | RESOLVED
+  frozenUntil      DateTime?
+  escalatedToAdmin Boolean   @default(false) // پس از ۳ ساعت بدون تأیید مالک → ادمین
+  resolvedBy       String?
+  resolvedAt       DateTime?
+  createdAt        DateTime  @default(now())
+}
+
+// ─── پیام ۱۱: کاربران پنل مدیریتی — دو دسترسی مالک و ادمین ──
+model AdminUser {
+  id          String    @id @default(cuid())
+  username    String    @unique
+  role        String    @default("ADMIN") // OWNER | ADMIN
+  passHash    String // sha256(salt + password)
+  displayName String    @default("")
+  active      Boolean   @default(true)
+  lastLoginAt DateTime?
+  createdAt   DateTime  @default(now())
+}
+
+// ─── هلدینگ: جذب سرمایه‌گذار ───────────────────────────────
+model InvestorRequest {
+  id          String   @id @default(cuid())
+  fullName    String
+  mobile      String
+  nationalId  String?
+  amountRange String // زیر-50M | 50-200M | 200M-1B | بالای-1B
+  message     String?
+  status      String   @default("NEW") // NEW | CONTACTED | APPROVED | REJECTED
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── هلدینگ: صندوق حمایت ──────────────────────────────────
+model FundRequest {
+  id          String   @id @default(cuid())
+  kind        String // SUPPORT | CONTRIBUTE
+  fullName    String
+  mobile      String
+  category    String? // نوع مشارکت: FINANCIAL | NON_FINANCIAL | SERVICE — یا نوع حمایت
+  amount      Int? // مبلغ پیشنهادی (اختیاری، تومان)
+  message     String
+  status      String   @default("NEW") // NEW | CONTACTED | DONE | REJECTED
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── پیام ۱۰: ریز جزئیات خدمات (تیک‌خور و شمارش‌پذیر) ────────
+model ServiceDetail {
+  id        String  @id @default(cuid())
+  serviceId String
+  service   Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  nameFa    String
+  nameEn    String  @default("")
+  price     Int     @default(0) // تومان یا دلار بر اساس edition خدمت؛ ۰ = همراه خدمت اصلی/کارمزدی
+  active    Boolean @default(true)
+  sortOrder Int     @default(0)
+  createdAt DateTime @default(now())
+}
+
+// ─── پیام ۱۰: درخواست «[+] افزودن ریز جزئیات» مشتری ─────────
+model DetailRequest {
+  id          String   @id @default(cuid())
+  serviceKey  String
+  serviceName String
+  name        String // نام ریز جزئیات پیشنهادی
+  price       Int? // قیمت پیشنهادی (اختیاری)
+  contact     String // موبایل یا ایمیل درخواست‌دهنده
+  note        String?
+  status      String   @default("PENDING") // PENDING | APPROVED | REJECTED
+  detailId    String? // در صورت تأیید، شناسهٔ ریز جزئیات ساخته‌شده
+  createdAt   DateTime @default(now())
+}
+
+// ─── پیام ۱۰: کاتالوگ قطعات برای «سفارش خرید قطعات» ─────────
+model Part {
+  id        String  @id @default(cuid())
+  key       String  @unique
+  nameFa    String
+  nameEn    String  @default("")
+  category  String  @default("سخت‌افزار")
+  basePrice Int // تومان — طبق تقویم نرخ روز به‌روزرسانی می‌شود
+  icon      String  @default("cpu")
+  active    Boolean @default(true)
+  sortOrder Int     @default(0)
+  createdAt DateTime @default(now())
+}
+
+// ─── پیام ۱۰: اقلام قطعهٔ سفارش ─────────────────────────────
+model OrderPart {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  partKey   String
+  partName  String
+  partModel String? // مدل انتخابی مشتری
+  qty       Int      @default(1)
+  unitPrice Int // تومان — لحظهٔ ثبت
+  lineTotal Int // unitPrice × qty
+  createdAt DateTime @default(now())
+}
+
+// ─── پیام ۱۰: اصلاح قیمت کارشناس → تأیید پشتیبانی ───────────
+model PriceChangeRequest {
+  id          String    @id @default(cuid())
+  targetType  String    @default("SERVICE") // SERVICE | PART
+  serviceKey  String
+  serviceName String
+  oldPrice    Int
+  newPrice    Int
+  reason      String?
+  proposedBy  String    @default("EXPERT") // کارشناس پیشنهاددهنده
+  status      String    @default("PENDING") // PENDING | APPROVED | REJECTED
+  decidedAt   DateTime?
+  createdAt   DateTime  @default(now())
+}

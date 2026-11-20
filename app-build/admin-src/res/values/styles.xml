@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">الو شتاب — پنل مدیریت</string>
+  <color name="admin_primary">#1F2A44</color>
+  <color name="admin_dark">#0B1526</color>
+  <color name="admin_accent">#D9A441</color>
+  <style name="AdminTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+    <item name="android:statusBarColor">@color/admin_dark</item>
+    <item name="android:navigationBarColor">@color/admin_dark</item>
+    <item name="android:windowBackground">@drawable/admin_splash</item>
+  </style>
+</resources>

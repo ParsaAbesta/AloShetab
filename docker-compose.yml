@@ -1,0 +1,24 @@
+# ─── سامانه الو شتاب — استقرار با Docker Compose ─────────────
+services:
+  alo-shetab:
+    build: .
+    image: alo-shetab:1.0.0
+    container_name: alo-shetab
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: file:/app/db/custom.db
+      NODE_ENV: production
+      SEED_ON_START: "true"
+    volumes:
+      # پایگاه دادهٔ SQLite روی میزبان ماندگار می‌شود (پشتیبان‌گیری: کپی همین پوشه)
+      - ./db:/app/db
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:3000/api"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

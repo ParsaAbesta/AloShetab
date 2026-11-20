@@ -1,0 +1,626 @@
+{
+ "c0-0": {
+  "key": "c0-0",
+  "nameEn": "Private Elementary & Middle School Tutoring",
+  "descFa": "تدریس خصوصی تمام دروس پایه ابتدایی و متوسطه اول به صورت تخصصی",
+  "descEn": "Private tutoring for all elementary and middle school subjects"
+ },
+ "c0-1": {
+  "key": "c0-1",
+  "nameEn": "Private High School & Specialized Subjects",
+  "descFa": "تدریس خصوصی دروس متوسطه دوم و رشته‌های تخصصی با اساتید مجرب",
+  "descEn": "Private tutoring for high school and specialized subjects with experienced teachers"
+ },
+ "c0-2": {
+  "key": "c0-2",
+  "nameEn": "University Entrance Exam Tutoring (Top Tutors)",
+  "descFa": "تدریس خصوصی کنکور با اساتید برتر و نتیجه‌گرای کشور",
+  "descEn": "Private university entrance exam tutoring with top-performing tutors nationwide"
+ },
+ "c0-3": {
+  "key": "c0-3",
+  "nameEn": "General English Language Tutoring",
+  "descFa": "تدریس زبان انگلیسی عمومی برای سطوح مبتدی تا پیشرفته",
+  "descEn": "General English language tutoring for beginner to advanced levels"
+ },
+ "c0-4": {
+  "key": "c0-4",
+  "nameEn": "IELTS & TOEFL Preparation",
+  "descFa": "آموزش تافل و آیلتس با تمرینات آزمون و تکنیک‌های نمره‌آوری",
+  "descEn": "IELTS and TOEFL preparation with practice tests and score-boosting techniques"
+ },
+ "c0-5": {
+  "key": "c0-5",
+  "nameEn": "Programming & Computer Science Tutoring",
+  "descFa": "تدریس برنامه‌نویسی و علوم کامپیوتر برای سطوح مختلف",
+  "descEn": "Programming and computer science tutoring for various skill levels"
+ },
+ "c0-6": {
+  "key": "c0-6",
+  "nameEn": "Music Lessons (Piano, Guitar, Santur)",
+  "descFa": "تدریس سازهای موسیقی پیانو، گیتار و سنتور با اساتید مجرب",
+  "descEn": "Music lessons for piano, guitar, and santur with professional instructors"
+ },
+ "c0-7": {
+  "key": "c0-7",
+  "nameEn": "Educational Consulting & Exam Planning",
+  "descFa": "مشاوره تحصیلی و برنامه‌ریزی هدفمند برای کنکور و آینده تحصیلی",
+  "descEn": "Educational consulting and strategic planning for university entrance exams"
+ },
+ "c0-8": {
+  "key": "c0-8",
+  "nameEn": "Recorded Online Courses",
+  "descFa": "دوره‌های آموزشی آنلاین با محتوای ضبط‌شده و دسترسی نامحدود",
+  "descEn": "Online courses with recorded content and unlimited access"
+ },
+ "c1-0": {
+  "key": "c1-0",
+  "nameEn": "Residential Rental Commission (Per Side)",
+  "descFa": "کارمزد معامله رهن و اجاره آپارتمان مسکونی برای هر طرف معامله",
+  "descEn": "Commission for residential rental transactions charged per party"
+ },
+ "c1-1": {
+  "key": "c1-1",
+  "nameEn": "Full Rental Deposit Commission (Per Side)",
+  "descFa": "کارمزد کامل معامله رهن کامل مسکونی برای هر طرف معامله",
+  "descEn": "Full commission for complete rental deposit transactions per party"
+ },
+ "c1-2": {
+  "key": "c1-2",
+  "nameEn": "Real Estate Purchase & Sale Commission (Per Side)",
+  "descFa": "کارمزد خرید و فروش املاک مسکونی و تجاری برای هر طرف معامله",
+  "descEn": "Commission for property purchase and sale transactions charged per party"
+ },
+ "c1-3": {
+  "key": "c1-3",
+  "nameEn": "Property Valuation & Consulting",
+  "descFa": "ارزیابی و مشاوره تخصصی قیمت املاک مسکونی، تجاری و صنعتی",
+  "descEn": "Professional property valuation and consulting services for residential, commercial, and industrial properties"
+ },
+ "c1-4": {
+  "key": "c1-4",
+  "nameEn": "Property Management",
+  "descFa": "مدیریت کامل املاک شامل اجاره، رهن و نگهداری ملک",
+  "descEn": "Complete property management including rental, lease, and maintenance services"
+ },
+ "c2-0": {
+  "key": "c2-0",
+  "nameEn": "Masonry & Construction",
+  "descFa": "اجرای انواع دیوارچینی، بنایی و کارهای بنایی ساختمانی",
+  "descEn": "Execution of all types of wall construction, masonry, and building works"
+ },
+ "c2-1": {
+  "key": "c2-1",
+  "nameEn": "General Construction Labor",
+  "descFa": "تیم کارگران متخصص برای کارهای عام و ساختمانی",
+  "descEn": "Team of skilled laborers for general construction and building works"
+ },
+ "c2-2": {
+  "key": "c2-2",
+  "nameEn": "Technical Services",
+  "descFa": "خدمات تخصصی برق، تاسیسات و جوشکاری ساختمانی",
+  "descEn": "Specialized electrical, plumbing, and welding services for buildings"
+ },
+ "c2-3": {
+  "key": "c2-3",
+  "nameEn": "Plumbing & Leak Repair",
+  "descFa": "لوله‌کابی تاسیسات و رفع انواع نشتی آب و گاز",
+  "descEn": "Plumbing installation and repair of all types of water and gas leaks"
+ },
+ "c2-4": {
+  "key": "c2-4",
+  "nameEn": "Electrical Works",
+  "descFa": "انواع خدمات برق‌کاری ساختمانی و نصب تجهیزات",
+  "descEn": "All types of electrical works and installation of building equipment"
+ },
+ "c2-5": {
+  "key": "c2-5",
+  "nameEn": "House Painting",
+  "descFa": "نقاشی ساختمان با رنگ‌های روغنی و مصالح نوین",
+  "descEn": "House painting with oil paints and modern materials"
+ },
+ "c2-6": {
+  "key": "c2-6",
+  "nameEn": "Faux Finishing",
+  "descFa": "پتینه‌کاری و تزئینات دکوراتیو با تکنیک‌های خاص",
+  "descEn": "Faux finishing and decorative treatments with special techniques"
+ },
+ "c2-7": {
+  "key": "c2-7",
+  "nameEn": "Tiling & Ceramics",
+  "descFa": "کاشی‌کاری و سرامیک‌کاری سطوح مختلف ساختمانی",
+  "descEn": "Tiling and ceramic works for various building surfaces"
+ },
+ "c2-8": {
+  "key": "c2-8",
+  "nameEn": "AC Installation & Service",
+  "descFa": "نصب، تعمیر و سرویس دوره‌ای کولرهای گازی",
+  "descEn": "Installation, repair, and periodic servicing of air conditioners"
+ },
+ "c3-0": {
+  "key": "c3-0",
+  "nameEn": "House Cleaning",
+  "descFa": "نظافت کامل منزل توسط نظافتچیان حرفه‌ای و آموزش دیده",
+  "descEn": "Complete house cleaning by professional and trained cleaners"
+ },
+ "c3-1": {
+  "key": "c3-1",
+  "nameEn": "Office Cleaning",
+  "descFa": "شامل نظافت کامل فضاهای اداری و تجاری با بهترین مواد شوینده",
+  "descEn": "Comprehensive cleaning of office and commercial spaces with high-quality detergents"
+ },
+ "c3-2": {
+  "key": "c3-2",
+  "nameEn": "Post-Construction Cleaning",
+  "descFa": "نظافت تخصصی پس از ساخت‌وساز و حذف کامل مصالح و گرد و غبار",
+  "descEn": "Specialized cleaning after construction, complete removal of materials and dust"
+ },
+ "c3-3": {
+  "key": "c3-3",
+  "nameEn": "Hand-Woven Carpet Cleaning",
+  "descFa": "شستشوی تخصصی و مراقبت از فرش‌های دستبافت با ارزش بالا",
+  "descEn": "Specialized cleaning and care for high-value hand-woven carpets"
+ },
+ "c3-4": {
+  "key": "c3-4",
+  "nameEn": "Machine-Made Carpet Cleaning",
+  "descFa": "شستشوی تخصصی فرش‌های ماشینی با روش‌های مدرن و ایمن",
+  "descEn": "Professional cleaning of machine-made carpets using modern safe methods"
+ },
+ "c3-5": {
+  "key": "c3-5",
+  "nameEn": "Carpet Cleaning",
+  "descFa": "شستشوی عمیق و تخصصی انواع موکت‌ها با دستگاه‌های پیشرفته",
+  "descEn": "Deep cleaning of various carpet types using advanced equipment"
+ },
+ "c3-6": {
+  "key": "c3-6",
+  "nameEn": "Upholstery Cleaning",
+  "descFa": "شستشوی تخصصی مبلمان و صندلی‌ها با مواد شوینده مناسب هر جنس",
+  "descEn": "Specialized cleaning of furniture and chairs with suitable detergents"
+ },
+ "c3-7": {
+  "key": "c3-7",
+  "nameEn": "Window & Facade Cleaning",
+  "descFa": "شستشوی شیشه‌ها و نمای ساختمان با تجهیزات حرفه‌ای و ایمن",
+  "descEn": "Professional and safe cleaning of windows and building facades"
+ },
+ "c4-0": {
+  "key": "c4-0",
+  "nameEn": "City Van Service (2 hours)",
+  "descFa": "حمل بار داخل شهر با نیسان بار ظرفیت بالا در مدت ۲ ساعت",
+  "descEn": "In-city cargo transportation with high-capacity van for 2 hours"
+ },
+ "c4-1": {
+  "key": "c4-1",
+  "nameEn": "Truck & Moving Service",
+  "descFa": "حمل اثاثیه و بار با کامیونت و خاور برای اسباب‌کشی‌های بزرگ",
+  "descEn": "Furniture and cargo transportation with truck for large moves"
+ },
+ "c4-2": {
+  "key": "c4-2",
+  "nameEn": "Loading Worker (per person, 3 hours)",
+  "descFa": "تأمین کارگر باتجربه برای بارگیری و تخلیه در مدت ۳ ساعت",
+  "descEn": "Experienced worker for loading and unloading for 3 hours"
+ },
+ "c4-3": {
+  "key": "c4-3",
+  "nameEn": "Full Moving with Packing",
+  "descFa": "اسباب‌کشی کامل با بسته‌بندی حرفه‌ای و ایمن اثاثیه",
+  "descEn": "Complete moving service with professional and secure packing"
+ },
+ "c4-4": {
+  "key": "c4-4",
+  "nameEn": "Short-Term Furniture Storage",
+  "descFa": "انبارش موقت اثاثیه با امنیت بالا و قیمت مناسب به صورت ماهانه",
+  "descEn": "Secure and affordable short-term furniture storage on monthly basis"
+ },
+ "c5-0": {
+  "key": "c5-0",
+  "nameEn": "Mobile Car Wash",
+  "descFa": "کارواش کامل سدان در محل با بهترین مواد شوینده",
+  "descEn": "Complete sedan car wash service at your location"
+ },
+ "c5-1": {
+  "key": "c5-1",
+  "nameEn": "Specialized Nano Car Wash",
+  "descFa": "توشویی تخصصی و نانو با محافظت از سطح خودرو",
+  "descEn": "Specialized nano car wash with surface protection"
+ },
+ "c5-2": {
+  "key": "c5-2",
+  "nameEn": "Periodic Car Service",
+  "descFa": "سرویس دوره‌ای کامل خودرو در محل با تکنسین متخصص",
+  "descEn": "Complete periodic car service at your location"
+ },
+ "c5-3": {
+  "key": "c5-3",
+  "nameEn": "Towing & Car Relocation",
+  "descFa": "یدک‌کش و جابه‌جایی خودرو در محدوده درون‌شهری",
+  "descEn": "Towing and car relocation within the city"
+ },
+ "c5-4": {
+  "key": "c5-4",
+  "nameEn": "Driver for Travel & Contract",
+  "descFa": "راننده حرفه‌ای برای سفرهای دور و نزدیک و قراردادهای بلندمدت",
+  "descEn": "Professional driver for travel and contract services"
+ },
+ "c5-5": {
+  "key": "c5-5",
+  "nameEn": "Vehicle Inspection",
+  "descFa": "کارشناسی کامل خودرو با گزارش دقیق فنی و قیمت‌گذاری",
+  "descEn": "Complete vehicle inspection with detailed technical report"
+ },
+ "c6-0": {
+  "key": "c6-0",
+  "nameEn": "Elderly Caregiver",
+  "descFa": "پرستار و مراقب حرفه‌ای برای سالمندان در منزل",
+  "descEn": "Professional caregiver for elderly people at home"
+ },
+ "c6-1": {
+  "key": "c6-1",
+  "nameEn": "Patient Care Nurse",
+  "descFa": "پرستار بیمار با شیفت ۸ ساعت با امکان شبانه‌روزی",
+  "descEn": "8-hour shift patient care nurse service"
+ },
+ "c6-2": {
+  "key": "c6-2",
+  "nameEn": "24/7 Elderly Care",
+  "descFa": "مراقبت شبانه‌روزی کامل سالمند با پرستار متخصص",
+  "descEn": "Complete 24/7 elderly care with professional caregiver"
+ },
+ "c6-3": {
+  "key": "c6-3",
+  "nameEn": "Home Doctor Visit",
+  "descFa": "ویزیت پزشک متخصص در منزل با تجهیزات کامل",
+  "descEn": "Specialist doctor home visit with full equipment"
+ },
+ "c6-4": {
+  "key": "c6-4",
+  "nameEn": "Home Physiotherapy",
+  "descFa": "فیزیوتراپی تخصصی در منزل با تجهیزات کامل",
+  "descEn": "Specialized physiotherapy service at your home"
+ },
+ "c7-0": {
+  "key": "c7-0",
+  "nameEn": "Home Massage Therapy",
+  "descFa": "ماساژدرمانی VIP و تخصصی در منزل با بهترین متخصصان",
+  "descEn": "VIP home massage therapy with professional therapists"
+ },
+ "c7-1": {
+  "key": "c7-1",
+  "nameEn": "Swedish & Thai Massage",
+  "descFa": "ماساژ درمانی با تکنیک‌های سوئدی و تایلندی برای کاهش استرس و بهبود گردش خون",
+  "descEn": "Therapeutic massage with Swedish and Thai techniques to reduce stress and improve blood circulation"
+ },
+ "c7-2": {
+  "key": "c7-2",
+  "nameEn": "Home Hair Styling",
+  "descFa": "خدمات آرایشگری حرفه‌ای در منزل برای مجالس و مراسم‌های خاص",
+  "descEn": "Professional hair styling services at home for events and special occasions"
+ },
+ "c8-0": {
+  "key": "c8-0",
+  "nameEn": "Corporate Website Design",
+  "descFa": "طراحی سایت شرکتی با پکیج اختصاصی شامل هاست و دامنه به مدت یک سال",
+  "descEn": "Corporate website design with exclusive package including hosting and domain for one year"
+ },
+ "c8-1": {
+  "key": "c8-1",
+  "nameEn": "E-commerce Website Design",
+  "descFa": "طراحی سایت فروشگاهی با پکیج اختصاصی و امکانات کامل برای فروش آنلاین",
+  "descEn": "E-commerce website design with exclusive package and complete features for online sales"
+ },
+ "c8-2": {
+  "key": "c8-2",
+  "nameEn": "Mobile App Design",
+  "descFa": "طراحی و توسعه اپلیکیشن موبایل برای پلتفرم‌های اندروید و iOS",
+  "descEn": "Mobile app design and development for Android and iOS platforms"
+ },
+ "c8-3": {
+  "key": "c8-3",
+  "nameEn": "Logo & Visual Identity",
+  "descFa": "طراحی لوگوی اختصاصی و هویت بصری کامل برای برند و کسب‌وکار شما",
+  "descEn": "Custom logo design and complete visual identity for your brand and business"
+ },
+ "c8-4": {
+  "key": "c8-4",
+  "nameEn": "SEO Service",
+  "descFa": "بهینه‌سازی سایت برای رقابت در بازارهای پررقابت و فروشگاهی",
+  "descEn": "Website optimization for competitive and e-commerce markets"
+ },
+ "c8-5": {
+  "key": "c8-5",
+  "nameEn": "SEO Consulting",
+  "descFa": "مشاوره تخصصی سئو برای بهبود رتبه سایت و افزایش ترافیک organic",
+  "descEn": "Professional SEO consulting to improve website ranking and increase organic traffic"
+ },
+ "c8-6": {
+  "key": "c8-6",
+  "nameEn": "Social Media Management",
+  "descFa": "مدیریت کامل شبکه‌های اجتماعی با تولید محتوا و تعامل با مخاطبان",
+  "descEn": "Complete social media management with content creation and audience engagement"
+ },
+ "c8-7": {
+  "key": "c8-7",
+  "nameEn": "Content Creation",
+  "descFa": "تولید محتوای متنی تخصصی با بهینه‌سازی برای سئو و جذابیت مخاطب",
+  "descEn": "Professional content creation optimized for SEO and audience engagement"
+ },
+ "c9-0": {
+  "key": "c9-0",
+  "nameEn": "Legal Consulting",
+  "descFa": "مشاوره حقوقی در زمینه‌های مختلف با وکالت و ارائه راهکارهای قانونی",
+  "descEn": "Legal consulting in various fields with legal representation and solutions"
+ },
+ "c9-1": {
+  "key": "c9-1",
+  "nameEn": "Financial & Tax Consulting",
+  "descFa": "مشاوره مالی و مالیاتی برای بهینه‌سازی مالیات و مدیریت مالی شرکت",
+  "descEn": "Financial and tax consulting for tax optimization and corporate financial management"
+ },
+ "c9-2": {
+  "key": "c9-2",
+  "nameEn": "Insurance Consultation",
+  "descFa": "ارائه مشاوره تخصصی در زمینه بیمه‌های مختلف",
+  "descEn": "Specialized consultation on various insurance types"
+ },
+ "c9-3": {
+  "key": "c9-3",
+  "nameEn": "Business Consultation",
+  "descFa": "مشاوره در زمینه راه‌اندازی و بهبود کسب‌وکارها",
+  "descEn": "Consultation on business establishment and improvement"
+ },
+ "c9-4": {
+  "key": "c9-4",
+  "nameEn": "Migration & Visa Consultation",
+  "descFa": "مشاوره تخصصی مهاجرت و اخذ انواع ویزا",
+  "descEn": "Specialized consultation on migration and visa acquisition"
+ },
+ "c10-0": {
+  "key": "c10-0",
+  "nameEn": "Wedding & Event Photography",
+  "descFa": "عکاسی تخصصی از مراسم عروسی و جشن‌ها",
+  "descEn": "Professional photography for weddings and events"
+ },
+ "c10-1": {
+  "key": "c10-1",
+  "nameEn": "Hourly Photography",
+  "descFa": "عکاسی ساعتی برای عقد و پرتره‌های مختلف",
+  "descEn": "Hourly photography for ceremonies and portraits"
+ },
+ "c10-2": {
+  "key": "c10-2",
+  "nameEn": "Event Videography",
+  "descFa": "فیلمبرداری حرفه‌ای از مراسم و جشن‌ها",
+  "descEn": "Professional videography for ceremonies and events"
+ },
+ "c10-3": {
+  "key": "c10-3",
+  "nameEn": "Catering & Event Services",
+  "descFa": "ارائه خدمات پذیرایی و کترینگ برای مجالس",
+  "descEn": "Catering and food services for events and gatherings"
+ },
+ "c10-4": {
+  "key": "c10-4",
+  "nameEn": "Floral Decoration & Lighting",
+  "descFa": "تزئینات گل و نورپردازی برای مراسم‌ها",
+  "descEn": "Floral arrangements and lighting for events"
+ },
+ "c10-5": {
+  "key": "c10-5",
+  "nameEn": "DJ & Sound System",
+  "descFa": "ارائه دی‌جی و سیستم صوت برای مجالس",
+  "descEn": "DJ and sound system services for events"
+ },
+ "c10-6": {
+  "key": "c10-6",
+  "nameEn": "Event Hosting & Coordination",
+  "descFa": "مهمانداری و مدیریت مراسم و تشریفات",
+  "descEn": "Event hosting and coordination services"
+ },
+ "c11-0": {
+  "key": "c11-0",
+  "nameEn": "Appliance Repair Service",
+  "descFa": "عیب‌یابی و اعزام تعمیرکار برای لوازم خانگی",
+  "descEn": "Troubleshooting and repair service for home appliances"
+ },
+ "c11-1": {
+  "key": "c11-1",
+  "nameEn": "Refrigerator Repair",
+  "descFa": "تعمیر یخچال و فریزر با شارژ گاز",
+  "descEn": "Refrigerator and freezer repair with gas charging"
+ },
+ "c11-2": {
+  "key": "c11-2",
+  "nameEn": "Washer & Dishboard Repair",
+  "descFa": "تعمیر برد و قطعات الکترونیکی لباسشویی و ظرفشویی",
+  "descEn": "Repair of electronic boards and parts for washing machines and dishwashers"
+ },
+ "c11-3": {
+  "key": "c11-3",
+  "nameEn": "Television Repair",
+  "descFa": "تعمیر انواع تلویزیون با استفاده از قطعات اصلی",
+  "descEn": "Repair of all types of televisions using original parts"
+ },
+ "c11-4": {
+  "key": "c11-4",
+  "nameEn": "Vacuum & Microwave Repair",
+  "descFa": "تعمیر و تعویض قطعات جاروبرقی و مایکروویو",
+  "descEn": "Repair and replacement of parts for vacuum cleaners and microwaves"
+ },
+ "c12-0": {
+  "key": "c12-0",
+  "nameEn": "Green Space Design & Execution",
+  "descFa": "طراحی و اجرای کامل فضاهای سبز و باغچه‌های مدرن",
+  "descEn": "Complete design and execution of modern green spaces and gardens"
+ },
+ "c12-1": {
+  "key": "c12-1",
+  "nameEn": "Lawn Installation",
+  "descFa": "کاشت و اجرای چمن با کیفیت بالا در فضاهای مختلف",
+  "descEn": "Installation of high-quality turf in various spaces"
+ },
+ "c12-2": {
+  "key": "c12-2",
+  "nameEn": "Tree Pruning",
+  "descFa": "هرس و شکل‌دهی حرفه‌ای انواع درختان و درختچه‌ها",
+  "descEn": "Professional pruning and shaping of all types of trees and shrubs"
+ },
+ "c12-3": {
+  "key": "c12-3",
+  "nameEn": "Smart Irrigation Installation",
+  "descFa": "نصب سیستم‌های آبیاری قطره‌ای و هوشمند برای صرفه‌جویی در آب",
+  "descEn": "Installation of drip and smart irrigation systems for water conservation"
+ },
+ "c13-0": {
+  "key": "c13-0",
+  "nameEn": "Home Pet Grooming",
+  "descFa": "گرومینگ و شستشوی حیوانات خانگی در محل شما",
+  "descEn": "Grooming and bathing of pets at your location"
+ },
+ "c13-1": {
+  "key": "c13-1",
+  "nameEn": "Home Veterinary Visit",
+  "descFa": "ویزیت و معاینه دامپزشک در منزل برای حیوانات خانگی",
+  "descEn": "Veterinary examination and consultation at your home for pets"
+ },
+ "c13-2": {
+  "key": "c13-2",
+  "nameEn": "Clinical Pet Examination",
+  "descFa": "معاینه و درمان تخصصی حیوانات در کلینیک تخصصی",
+  "descEn": "Specialized examination and treatment of pets in veterinary clinics"
+ },
+ "c13-3": {
+  "key": "c13-3",
+  "nameEn": "Pet Sitting & Walking",
+  "descFa": "نگهداری و پیاده‌روی با حیوان خانگی شما در روزهای خاص",
+  "descEn": "Pet care and walking services on specific days"
+ },
+ "c14-0": {
+  "key": "c14-0",
+  "nameEn": "Informal Translation",
+  "descFa": "ترجمه غیررسمی متون با تضمین کیفیت و دقت",
+  "descEn": "Informal translation of texts with quality and accuracy guarantee"
+ },
+ "c14-1": {
+  "key": "c14-1",
+  "nameEn": "Official Document Translation",
+  "descFa": "ترجمه رسمی انواع مدارک اداری و حقوقی به زبان‌های مختلف",
+  "descEn": "Official translation of administrative and legal documents into various languages"
+ },
+ "c14-2": {
+  "key": "c14-2",
+  "nameEn": "Typing & Formatting",
+  "descFa": "تایح و صفحه‌آرایی حرفه‌ای اسناد و متون با قالب‌بندی استاندارد",
+  "descEn": "Professional typing and formatting of documents with standard layouts"
+ },
+ "c14-3": {
+  "key": "c14-3",
+  "nameEn": "Professional Resume Design",
+  "descFa": "طراحی رزومه حرفه‌ای و جذاب برای افزایش شانس استخدام",
+  "descEn": "Designing professional and attractive resumes to increase employment chances"
+ },
+ "c14-4": {
+  "key": "c14-4",
+  "nameEn": "Company Registration Services",
+  "descFa": "ثبت شرکت و انجام کلیه امور ثبتی و حقوقی مربوط به آن",
+  "descEn": "Company registration and handling all related legal and registration matters"
+ },
+ "c15-0": {
+  "key": "c15-0",
+  "nameEn": "Domestic Tours",
+  "descFa": "تورهای داخلی به مقاصد پرطرفدار با بهترین امکانات و قیمت",
+  "descEn": "Domestic tours to popular destinations with the best facilities and prices"
+ },
+ "c15-1": {
+  "key": "c15-1",
+  "nameEn": "International Tours",
+  "descFa": "تورهای خارجی به نقاط مختلف جهان با همراهی راهنمای مجرب",
+  "descEn": "International tours to various world destinations with experienced guides"
+ },
+ "c15-2": {
+  "key": "c15-2",
+  "nameEn": "Hotel & Ticket Booking",
+  "descFa": "رزرو هتل و بلیط هواپیما با بهترین قیمت‌ها و خدمات ویژه",
+  "descEn": "Hotel and flight ticket booking with the best prices and special services"
+ },
+ "c15-3": {
+  "key": "c15-3",
+  "nameEn": "Local Tour Guide",
+  "descFa": "راهنمای تور محلی با آشنایی کامل با جاذبه‌های گردشگری منطقه",
+  "descEn": "Local tour guide with complete knowledge of the area's tourist attractions"
+ },
+ "c16-0": {
+  "key": "c16-0",
+  "nameEn": "Personal Trainer",
+  "descFa": "مربی شخصی در باشگاه یا منزل با برنامه‌های تمرینی متناسب با نیاز شما",
+  "descEn": "Personal trainer at gym or home with customized workout programs"
+ },
+ "c16-1": {
+  "key": "c16-1",
+  "nameEn": "Private Yoga & Pilates",
+  "descFa": "یوگا و پیلاتس خصوصی برای بهبود انعطاف‌پذیری و تناسب اندام",
+  "descEn": "Private yoga and pilates sessions to improve flexibility and fitness"
+ },
+ "c16-2": {
+  "key": "c16-2",
+  "nameEn": "Custom Fitness & Nutrition Plan",
+  "descFa": "برنامه تمرینی و تغذیه اختصاصی متناسب با اهداف بدنی شما",
+  "descEn": "Customized workout and nutrition plan tailored to your fitness goals"
+ },
+ "c17-0": {
+  "key": "c17-0",
+  "nameEn": "Private Chef for Parties",
+  "descFa": "آشپز حرفه‌ای برای پذیرایی در مهمانی‌ها و مناسبت‌های خاص در منزل",
+  "descEn": "Professional chef for catering at parties and special occasions at home"
+ },
+ "c17-1": {
+  "key": "c17-1",
+  "nameEn": "Daily Home Cooking",
+  "descFa": "پخت انواع غذا برای مصرف روزانه در منزل شما",
+  "descEn": "Cooking various meals for daily consumption at your home"
+ },
+ "c17-2": {
+  "key": "c17-2",
+  "nameEn": "Custom Cakes & Pastries",
+  "descFa": "ساخت کیک و شیرینی سفارشی برای مناسبت‌ها",
+  "descEn": "Making custom cakes and pastries for special occasions"
+ },
+ "c18-0": {
+  "key": "c18-0",
+  "nameEn": "Commission-Based Marketing",
+  "descFa": "بازاریابی و فروش محصولات با دریافت درصدی از فروش",
+  "descEn": "Marketing and selling products with a commission percentage"
+ },
+ "c18-1": {
+  "key": "c18-1",
+  "nameEn": "Online Product Listing",
+  "descFa": "لیستینگ و فروش محصولات شما در پلتفرم‌های آنلاین",
+  "descEn": "Listing and selling your products on online platforms"
+ },
+ "c18-2": {
+  "key": "c18-2",
+  "nameEn": "Brochure & Catalog Distribution",
+  "descFa": "توزیع و ارسال بروشور و کاتالوگ در مناطق مشخص",
+  "descEn": "Distributing and delivering brochures and catalogs in specific areas"
+ },
+ "c19-0": {
+  "key": "c19-0",
+  "nameEn": "On-Site Dry Cleaning",
+  "descFa": "خشکشویی و اتوکشی لباس‌ها در محل مورد نظر شما",
+  "descEn": "Dry cleaning and ironing clothes at your preferred location"
+ },
+ "c19-1": {
+  "key": "c19-1",
+  "nameEn": "Personal Shopping & Delivery",
+  "descFa": "خرید از بازار و تحویل کالا به درب منزل شما",
+  "descEn": "Shopping from markets and delivering goods to your doorstep"
+ },
+ "c19-2": {
+  "key": "c19-2",
+  "nameEn": "On-Site Tailoring & Repair",
+  "descFa": "دوخت و تعمیر انواع لباس در محل با کیفیت بالا",
+  "descEn": "Sewing and repairing various clothes on-site with high quality"
+ }
+}

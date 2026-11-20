@@ -1,0 +1,1978 @@
+{
+  "system": "aloshetab-world",
+  "edition": "WORLD",
+  "currency": "USD",
+  "version": "2.0",
+  "pricing_rule_fa": "قیمت‌های پایه بر اساس میانگین بازار جهانی ۲۰۲۶ (دلار آمریکا) است و سکوی الو شتاب ضریب‌های روز/ساعت و تخفیف معرف را روی آن اعمال می‌کند.",
+  "categories": [
+    {
+      "nameFa": "فناوری اطلاعات و توسعه نرم‌افزار",
+      "nameEn": "IT & Software Development",
+      "icon": "monitor",
+      "services": [
+        {
+          "key": "w1-1",
+          "nameFa": "طراحی و توسعه وب‌سایت شرکتی",
+          "nameEn": "Corporate Website Design & Development",
+          "descFa": "طراحی و پیاده‌سازی کامل وب‌سایت شرکتی واکنش‌گرا همراه با پنل مدیریت محتوا و بهینه‌سازی سرعت.",
+          "descEn": "End-to-end build of a responsive corporate website with an admin panel and performance tuning.",
+          "basePrice": 3500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "طراحی رابط کاربری صفحات اصلی (تا ۱۰ صفحه)", "nameEn": "UI design for core pages (up to 10 pages)", "price": 900},
+            {"nameFa": "پیاده‌سازی فرانت‌اند واکنش‌گرا", "nameEn": "Responsive front-end implementation", "price": 1200},
+            {"nameFa": "توسعه بک‌اند و پنل مدیریت", "nameEn": "Back-end and admin panel development", "price": 1500},
+            {"nameFa": "راه‌اندازی هاست، دامنه و گواهی SSL", "nameEn": "Hosting, domain and SSL certificate setup", "price": 600},
+            {"nameFa": "اتصال به درگاه پرداخت یا نرم‌افزار CRM", "nameEn": "Payment gateway or CRM integration", "price": 800},
+            {"nameFa": "بهینه‌سازی سرعت و سئوی فنی", "nameEn": "Speed and technical SEO optimization", "price": 700},
+            {"nameFa": "آموزش کار با پنل و تحویل مستندات", "nameEn": "Admin training and handover documentation", "price": 550}
+          ]
+        },
+        {
+          "key": "w1-2",
+          "nameFa": "توسعه فروشگاه اینترنتی",
+          "nameEn": "E-commerce Store Development",
+          "descFa": "راه‌اندازی کامل فروشگاه آنلاین شامل سبد خرید، درگاه پرداخت، مدیریت موجودی و گزارش فروش.",
+          "descEn": "Full online store setup including cart, payment gateway, inventory management and sales reporting.",
+          "basePrice": 4500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "طراحی صفحه اصلی و صفحات محصول", "nameEn": "Homepage and product page design", "price": 1000},
+            {"nameFa": "راه‌اندازی سبد خرید و درگاه پرداخت", "nameEn": "Cart and payment gateway setup", "price": 1200},
+            {"nameFa": "مدیریت موجودی و دسته‌بندی محصولات", "nameEn": "Inventory and product category management", "price": 900},
+            {"nameFa": "اتصال به شرکت‌های حمل‌ونقل", "nameEn": "Shipping carrier integration", "price": 700},
+            {"nameFa": "پیکربندی مالیات و صدور فاکتور خودکار", "nameEn": "Tax and automated invoicing configuration", "price": 800},
+            {"nameFa": "گزارش‌های فروش و تحلیل رفتار کاربر", "nameEn": "Sales reports and user behavior analytics", "price": 750},
+            {"nameFa": "آموزش تیم فروش و پشتیبانی", "nameEn": "Sales team training and handover", "price": 700}
+          ]
+        },
+        {
+          "key": "w1-3",
+          "nameFa": "توسعه اپلیکیشن موبایل",
+          "nameEn": "Mobile App Development",
+          "descFa": "توسعه اپلیکیشن موبایل برای اندروید و iOS همراه با وب‌سرویس، پنل مدیریت و انتشار در استورها.",
+          "descEn": "Development of an Android and iOS mobile app with a back-end API, admin panel and store publishing.",
+          "basePrice": 8000,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل نیازمندی‌ها و طراحی تجربه کاربری", "nameEn": "Requirements analysis and UX design", "price": 1600},
+            {"nameFa": "طراحی رابط گرافیکی تمام صفحه‌ها", "nameEn": "Full UI design for all screens", "price": 2000},
+            {"nameFa": "توسعه نسخه اندروید", "nameEn": "Android version development", "price": 3000},
+            {"nameFa": "توسعه نسخه iOS", "nameEn": "iOS version development", "price": 3200},
+            {"nameFa": "توسعه وب‌سرویس و پنل مدیریت", "nameEn": "API and admin panel development", "price": 2800},
+            {"nameFa": "استقرار در استورهای اپلیکیشن", "nameEn": "App store deployment", "price": 1300},
+            {"nameFa": "تست و رفع اشکال نسخه اول", "nameEn": "First-release testing and bug fixing", "price": 1800}
+          ]
+        },
+        {
+          "key": "w1-4",
+          "nameFa": "راه‌اندازی سرور و زیرساخت ابری",
+          "nameEn": "Cloud Server & DevOps Setup",
+          "descFa": "راه‌اندازی سرور ابری، فایروال، استقرار خودکار و پایش منابع برای وب‌سایت یا نرم‌افزار شما.",
+          "descEn": "Provisioning of cloud servers, firewalls, automated deployment and resource monitoring for your stack.",
+          "basePrice": 900,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "مشاوره انتخاب معماری و اندازه‌گذاری منابع", "nameEn": "Architecture consulting and resource sizing", "price": 200},
+            {"nameFa": "راه‌اندازی سرور ابری و فایروال", "nameEn": "Cloud server and firewall provisioning", "price": 350},
+            {"nameFa": "نصب وب‌سرور، پایگاه داده و SSL", "nameEn": "Web server, database and SSL installation", "price": 300},
+            {"nameFa": "پایپ‌لاین CI/CD و استقرار خودکار", "nameEn": "CI/CD pipeline and automated deployment", "price": 450},
+            {"nameFa": "پایش منابع و هشدار خرابی", "nameEn": "Resource monitoring and downtime alerts", "price": 250},
+            {"nameFa": "پشتیبان‌گیری خودکار روزانه", "nameEn": "Daily automated backups", "price": 200}
+          ]
+        },
+        {
+          "key": "w1-5",
+          "nameFa": "رفع اشکال و نگهداری نرم‌افزار",
+          "nameEn": "Software Bug Fixing & Maintenance",
+          "descFa": "عیب‌یابی و رفع خطاهای نرم‌افزار موجود، به‌روزرسانی کتابخانه‌ها و پایش پایداری سیستم.",
+          "descEn": "Investigation and fixing of software defects, dependency updates and system stability monitoring.",
+          "basePrice": 500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "عیب‌یابی و تحلیل خطاهای گزارش‌شده", "nameEn": "Error investigation and root-cause analysis", "price": 120},
+            {"nameFa": "رفع اشکال منطق برنامه", "nameEn": "Application logic bug fixing", "price": 150},
+            {"nameFa": "به‌روزرسانی کتابخانه‌ها و وابستگی‌ها", "nameEn": "Library and dependency updates", "price": 100},
+            {"nameFa": "بهینه‌سازی کوئری‌های پایگاه داده", "nameEn": "Database query optimization", "price": 140},
+            {"nameFa": "رفع آسیب‌پذیری‌های شناخته‌شده", "nameEn": "Known security patching", "price": 160},
+            {"nameFa": "گزارش تغییرات و تست نهایی", "nameEn": "Change report and final regression testing", "price": 90}
+          ]
+        },
+        {
+          "key": "w1-6",
+          "nameFa": "نصب و پیکربندی شبکه محلی",
+          "nameEn": "Office Network Setup & Configuration",
+          "descFa": "کابل‌کشی و راه‌اندازی شبکه محلی دفتر شامل روتر، سوییچ، وای‌فای سازمانی و سیاست‌های دسترسی.",
+          "descEn": "On-site office LAN setup including cabling, router and switch configuration, enterprise Wi-Fi and access policies.",
+          "basePrice": 600,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "طراحی نقشه شبکه و فهرست تجهیزات", "nameEn": "Network design and equipment list", "price": 150},
+            {"nameFa": "کابل‌کشی و نصب سوکت‌های شبکه", "nameEn": "Cabling and network outlet installation", "price": 250},
+            {"nameFa": "نصب و پیکربندی روتر و سوییچ", "nameEn": "Router and switch configuration", "price": 200},
+            {"nameFa": "راه‌اندازی وای‌فای سازمانی و VLAN", "nameEn": "Enterprise Wi-Fi and VLAN setup", "price": 180},
+            {"nameFa": "تنظیم فایروال و سیاست دسترسی", "nameEn": "Firewall and access policy setup", "price": 220},
+            {"nameFa": "تست، لیبلینگ و تحویل مستندات", "nameEn": "Testing, labeling and documentation", "price": 100}
+          ]
+        },
+        {
+          "key": "w1-7",
+          "nameFa": "بازیابی اطلاعات از رسانه‌های ذخیره‌سازی",
+          "nameEn": "Data Recovery Services",
+          "descFa": "بازیابی اطلاعات از هارد، حافظه فلش و پارتیشن‌های آسیب‌دیده در محیط آزمایشگاهی ایمن.",
+          "descEn": "Safe laboratory recovery of data from damaged drives, flash media and lost partitions.",
+          "basePrice": 400,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "تشخیص نوع خرابی و ارزیابی دیسک", "nameEn": "Failure diagnosis and drive assessment", "price": 80},
+            {"nameFa": "بازیابی از دیسک با خرابی منطقی", "nameEn": "Recovery from a logically damaged drive", "price": 180},
+            {"nameFa": "بازیابی از حافظه فلش و کارت حافظه", "nameEn": "Flash memory and memory card recovery", "price": 150},
+            {"nameFa": "بازیابی پارتیشن فرمت‌شده", "nameEn": "Formatted partition recovery", "price": 200},
+            {"nameFa": "تحویل روی رسانه جدید همراه با گزارش", "nameEn": "Delivery on new media with a report", "price": 60},
+            {"nameFa": "راهنمای پشتیبان‌گیری برای جلوگیری از تکرار", "nameEn": "Backup guidance to prevent recurrence", "price": 70}
+          ]
+        },
+        {
+          "key": "w1-8",
+          "nameFa": "اتوماسیون فرایندها و اسکریپت‌نویسی",
+          "nameEn": "Business Process Automation & Scripting",
+          "descFa": "طراحی و توسعه ربات‌ها و اسکریپت‌های اتوماسیون برای حذف کارهای تکراری و اتصال ابزارهای شما.",
+          "descEn": "Design and development of automation bots and scripts that remove repetitive work and connect your tools.",
+          "basePrice": 800,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "بررسی فرایند فعلی و شناسایی نقاط اتوماسیون", "nameEn": "Current process review and automation scoping", "price": 180},
+            {"nameFa": "طراحی گردش کار و تعامل با کاربر", "nameEn": "Workflow design and user interaction mapping", "price": 220},
+            {"nameFa": "توسعه اسکریپت یا ربات مورد نیاز", "nameEn": "Required script or bot development", "price": 400},
+            {"nameFa": "اتصال به ابزارهای موجود مانند ایمیل و صفحات داده", "nameEn": "Integration with existing tools such as email and data sheets", "price": 300},
+            {"nameFa": "زمان‌بندی اجرا و پایش خطاها", "nameEn": "Run scheduling and error monitoring", "price": 150},
+            {"nameFa": "آموزش تیم و تحویل سورس‌کد", "nameEn": "Team training and source-code handover", "price": 130}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "بازاریابی دیجیتال و سئو",
+      "nameEn": "Digital Marketing & SEO",
+      "icon": "trending-up",
+      "services": [
+        {
+          "key": "w2-1",
+          "nameFa": "سئو و بهینه‌سازی موتورهای جست‌وجو",
+          "nameEn": "Search Engine Optimization (SEO)",
+          "descFa": "بهبود رتبه سایت در نتایج جست‌وجو با ممیزی فنی، تحقیق کلیدواژه و لینک‌سازی اصولی.",
+          "descEn": "Improved search rankings through technical audits, keyword research and principled link building.",
+          "basePrice": 1200,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ممیزی فنی کامل سایت", "nameEn": "Full technical site audit", "price": 250},
+            {"nameFa": "تحقیق کلیدواژه و تحلیل رقبا", "nameEn": "Keyword research and competitor analysis", "price": 300},
+            {"nameFa": "بهینه‌سازی محتوای صفحات کلیدی", "nameEn": "On-page optimization of key pages", "price": 400},
+            {"nameFa": "اصلاح ساختار و لینک‌سازی داخلی", "nameEn": "Site structure and internal linking fixes", "price": 200},
+            {"nameFa": "لینک‌سازی خارجی از منابع معتبر", "nameEn": "Authoritative backlink building", "price": 600},
+            {"nameFa": "گزارش ماهانه پیشرفت رتبه‌ها", "nameEn": "Monthly ranking progress report", "price": 200}
+          ]
+        },
+        {
+          "key": "w2-2",
+          "nameFa": "مدیریت کمپین تبلیغات گوگل",
+          "nameEn": "Google Ads Campaign Management",
+          "descFa": "راه‌اندازی و مدیریت حرفه‌ای کمپین‌های گوگل ادز برای کاهش هزینه هر تبدیل و افزایش فروش.",
+          "descEn": "Professional setup and management of Google Ads campaigns to lower cost per conversion and grow sales.",
+          "basePrice": 900,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "راه‌اندازی حساب و ساختار کمپین", "nameEn": "Account and campaign structure setup", "price": 200},
+            {"nameFa": "تحقیق کلیدواژه و نوشتن متن تبلیغ", "nameEn": "Keyword research and ad copywriting", "price": 250},
+            {"nameFa": "پیکربندی مخاطب و کلیدواژه‌های منفی", "nameEn": "Audience targeting and negative keywords", "price": 180},
+            {"nameFa": "بهینه‌سازی صفحه فرود", "nameEn": "Landing page optimization", "price": 300},
+            {"nameFa": "مدیریت بودجه و استراتژی پیشنهاد قیمت", "nameEn": "Budget and bid strategy management", "price": 200},
+            {"nameFa": "گزارش هفتگی عملکرد کمپین", "nameEn": "Weekly campaign performance report", "price": 140}
+          ]
+        },
+        {
+          "key": "w2-3",
+          "nameFa": "مدیریت شبکه‌های اجتماعی",
+          "nameEn": "Social Media Management",
+          "descFa": "مدیریت کامل پیج‌های اینستاگرام، لینکدین و سایر شبکه‌ها از تولید محتوا تا پاسخ‌گویی به مخاطبان.",
+          "descEn": "Complete management of Instagram, LinkedIn and other channels from content creation to audience replies.",
+          "basePrice": 750,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تدوین تقویم محتوای ماهانه", "nameEn": "Monthly content calendar", "price": 150},
+            {"nameFa": "طراحی گرافیک پست‌ها (۱۲ عدد)", "nameEn": "Post graphic design (12 items)", "price": 300},
+            {"nameFa": "نوشتن کپشن و هشتگ‌های هدفمند", "nameEn": "Caption and targeted hashtag writing", "price": 120},
+            {"nameFa": "انتشار و زمان‌بندی منظم محتوا", "nameEn": "Scheduled content publishing", "price": 120},
+            {"nameFa": "پاسخ‌گویی به کامنت‌ها و پیام‌ها", "nameEn": "Comment and direct message replies", "price": 150},
+            {"nameFa": "گزارش رشد و تعامل ماهانه", "nameEn": "Monthly growth and engagement report", "price": 120}
+          ]
+        },
+        {
+          "key": "w2-4",
+          "nameFa": "تولید محتوای بازاریابی",
+          "nameEn": "Marketing Content Creation",
+          "descFa": "تولید مقاله و محتوای هدفمند برای سایت و شبکه‌های اجتماعی هماهنگ با استراتژی برند شما.",
+          "descEn": "Purposeful articles and content for your website and social channels aligned with brand strategy.",
+          "basePrice": 600,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ایده‌پردازی و ساختار محتوا", "nameEn": "Ideation and content outline", "price": 120},
+            {"nameFa": "نوشتن مقاله وبلاگ (۱۰۰۰ واژه)", "nameEn": "Blog article writing (1,000 words)", "price": 150},
+            {"nameFa": "تحقیق و اعتبارسنجی منابع", "nameEn": "Research and source verification", "price": 100},
+            {"nameFa": "بهینه‌سازی محتوا برای سئو", "nameEn": "SEO content optimization", "price": 130},
+            {"nameFa": "بازنویسی محتوا برای شبکه‌های اجتماعی", "nameEn": "Social media adaptations", "price": 100},
+            {"nameFa": "جست‌وجو و آماده‌سازی تصاویر مرتبط", "nameEn": "Relevant image sourcing and preparation", "price": 90}
+          ]
+        },
+        {
+          "key": "w2-5",
+          "nameFa": "طراحی و اجرای کمپین ایمیلی",
+          "nameEn": "Email Marketing Campaign",
+          "descFa": "طراحی، نوشتن و ارسال کمپین‌های ایمیلی هدفمند همراه با تقسیم‌بندی مخاطبان و گزارش عملکرد.",
+          "descEn": "Design, copywriting and delivery of targeted email campaigns with audience segmentation and performance reporting.",
+          "basePrice": 500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "طراحی قالب ایمیل برند", "nameEn": "Branded email template design", "price": 150},
+            {"nameFa": "تنظیم سامانه ارسال و مدیریت لیست تماس", "nameEn": "ESP setup and contact list management", "price": 120},
+            {"nameFa": "نوشتن متن ایمیل‌های کمپین", "nameEn": "Campaign email copywriting", "price": 130},
+            {"nameFa": "تقسیم‌بندی مخاطبان بر اساس رفتار", "nameEn": "Behavior-based audience segmentation", "price": 100},
+            {"nameFa": "تست A/B و زمان‌بندی ارسال", "nameEn": "A/B testing and send scheduling", "price": 90},
+            {"nameFa": "گزارش نرخ باز شدن و کلیک", "nameEn": "Open-rate and click-through report", "price": 75}
+          ]
+        },
+        {
+          "key": "w2-6",
+          "nameFa": "هماهنگی تبلیغات اینفلوئنسر",
+          "nameEn": "Influencer Marketing Coordination",
+          "descFa": "شناسایی اینفلوئنسرهای مرتبط، مذاکره و مدیریت همکاری تا انتشار و سنجش اثرگذاری کمپین.",
+          "descEn": "Identifying relevant influencers, negotiating partnerships and managing campaigns through publishing and impact measurement.",
+          "basePrice": 1500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحقیق و تهیه فهرست اینفلوئنسرهای مرتبط", "nameEn": "Relevant influencer research and shortlist", "price": 300},
+            {"nameFa": "بررسی آمار و تشخیص فالوئرهای واقعی", "nameEn": "Metrics audit and fake-follower check", "price": 250},
+            {"nameFa": "مذاکره و تنظیم توافق‌نامه همکاری", "nameEn": "Outreach negotiation and agreement", "price": 350},
+            {"nameFa": "برنامه‌ریزی تقویم انتشار محتوا", "nameEn": "Publishing calendar planning", "price": 250},
+            {"nameFa": "پیگیری تولید محتوا و بازبینی کیفیت", "nameEn": "Content follow-up and quality review", "price": 400},
+            {"nameFa": "گزارش اثرگذاری کمپین", "nameEn": "Campaign impact report", "price": 225}
+          ]
+        },
+        {
+          "key": "w2-7",
+          "nameFa": "تحلیل داده و گزارش وب",
+          "nameEn": "Web Analytics & Reporting",
+          "descFa": "نصب و پیکربندی ابزارهای تحلیل وب، تعریف اهداف تبدیل و ارائه داشبورد مدیریتی شفاف.",
+          "descEn": "Installation and configuration of web analytics tools, conversion goal definition and a clear management dashboard.",
+          "basePrice": 450,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "نصب و پیکربندی ابزار تحلیل", "nameEn": "Analytics tool setup", "price": 120},
+            {"nameFa": "تعریف رویدادها و اهداف تبدیل", "nameEn": "Event and conversion goal definition", "price": 150},
+            {"nameFa": "ساخت داشبورد مدیریتی", "nameEn": "Management dashboard build", "price": 200},
+            {"nameFa": "تحلیل مسیر کاربر و نقاط ریزش", "nameEn": "User-flow and drop-off analysis", "price": 180},
+            {"nameFa": "ارائه گزارش و پیشنهاد بهبود", "nameEn": "Findings report and improvement recommendations", "price": 120},
+            {"nameFa": "پایش صحت داده‌ها و رفع خطاها", "nameEn": "Data quality check and fix", "price": 100}
+          ]
+        },
+        {
+          "key": "w2-8",
+          "nameFa": "مدیریت اعتبار و نظرات آنلاین",
+          "nameEn": "Online Reputation & Review Management",
+          "descFa": "پایش نظرات و ذکر برند در وب، پاسخ‌گویی حرفه‌ای و مدیریت موقعیت‌های اعتباری حساس.",
+          "descEn": "Monitoring of reviews and brand mentions, professional responses and handling of sensitive reputation situations.",
+          "basePrice": 700,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ممیزی وضعیت فعلی برند در وب", "nameEn": "Current brand presence audit", "price": 150},
+            {"nameFa": "طراحی استراتژی دریافت نظر واقعی", "nameEn": "Authentic review generation strategy", "price": 200},
+            {"nameFa": "پاسخ‌گویی حرفه‌ای به نظرات مثبت و منفی", "nameEn": "Professional responses to positive and negative reviews", "price": 180},
+            {"nameFa": "پایش روزانه ذکر برند در وب", "nameEn": "Daily brand mention monitoring", "price": 150},
+            {"nameFa": "مدیریت موقعیت‌های اعتباری حساس", "nameEn": "Reputation incident handling", "price": 300},
+            {"nameFa": "گزارش ماهانه شاخص‌های اعتبار", "nameEn": "Monthly reputation metrics report", "price": 105}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "طراحی گرافیک و رسانه",
+      "nameEn": "Design & Multimedia",
+      "icon": "palette",
+      "services": [
+        {
+          "key": "w3-1",
+          "nameFa": "طراحی لوگو و هویت بصری",
+          "nameEn": "Logo & Brand Identity Design",
+          "descFa": "طراحی لوگو و سیستم کامل هویت بصری برند همراه با فایل‌های نهایی و راهنمای استفاده.",
+          "descEn": "Logo design and a complete brand identity system with final files and a usage guideline.",
+          "basePrice": 800,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جلسه بریف و تحلیل برند", "nameEn": "Brief session and brand analysis", "price": 120},
+            {"nameFa": "ارائه سه کانسپت اولیه لوگو", "nameEn": "Three initial logo concepts", "price": 300},
+            {"nameFa": "دو دور بازخورد و اصلاح طراحی", "nameEn": "Two revision rounds", "price": 200},
+            {"nameFa": "فایل‌های نهایی در تمام فرمت‌ها", "nameEn": "Final files in all formats", "price": 150},
+            {"nameFa": "طراحی کارت ویزیت و سربرگ", "nameEn": "Business card and letterhead design", "price": 180},
+            {"nameFa": "راهنمای استفاده از برند", "nameEn": "Brand usage guideline booklet", "price": 250}
+          ]
+        },
+        {
+          "key": "w3-2",
+          "nameFa": "طراحی رابط و تجربه کاربری",
+          "nameEn": "UI/UX Design",
+          "descFa": "تحقیق کاربر، وایرفریم و طراحی رابط محصولات دیجیتال همراه با پروتوتایپ تعاملی و تست کاربردپذیری.",
+          "descEn": "User research, wireframing and interface design for digital products with an interactive prototype and usability testing.",
+          "basePrice": 1600,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحقیق کاربر و پرسونای هدف", "nameEn": "User research and target personas", "price": 300},
+            {"nameFa": "معماری اطلاعات و وایرفریم", "nameEn": "Information architecture and wireframes", "price": 400},
+            {"nameFa": "طراحی رابط صفحات کلیدی", "nameEn": "Key screen UI design", "price": 700},
+            {"nameFa": "ساخت پروتوتایپ تعاملی", "nameEn": "Interactive prototype build", "price": 500},
+            {"nameFa": "تست کاربردپذیری و اصلاحات", "nameEn": "Usability testing and fixes", "price": 350},
+            {"nameFa": "تحویل دیزاین‌سیستم و فایل‌های طرح", "nameEn": "Design system and file handover", "price": 400}
+          ]
+        },
+        {
+          "key": "w3-3",
+          "nameFa": "تدوین ویدیو",
+          "nameEn": "Video Editing",
+          "descFa": "تدوین حرفه‌ای ویدیوهای تبلیغاتی و آموزشی شامل اصلاح رنگ، صداگذاری و زیرنویس.",
+          "descEn": "Professional editing of promotional and educational videos including color grading, sound design and subtitles.",
+          "basePrice": 550,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "بررسی و انتخاب نماها از روشرت", "nameEn": "Footage review and shot selection", "price": 100},
+            {"nameFa": "تدوین اصلی و ریتم‌سازی", "nameEn": "Main edit and pacing", "price": 250},
+            {"nameFa": "اصلاح رنگ و یکدست‌سازی نماها", "nameEn": "Color correction and grading", "price": 150},
+            {"nameFa": "طراحی زیرنویس و تایپوگرافی", "nameEn": "Subtitle and typography design", "price": 120},
+            {"nameFa": "میکس صدا و انتخاب موسیقی", "nameEn": "Audio mix and music selection", "price": 130},
+            {"nameFa": "خروجی در فرمت‌های مورد نیاز", "nameEn": "Deliverables in required formats", "price": 85}
+          ]
+        },
+        {
+          "key": "w3-4",
+          "nameFa": "موشن گرافیک و انیمیشن",
+          "nameEn": "Motion Graphics & Animation",
+          "descFa": "تولید ویدیوی موشن گرافیک از سناریو و استوری‌برد تا انیمیت، صداگذاری و رندر نهایی.",
+          "descEn": "Motion graphics production from script and storyboard to animation, sound design and final render.",
+          "basePrice": 1200,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "نوشتن سناریو و ساخت استوری‌برد", "nameEn": "Script writing and storyboard", "price": 250},
+            {"nameFa": "طراحی استایل فریم‌های کلیدی", "nameEn": "Key style frame design", "price": 300},
+            {"nameFa": "طراحی کاراکتر یا آیکون‌های اختصاصی", "nameEn": "Custom character or icon design", "price": 300},
+            {"nameFa": "انیمیت صحنه‌ها", "nameEn": "Scene animation", "price": 600},
+            {"nameFa": "صداگذاری و افکت‌های صوتی", "nameEn": "Sound design and audio effects", "price": 200},
+            {"nameFa": "رندر و اصلاحات نهایی", "nameEn": "Rendering and final revisions", "price": 200}
+          ]
+        },
+        {
+          "key": "w3-5",
+          "nameFa": "عکاسی تخصصی محصول",
+          "nameEn": "Product Photography",
+          "descFa": "عکاسی استودیویی محصول با نورپردازی حرفه‌ای و روتوش آماده برای فروشگاه و شبکه‌های اجتماعی.",
+          "descEn": "Studio product photography with professional lighting and retouching ready for e-commerce and social media.",
+          "basePrice": 450,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره استایل و پس‌زمینه عکاسی", "nameEn": "Style and backdrop consultation", "price": 70},
+            {"nameFa": "راه‌اندازی نور و صحنه استودیویی", "nameEn": "Lighting and studio set setup", "price": 120},
+            {"nameFa": "عکاسی تا ۲۰ نمای محصول", "nameEn": "Up to 20 product shots", "price": 220},
+            {"nameFa": "روتوش و اصلاح رنگ تصاویر", "nameEn": "Image retouching and color correction", "price": 180},
+            {"nameFa": "آماده‌سازی فایل برای فروشگاه و شبکه‌ها", "nameEn": "Store and social media file preparation", "price": 90},
+            {"nameFa": "تحویل آرشیو کامل تصاویر", "nameEn": "Full image archive delivery", "price": 70}
+          ]
+        },
+        {
+          "key": "w3-6",
+          "nameFa": "طراحی بسته‌بندی محصول",
+          "nameEn": "Product Packaging Design",
+          "descFa": "طراحی بسته‌بندی جذاب و قابل چاپ همراه با فایل دی‌کات و ماکت سه‌بعدی پیش‌نمایش.",
+          "descEn": "Appealing print-ready packaging design with a dieline file and a 3D preview mockup.",
+          "basePrice": 600,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحقیق بازار و تحلیل بسته‌بندی رقبا", "nameEn": "Market research and competitor packaging analysis", "price": 120},
+            {"nameFa": "طراحی دو کانسپت بسته‌بندی", "nameEn": "Two packaging concepts", "price": 250},
+            {"nameFa": "آماده‌سازی فایل دی‌کات", "nameEn": "Dieline file preparation", "price": 180},
+            {"nameFa": "ماکت سه‌بعدی پیش‌نمایش", "nameEn": "3D preview mockup", "price": 150},
+            {"nameFa": "بازخورد و اصلاحات طراحی", "nameEn": "Feedback and design revisions", "price": 150},
+            {"nameFa": "فایل چاپی نهایی با پروفایل رنگ", "nameEn": "Print-ready final file with color profile", "price": 120}
+          ]
+        },
+        {
+          "key": "w3-7",
+          "nameFa": "طراحی پوستر و بنر تبلیغاتی",
+          "nameEn": "Poster & Banner Design",
+          "descFa": "طراحی پوستر و بنرهای تبلیغاتی برای چاپ و فضای مجازی در ابعاد و فرمت‌های مختلف.",
+          "descEn": "Promotional poster and banner design for print and digital use in multiple sizes and formats.",
+          "basePrice": 250,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "بریف و جمع‌آوری محتوای تبلیغ", "nameEn": "Brief and ad content gathering", "price": 40},
+            {"nameFa": "طراحی نسخه اصلی", "nameEn": "Main design version", "price": 100},
+            {"nameFa": "دو دور بازخورد و اصلاح", "nameEn": "Two revision rounds", "price": 50},
+            {"nameFa": "خروجی در ابعاد مختلف", "nameEn": "Multi-size exports", "price": 60},
+            {"nameFa": "آماده‌سازی فایل چاپی", "nameEn": "Print-ready file preparation", "price": 40},
+            {"nameFa": "تحویل نسخه بهینه برای فضای مجازی", "nameEn": "Optimized digital version delivery", "price": 40}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "نوشتن و ترجمه",
+      "nameEn": "Writing & Translation",
+      "icon": "languages",
+      "services": [
+        {
+          "key": "w4-1",
+          "nameFa": "ترجمه تخصصی انگلیسی و فارسی",
+          "nameEn": "Specialized English–Persian Translation",
+          "descFa": "ترجمه دقیق متون تخصصی بین انگلیسی و فارسی همراه با ویرایش اصطلاحات و حفظ قالب سند.",
+          "descEn": "Accurate specialized translation between English and Persian with terminology editing and format preservation.",
+          "basePrice": 300,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ترجمه متن تخصصی (تا ۵۰۰۰ واژه)", "nameEn": "Specialized text translation (up to 5,000 words)", "price": 150},
+            {"nameFa": "ویرایش و یکدست‌سازی اصطلاحات", "nameEn": "Terminology editing and consistency pass", "price": 80},
+            {"nameFa": "بومی‌سازی مثال‌ها و واحدهای اندازه‌گیری", "nameEn": "Localization of examples and measurement units", "price": 60},
+            {"nameFa": "بازبینی نهایی و پاک‌سازی متن", "nameEn": "Final proofreading pass", "price": 50},
+            {"nameFa": "تحویل در قالب اصلی با حفظ ساختار", "nameEn": "Format-preserving delivery", "price": 45},
+            {"nameFa": "تهیه واژه‌نامه اختصاصی پروژه", "nameEn": "Project-specific glossary", "price": 60}
+          ]
+        },
+        {
+          "key": "w4-2",
+          "nameFa": "ترجمه رسمی و مصدق اسناد",
+          "nameEn": "Certified Document Translation",
+          "descFa": "ترجمه مصدق مدارک و اسناد رسمی با مهر مترجم و تحویل نسخه اسکن‌شده و چاپی.",
+          "descEn": "Certified translation of official documents with translator stamp and scanned plus printed delivery.",
+          "basePrice": 150,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ترجمه مصدق سند (تا ۵ صفحه)", "nameEn": "Certified translation (up to 5 pages)", "price": 60},
+            {"nameFa": "بازبینی و تأیید اصطلاحات رسمی", "nameEn": "Official terminology review", "price": 30},
+            {"nameFa": "تنظیم قالب مطابق سند اصلی", "nameEn": "Layout matching the original document", "price": 25},
+            {"nameFa": "مهر و امضای مترجم مصدق", "nameEn": "Certified translator stamp and signature", "price": 40},
+            {"nameFa": "اسکن باکیفیت و ارسال نسخه دیجیتال", "nameEn": "High-quality scan and digital delivery", "price": 25},
+            {"nameFa": "بازبینی نهایی پیش از تحویل", "nameEn": "Final pre-delivery check", "price": 25}
+          ]
+        },
+        {
+          "key": "w4-3",
+          "nameFa": "نوشتن مقاله و محتوای وب",
+          "nameEn": "Article & Web Content Writing",
+          "descFa": "نگارش مقاله‌های روان و تحقیق‌شده برای وبلاگ و سایت با بهینه‌سازی کلیدواژه‌ها.",
+          "descEn": "Well-researched fluent articles for blogs and websites with keyword optimization.",
+          "basePrice": 250,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحقیق و ساختاربندی مقاله", "nameEn": "Research and article outline", "price": 50},
+            {"nameFa": "نگارش مقاله ۱۰۰۰ تا ۱۵۰۰ واژه‌ای", "nameEn": "Writing a 1,000 to 1,500-word article", "price": 100},
+            {"nameFa": "بهینه‌سازی کلیدواژه‌های هدف", "nameEn": "Target keyword optimization", "price": 60},
+            {"nameFa": "ویرایش و بازخوانی نهایی", "nameEn": "Editing and final proofreading", "price": 40},
+            {"nameFa": "نوشتن عنوان و توضیحات متا", "nameEn": "Title and meta description writing", "price": 40},
+            {"nameFa": "دو نسخه کوتاه برای شبکه‌های اجتماعی", "nameEn": "Two short social media adaptations", "price": 50}
+          ]
+        },
+        {
+          "key": "w4-4",
+          "nameFa": "ویرایش و بازنویسی متن",
+          "nameEn": "Editing & Rewriting",
+          "descFa": "ویرایش زبانی، بازنویسی جملات ضعیف و یکدست‌سازی لحن متن‌های تجاری و آموزشی.",
+          "descEn": "Language editing, rewriting of weak passages and tone consistency for business and educational texts.",
+          "basePrice": 180,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ویرایش زبانی و نگارشی متن", "nameEn": "Language and style editing", "price": 50},
+            {"nameFa": "بازنویسی جملات ضعیف و گنگ", "nameEn": "Rewriting weak and unclear sentences", "price": 60},
+            {"nameFa": "یکدست‌سازی لحن و واژگان", "nameEn": "Tone and terminology consistency", "price": 40},
+            {"nameFa": "اصلاح ساختار و انسجام پاراگراف‌ها", "nameEn": "Structure and paragraph coherence fixes", "price": 35},
+            {"nameFa": "کنترل نهایی پیش از تحویل", "nameEn": "Final pre-delivery check", "price": 30},
+            {"nameFa": "گزارش خلاصه تغییرات", "nameEn": "Change summary report", "price": 30}
+          ]
+        },
+        {
+          "key": "w4-5",
+          "nameFa": "کپی‌رایتینگ تبلیغاتی",
+          "nameEn": "Advertising Copywriting",
+          "descFa": "نوشتن شعارها و متون تبلیغاتی اثرگذار برای لندینگ‌پیج، بنر و کمپین‌های دیجیتال.",
+          "descEn": "Impactful taglines and ad copy for landing pages, banners and digital campaigns.",
+          "basePrice": 400,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل مخاطب و پیام اصلی برند", "nameEn": "Audience and core brand message analysis", "price": 80},
+            {"nameFa": "نوشتن شعارها و پیام‌های کلیدی", "nameEn": "Taglines and key messages", "price": 120},
+            {"nameFa": "نگارش متن لندینگ‌پیج", "nameEn": "Landing page copywriting", "price": 150},
+            {"nameFa": "متن بنر و تبلیغ کوتاه", "nameEn": "Banner and short ad copy", "price": 80},
+            {"nameFa": "دو دور بازخورد و بهبود متن", "nameEn": "Two feedback and improvement rounds", "price": 60},
+            {"nameFa": "نسخه‌های A/B برای تست", "nameEn": "A/B variants for testing", "price": 60}
+          ]
+        },
+        {
+          "key": "w4-6",
+          "nameFa": "نگارش رزومه و پروفایل حرفه‌ای",
+          "nameEn": "Resume & LinkedIn Profile Writing",
+          "descFa": "نگارش رزومه استاندارد بین‌المللی و بهینه‌سازی پروفایل لینکدین برای افزایش شانس استخدام.",
+          "descEn": "International-standard resume writing and LinkedIn profile optimization to boost hiring chances.",
+          "basePrice": 150,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "مصاحبه اطلاعاتی و استخراج دستاوردها", "nameEn": "Intake interview and achievement extraction", "price": 40},
+            {"nameFa": "نگارش رزومه استاندارد بین‌المللی", "nameEn": "International-standard resume writing", "price": 60},
+            {"nameFa": "بهینه‌سازی پروفایل لینکدین", "nameEn": "LinkedIn profile optimization", "price": 50},
+            {"nameFa": "نگارش نامه همراه درخواست شغل", "nameEn": "Cover letter writing", "price": 30},
+            {"nameFa": "یک دور بازخورد و اصلاح", "nameEn": "One revision round", "price": 25},
+            {"nameFa": "قالب‌بندی نهایی و خروجی PDF", "nameEn": "Final formatting and PDF export", "price": 25}
+          ]
+        },
+        {
+          "key": "w4-7",
+          "nameFa": "زیرنویس‌سازی و رونویسی",
+          "nameEn": "Subtitling & Transcription",
+          "descFa": "رونویسی دقیق گفتار و ساخت زیرنویس هماهنگ با زمان برای ویدیوها و پادکست‌ها.",
+          "descEn": "Accurate speech transcription and time-synced subtitling for videos and podcasts.",
+          "basePrice": 200,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "رونویسی گفتار (تا ۶۰ دقیقه فایل)", "nameEn": "Speech transcription (up to 60 minutes)", "price": 80},
+            {"nameFa": "ترجمه و تنظیم زمان‌بندی زیرنویس", "nameEn": "Subtitle translation and timing", "price": 100},
+            {"nameFa": "ویرایش و هم‌ترازی متن با صدا", "nameEn": "Text editing and audio alignment", "price": 50},
+            {"nameFa": "خروجی SRT و فایل متنی", "nameEn": "SRT and text file export", "price": 30},
+            {"nameFa": "رعایت راهنمای سبک سفارش‌دهنده", "nameEn": "Client style-guide compliance", "price": 30},
+            {"nameFa": "کنترل نهایی روی ویدیو", "nameEn": "Final check on the video", "price": 40}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "مشاورهٔ کسب‌وکار و مدیریت",
+      "nameEn": "Business & Management Consulting",
+      "icon": "briefcase",
+      "services": [
+        {
+          "key": "w5-1",
+          "nameFa": "مشاوره استراتژی کسب‌وکار",
+          "nameEn": "Business Strategy Consulting",
+          "descFa": "تدوین استراتژی رشد بر اساس تحلیل بازار، رقبا و ظرفیت‌های سازمان همراه با شاخص‌های عملکرد.",
+          "descEn": "Growth strategy development based on market, competitor and capability analysis with defined KPIs.",
+          "basePrice": 2500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جلسات کشف و تحلیل وضعیت موجود", "nameEn": "Discovery sessions and situation analysis", "price": 600},
+            {"nameFa": "تحلیل بازار، رقبا و SWOT", "nameEn": "Market, competitor and SWOT analysis", "price": 800},
+            {"nameFa": "تدوین استراتژی رشد سه‌ساله", "nameEn": "Three-year growth strategy", "price": 1200},
+            {"nameFa": "تعریف شاخص‌های کلیدی عملکرد", "nameEn": "KPI definition", "price": 500},
+            {"nameFa": "سند استراتژی و ارائه مدیریتی", "nameEn": "Strategy document and executive presentation", "price": 700},
+            {"nameFa": "دو جلسه پیگیری اجرا", "nameEn": "Two implementation follow-up sessions", "price": 500}
+          ]
+        },
+        {
+          "key": "w5-2",
+          "nameFa": "تدوین طرح کسب‌وکار",
+          "nameEn": "Business Plan Development",
+          "descFa": "نگارش طرح کسب‌وکار کامل با تحلیل بازار، مدل درآمدی و پیش‌بینی مالی سه‌ساله.",
+          "descEn": "Complete business plan writing with market analysis, revenue model and three-year financial projection.",
+          "basePrice": 1200,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جلسه بریف و جمع‌آوری اطلاعات", "nameEn": "Brief session and data gathering", "price": 250},
+            {"nameFa": "تحلیل بازار و طراحی مدل درآمدی", "nameEn": "Market analysis and revenue model design", "price": 400},
+            {"nameFa": "پیش‌بینی مالی سه‌ساله", "nameEn": "Three-year financial projection", "price": 500},
+            {"nameFa": "نگارش سند طرح کسب‌وکار", "nameEn": "Business plan document writing", "price": 450},
+            {"nameFa": "خلاصه مدیریتی و ارائه سرمایه‌گذار", "nameEn": "Executive summary and investor deck", "price": 300},
+            {"nameFa": "یک دور بازخورد و نهایی‌سازی", "nameEn": "One feedback and finalization round", "price": 200}
+          ]
+        },
+        {
+          "key": "w5-3",
+          "nameFa": "تحقیق و تحلیل بازار",
+          "nameEn": "Market Research & Analysis",
+          "descFa": "گردآوری و تحلیل داده‌های بازار، نظرسنجی و مصاحبه برای تصمیم‌های مبتنی بر شواهد.",
+          "descEn": "Market data collection and analysis, surveys and interviews for evidence-based decisions.",
+          "basePrice": 1500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "طراحی چارچوب و سؤالات تحقیق", "nameEn": "Research framework and question design", "price": 300},
+            {"nameFa": "گردآوری داده‌های ثانویه معتبر", "nameEn": "Credible secondary data collection", "price": 400},
+            {"nameFa": "طراحی و اجرای نظرسنجی", "nameEn": "Survey design and execution", "price": 500},
+            {"nameFa": "مصاحبه با ذی‌نفعان کلیدی", "nameEn": "Key stakeholder interviews", "price": 350},
+            {"nameFa": "تحلیل داده و بخش‌بندی بازار", "nameEn": "Data analysis and market segmentation", "price": 600},
+            {"nameFa": "گزارش نهایی و توصیه‌های اجرایی", "nameEn": "Final report and actionable recommendations", "price": 400}
+          ]
+        },
+        {
+          "key": "w5-4",
+          "nameFa": "مشاوره منابع انسانی",
+          "nameEn": "HR Consulting",
+          "descFa": "طراحی ساختار سازمانی، شرح شغل‌ها و فرایندهای استخدام و ارزیابی عملکرد کارکنان.",
+          "descEn": "Organizational structure design, job descriptions and hiring and performance review processes.",
+          "basePrice": 1000,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ارزیابی ساختار فعلی منابع انسانی", "nameEn": "Current HR structure assessment", "price": 250},
+            {"nameFa": "طراحی شرح شغل و چارت سازمانی", "nameEn": "Job descriptions and org chart design", "price": 300},
+            {"nameFa": "طراحی فرایند استخدام و ورود کارکنان", "nameEn": "Hiring and onboarding process design", "price": 300},
+            {"nameFa": "طراحی نظام ارزیابی عملکرد", "nameEn": "Performance review framework design", "price": 350},
+            {"nameFa": "قالب‌ها و مستندات آماده استفاده", "nameEn": "Ready-to-use templates and documents", "price": 150},
+            {"nameFa": "جلسه آموزش مدیران", "nameEn": "Manager training session", "price": 200}
+          ]
+        },
+        {
+          "key": "w5-5",
+          "nameFa": "بهینه‌سازی فرایندهای سازمانی",
+          "nameEn": "Organizational Process Optimization",
+          "descFa": "نگاشت فرایندهای موجود، شناسایی گلوگاه‌ها و طراحی رویه‌های بهبودیافته و مستند.",
+          "descEn": "Mapping of current processes, bottleneck identification and improved documented procedure design.",
+          "basePrice": 1800,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "نگاشت فرایندهای موجود", "nameEn": "Current process mapping", "price": 500},
+            {"nameFa": "شناسایی گلوگاه‌ها و اتلاف‌ها", "nameEn": "Bottleneck and waste identification", "price": 450},
+            {"nameFa": "طراحی فرایند بهبودیافته", "nameEn": "Improved process design", "price": 600},
+            {"nameFa": "تعریف شاخص‌های سنجش فرایند", "nameEn": "Process metrics definition", "price": 300},
+            {"nameFa": "مستندسازی رویه‌های عملیاتی", "nameEn": "SOP documentation", "price": 500},
+            {"nameFa": "کارگاه انتقال دانش به تیم", "nameEn": "Team handover workshop", "price": 350}
+          ]
+        },
+        {
+          "key": "w5-6",
+          "nameFa": "مشاوره راه‌اندازی استارتاپ",
+          "nameEn": "Startup Launch Consulting",
+          "descFa": "اعتبارسنجی ایده، انتخاب مدل کسب‌وکار و آماده‌سازی نقشه راه و ارائه سرمایه‌گذار.",
+          "descEn": "Idea validation, business model selection and preparation of a roadmap and investor pitch.",
+          "basePrice": 900,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "اعتبارسنجی ایده و بازار هدف", "nameEn": "Idea and target market validation", "price": 250},
+            {"nameFa": "انتخاب مدل کسب‌وکار و قیمت‌گذاری", "nameEn": "Business model and pricing choices", "price": 300},
+            {"nameFa": "تدوین نقشه راه محصول اول", "nameEn": "First-product roadmap", "price": 350},
+            {"nameFa": "راهنمای ثبت و ساختار حقوقی اولیه", "nameEn": "Registration and basic legal structure guidance", "price": 200},
+            {"nameFa": "آماده‌سازی ارائه سرمایه‌گذار", "nameEn": "Investor pitch preparation", "price": 300},
+            {"nameFa": "دو جلسه منتورینگ ماهانه", "nameEn": "Two monthly mentoring sessions", "price": 200}
+          ]
+        },
+        {
+          "key": "w5-7",
+          "nameFa": "برنامه‌ریزی مالی و بودجه‌بندی",
+          "nameEn": "Financial Planning & Budgeting",
+          "descFa": "تحلیل وضعیت مالی، طراحی بودجه عملیاتی و پیش‌بینی جریان نقدینگی با سناریوهای ریسک.",
+          "descEn": "Financial position analysis, operating budget design and cash-flow forecasting with risk scenarios.",
+          "basePrice": 1100,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل وضعیت مالی فعلی", "nameEn": "Current financial position analysis", "price": 300},
+            {"nameFa": "طراحی ساختار بودجه عملیاتی", "nameEn": "Operating budget structure design", "price": 400},
+            {"nameFa": "پیش‌بینی جریان نقدینگی", "nameEn": "Cash-flow forecasting", "price": 350},
+            {"nameFa": "سناریوهای ریسک و برنامه اضطراری", "nameEn": "Risk scenarios and contingency plan", "price": 250},
+            {"nameFa": "ساخت داشبورد مالی اکسل", "nameEn": "Excel financial dashboard build", "price": 300},
+            {"nameFa": "جلسه آموزش و تحویل ابزارها", "nameEn": "Training session and tool handover", "price": 180}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "خدمات حقوقی",
+      "nameEn": "Legal Services",
+      "icon": "scale",
+      "services": [
+        {
+          "key": "w6-1",
+          "nameFa": "مشاوره حقوقی کسب‌وکار",
+          "nameEn": "Business Legal Consultation",
+          "descFa": "بررسی موضوعات حقوقی کسب‌وکار، تحلیل اسناد و ارائه راهکارهای قانونی مکتوب.",
+          "descEn": "Review of business legal matters, document analysis and a written legal options memo.",
+          "basePrice": 350,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جلسه بررسی موضوع حقوقی", "nameEn": "Legal matter review session", "price": 100},
+            {"nameFa": "تحلیل اسناد و مدارک ارسالی", "nameEn": "Submitted document analysis", "price": 120},
+            {"nameFa": "ارائه راهکارهای قانونی مکتوب", "nameEn": "Written legal options memo", "price": 150},
+            {"nameFa": "ارزیابی ریسک‌های قراردادی", "nameEn": "Contractual risk assessment", "price": 120},
+            {"nameFa": "جلسه پیگیری و پاسخ به پرسش‌ها", "nameEn": "Follow-up and Q&A session", "price": 80},
+            {"nameFa": "معرفی وکیل متخصص در صورت نیاز", "nameEn": "Specialist lawyer referral if needed", "price": 55}
+          ]
+        },
+        {
+          "key": "w6-2",
+          "nameFa": "تنظیم و بازبینی قرارداد",
+          "nameEn": "Contract Drafting & Review",
+          "descFa": "پیش‌نویس قراردادهای سفارشی، افزودن بندهای حفاظتی و بازبینی حقوقی تا نسخه نهایی.",
+          "descEn": "Custom contract drafting, protective clause addition and legal review through to the final version.",
+          "basePrice": 400,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "شناخت موضوع و تعهدات طرفین", "nameEn": "Subject and party obligations scoping", "price": 80},
+            {"nameFa": "پیش‌نویس قرارداد سفارشی", "nameEn": "Custom contract draft", "price": 180},
+            {"nameFa": "بازبینی اصطلاحات و تعاریف حقوقی", "nameEn": "Legal terminology and definitions review", "price": 100},
+            {"nameFa": "افزودن بندهای حفاظتی و ضمانت‌ها", "nameEn": "Protective and warranty clauses", "price": 120},
+            {"nameFa": "دو دور بازخورد با طرفین", "nameEn": "Two feedback rounds with parties", "price": 80},
+            {"nameFa": "نسخه نهایی آماده امضا", "nameEn": "Final signature-ready version", "price": 60}
+          ]
+        },
+        {
+          "key": "w6-3",
+          "nameFa": "خدمات ثبت شرکت",
+          "nameEn": "Company Registration Services",
+          "descFa": "همراهی کامل در ثبت شرکت از تهیه اساسنامه تا اخذ شناسه مالیاتی و مجوزهای پایه.",
+          "descEn": "Full company registration support from articles of association to tax ID and base licenses.",
+          "basePrice": 700,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "مشاوره انتخاب نوع شرکت مناسب", "nameEn": "Suitable company type advisory", "price": 120},
+            {"nameFa": "آماده‌سازی اساسنامه و تقاضانامه", "nameEn": "Articles of association and application prep", "price": 250},
+            {"nameFa": "ثبت‌نام و پیگیری مراحل اداری", "nameEn": "Filing and administrative follow-up", "price": 200},
+            {"nameFa": "اخذ شناسه مالیاتی و مجوزهای پایه", "nameEn": "Tax ID and base license acquisition", "price": 300},
+            {"nameFa": "تحویل مستندات رسمی شرکت", "nameEn": "Official company documents delivery", "price": 120},
+            {"nameFa": "راهنمای تعهدات سالانه شرکت", "nameEn": "Annual obligations guide", "price": 105}
+          ]
+        },
+        {
+          "key": "w6-4",
+          "nameFa": "مشاوره حقوق کار و مناسبات استخدام",
+          "nameEn": "Employment Law Consultation",
+          "descFa": "مشاوره درباره قراردادهای کار، مزایا و فرایند خاتمه همکاری مطابق الزامات قانونی.",
+          "descEn": "Advisory on employment contracts, benefits and termination processes in line with legal requirements.",
+          "basePrice": 300,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "بررسی قالب قراردادهای کارکنان", "nameEn": "Employee contract template review", "price": 90},
+            {"nameFa": "مشاوره درباره قرارداد و مزایا", "nameEn": "Contract and benefits advisory", "price": 100},
+            {"nameFa": "راهنمای فرایند خاتمه همکاری", "nameEn": "Termination and offboarding guidance", "price": 120},
+            {"nameFa": "تنظیم تعهدنامه‌های محرمانگی", "nameEn": "Confidentiality agreement drafting", "price": 100},
+            {"nameFa": "جلسه آموزش الزامات قانونی", "nameEn": "Legal compliance training session", "price": 80},
+            {"nameFa": "پاسخ کتبی به پرسش‌های متداول", "nameEn": "Written answers to common questions", "price": 45}
+          ]
+        },
+        {
+          "key": "w6-5",
+          "nameFa": "حمایت از ثبت مالکیت فکری",
+          "nameEn": "Intellectual Property Filing Support",
+          "descFa": "جست‌وجوی سابقه علامت، آماده‌سازی درخواست ثبت و پیگیری تا صدور گواهی.",
+          "descEn": "Trademark prior search, application preparation and follow-up through certificate issuance.",
+          "basePrice": 600,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جست‌وجوی سابقه علامت تجاری", "nameEn": "Trademark prior search", "price": 120},
+            {"nameFa": "ارزیابی قابلیت ثبت علامت", "nameEn": "Registrability assessment", "price": 150},
+            {"nameFa": "آماده‌سازی و ارائه درخواست ثبت", "nameEn": "Application preparation and filing", "price": 250},
+            {"nameFa": "پیگیری پرونده تا صدور گواهی", "nameEn": "Follow-up through certificate issuance", "price": 200},
+            {"nameFa": "پشتیبانی پاسخ به اعتراض‌های احتمالی", "nameEn": "Objection response support", "price": 250},
+            {"nameFa": "راهنمای نگهداشت و تمدید ثبت", "nameEn": "Renewal and maintenance guide", "price": 90}
+          ]
+        },
+        {
+          "key": "w6-6",
+          "nameFa": "تنظیم اسناد محضری و وکالت‌نامه",
+          "nameEn": "Notarial Document & Power of Attorney Preparation",
+          "descFa": "پیش‌نویس دقیق اسناد محضری و وکالت‌نامه همراه با هماهنگی مراجعه و بازبینی قانونی.",
+          "descEn": "Precise drafting of notarial deeds and powers of attorney with appointment coordination and legal review.",
+          "basePrice": 250,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "مشاوره نوع سند و ساختار آن", "nameEn": "Document type and structure advisory", "price": 50},
+            {"nameFa": "پیش‌نویس متن سند", "nameEn": "Document text drafting", "price": 100},
+            {"nameFa": "هماهنگی وقت مراجعه به دفترخانه", "nameEn": "Notary appointment coordination", "price": 40},
+            {"nameFa": "بازبینی نهایی مطابق قوانین", "nameEn": "Final legal-compliance review", "price": 60},
+            {"nameFa": "تحویل نسخه رسمی و رونوشت", "nameEn": "Official copy and duplicate delivery", "price": 40},
+            {"nameFa": "راهنمای مراحل پس از تنظیم سند", "nameEn": "Post-signing step guide", "price": 40}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "حسابداری و مالیات",
+      "nameEn": "Accounting & Tax",
+      "icon": "calculator",
+      "services": [
+        {
+          "key": "w7-1",
+          "nameFa": "حسابداری ماهانه کسب‌وکار",
+          "nameEn": "Monthly Business Bookkeeping",
+          "descFa": "ثبت منظم اسناد حسابداری، تطبیق بانک و ارائه گزارش سود و زیان ماهانه.",
+          "descEn": "Regular accounting entry recording, bank reconciliation and a monthly profit and loss report.",
+          "basePrice": 400,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ثبت اسناد حسابداری ماه", "nameEn": "Monthly accounting entry recording", "price": 150},
+            {"nameFa": "کنترل و تطبیق صورت‌حساب بانک", "nameEn": "Bank statement reconciliation", "price": 100},
+            {"nameFa": "صدور فاکتورهای خرید و فروش", "nameEn": "Sales and purchase invoicing", "price": 80},
+            {"nameFa": "گزارش سود و زیان ماهانه", "nameEn": "Monthly profit and loss report", "price": 120},
+            {"nameFa": "بایگانی الکترونیک اسناد", "nameEn": "Electronic document archiving", "price": 60},
+            {"nameFa": "جلسه مرور ماهانه با مدیران", "nameEn": "Monthly review session with management", "price": 80}
+          ]
+        },
+        {
+          "key": "w7-2",
+          "nameFa": "تهیه و تنظیم اظهارنامه مالیاتی",
+          "nameEn": "Tax Return Preparation",
+          "descFa": "محاسبه درآمد مشمول، تکمیل و ارسال اظهارنامه مالیاتی و پیگیری وضعیت پرونده.",
+          "descEn": "Taxable income calculation, official return completion and filing with status follow-up.",
+          "basePrice": 350,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جمع‌آوری و مرتب‌سازی اسناد مالی", "nameEn": "Financial document collection and sorting", "price": 80},
+            {"nameFa": "محاسبه درآمد مشمول مالیات", "nameEn": "Taxable income calculation", "price": 120},
+            {"nameFa": "تکمیل اظهارنامه رسمی", "nameEn": "Official return completion", "price": 100},
+            {"nameFa": "بررسی معافیت‌ها و کسورات مجاز", "nameEn": "Exemption and deduction review", "price": 100},
+            {"nameFa": "ارسال و پیگیری وضعیت پرونده", "nameEn": "Filing and status follow-up", "price": 55},
+            {"nameFa": "پاسخ به استعلام‌های اولیه", "nameEn": "Initial inquiry responses", "price": 80}
+          ]
+        },
+        {
+          "key": "w7-3",
+          "nameFa": "تنظیم صورت‌های مالی سالانه",
+          "nameEn": "Annual Financial Statements",
+          "descFa": "بستن دفاتر پایان سال و تنظیم کامل صورت‌های مالی همراه با یاداشت‌های توضیحی.",
+          "descEn": "Year-end book closure and complete financial statement preparation with explanatory notes.",
+          "basePrice": 800,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "بستن دفاتر و اسناد پایان سال", "nameEn": "Year-end books and records closure", "price": 250},
+            {"nameFa": "ترازنامه و صورت سود و زیان", "nameEn": "Balance sheet and income statement", "price": 300},
+            {"nameFa": "صورت جریان نقدینگی", "nameEn": "Cash-flow statement", "price": 200},
+            {"nameFa": "یاداشت‌های توضیحی صورت‌های مالی", "nameEn": "Financial statement explanatory notes", "price": 180},
+            {"nameFa": "هماهنگی با حسابرس", "nameEn": "Auditor coordination", "price": 220},
+            {"nameFa": "ارائه و توضیح به مدیران", "nameEn": "Management presentation and walkthrough", "price": 120}
+          ]
+        },
+        {
+          "key": "w7-4",
+          "nameFa": "خدمات حقوق و دستمزد",
+          "nameEn": "Payroll Processing",
+          "descFa": "محاسبه ماهانه حقوق کارکنان، کسورات قانونی و صدور فیش حقوقی و گزارش‌های مرتبط.",
+          "descEn": "Monthly staff payroll calculation, statutory deductions, payslip issuance and related reports.",
+          "basePrice": 300,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "محاسبه ماهانه حقوق کارکنان", "nameEn": "Monthly payroll calculation", "price": 100},
+            {"nameFa": "محاسبه کسورات قانونی و بیمه", "nameEn": "Statutory deductions and contributions", "price": 80},
+            {"nameFa": "صدور فیش حقوقی کارکنان", "nameEn": "Employee payslip issuance", "price": 50},
+            {"nameFa": "گزارش دستمزد برای حسابداری", "nameEn": "Payroll report for accounting", "price": 60},
+            {"nameFa": "پاسخ‌گویی به پرسش‌های کارکنان", "nameEn": "Employee query support", "price": 45},
+            {"nameFa": "به‌روزرسانی نرخ‌ها و قوانین", "nameEn": "Rate and regulation updates", "price": 45}
+          ]
+        },
+        {
+          "key": "w7-5",
+          "nameFa": "مشاوره مالیات بین‌المللی",
+          "nameEn": "International Tax Advisory",
+          "descFa": "تحلیل وضعیت مالیاتی فعالیت‌های فرامرزی، معاهدات مالیاتی و طراحی ساختار قانونی پرداخت‌ها.",
+          "descEn": "Analysis of cross-border tax positions, tax treaties and legal structuring of cross-border payments.",
+          "basePrice": 900,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل وضعیت مالیاتی چندکشوری", "nameEn": "Multi-country tax position analysis", "price": 300},
+            {"nameFa": "بررسی معاهدات مالیات بر درآمد", "nameEn": "Income tax treaty review", "price": 350},
+            {"nameFa": "طراحی ساختار قانونی پرداخت‌های فرامرزی", "nameEn": "Legal structure for cross-border payments", "price": 400},
+            {"nameFa": "راهنمای تعهدات گزارش‌گری", "nameEn": "Reporting obligations guide", "price": 200},
+            {"nameFa": "سند توصیه‌ها و نقشه راه اجرا", "nameEn": "Recommendations memo and roadmap", "price": 250},
+            {"nameFa": "جلسه پیگیری با تیم مالی", "nameEn": "Finance team follow-up session", "price": 150}
+          ]
+        },
+        {
+          "key": "w7-6",
+          "nameFa": "راه‌اندازی نرم‌افزار حسابداری",
+          "nameEn": "Accounting Software Setup",
+          "descFa": "انتخاب، نصب و پیکربندی نرم‌افزار حسابداری با کدینگ حساب‌ها و انتقال داده‌های اولیه.",
+          "descEn": "Accounting software selection, installation and configuration with chart of accounts and initial data migration.",
+          "basePrice": 250,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "مشاوره انتخاب نرم‌افزار مناسب", "nameEn": "Suitable software selection advisory", "price": 50},
+            {"nameFa": "نصب و پیکربندی پایه نرم‌افزار", "nameEn": "Installation and base configuration", "price": 80},
+            {"nameFa": "تعریف کدینگ حساب‌ها", "nameEn": "Chart of accounts setup", "price": 70},
+            {"nameFa": "انتقال داده‌های اولیه", "nameEn": "Initial data migration", "price": 100},
+            {"nameFa": "آموزش تیم مالی", "nameEn": "Finance team training", "price": 60},
+            {"nameFa": "یک ماه پشتیبانی راه‌اندازی", "nameEn": "First-month launch support", "price": 50}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "آموزش و تدریس آنلاین",
+      "nameEn": "Education & Online Tutoring",
+      "icon": "graduation-cap",
+      "services": [
+        {
+          "key": "w8-1",
+          "nameFa": "تدریس خصوصی آنلاین ریاضی",
+          "nameEn": "Online Private Math Tutoring",
+          "descFa": "بسته هشت‌جلسه‌ای تدریس خصوصی آنلاین ریاضی همراه با تمرین، آزمونک و جلسه مشاوره.",
+          "descEn": "An eight-session online private math package with exercises, progress quizzes and a consultation session.",
+          "basePrice": 200,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ارزیابی سطح و برنامه‌ریزی درسی", "nameEn": "Level assessment and study plan", "price": 40},
+            {"nameFa": "هشت جلسه تدریس آنلاین خصوصی", "nameEn": "8 private online sessions", "price": 100},
+            {"nameFa": "تمرین‌های هفتگی و بازخورد", "nameEn": "Weekly exercises and feedback", "price": 50},
+            {"nameFa": "جزوه خلاصه هر فصل", "nameEn": "Chapter summary handouts", "price": 30},
+            {"nameFa": "آزمونک سنجش پیشرفت", "nameEn": "Progress quiz", "price": 30},
+            {"nameFa": "جلسه مشاوره با والدین", "nameEn": "Parent consultation session", "price": 30}
+          ]
+        },
+        {
+          "key": "w8-2",
+          "nameFa": "آموزش خصوصی زبان انگلیسی",
+          "nameEn": "Private English Language Tutoring",
+          "descFa": "کلاس‌های زنده زبان انگلیسی متناسب با سطح شما با تمرکز بر مکالمه و بازخورد مداوم.",
+          "descEn": "Live English classes tailored to your level with a conversation focus and continuous feedback.",
+          "basePrice": 250,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تعیین سطح و هدف‌گذاری دوره", "nameEn": "Placement and course goal setting", "price": 40},
+            {"nameFa": "ده جلسه کلاس زنده", "nameEn": "10 live class sessions", "price": 120},
+            {"nameFa": "بسته تمرین مکالمه", "nameEn": "Conversation practice pack", "price": 60},
+            {"nameFa": "بازخورد تلفظ و نگارش", "nameEn": "Pronunciation and writing feedback", "price": 50},
+            {"nameFa": "منابع و واژگان هدفمند", "nameEn": "Targeted vocabulary resources", "price": 40},
+            {"nameFa": "آزمون پایان دوره", "nameEn": "End-of-course assessment", "price": 40}
+          ]
+        },
+        {
+          "key": "w8-3",
+          "nameFa": "دوره آمادگی آیلتس و تافل",
+          "nameEn": "IELTS & TOEFL Preparation",
+          "descFa": "دوره فشرده آمادگی آیلتس یا تافل با تمرین چهار مهارت، آزمون‌های ماک و بازخورد اختصاصی.",
+          "descEn": "Intensive IELTS or TOEFL preparation with four-skill practice, mock exams and personal feedback.",
+          "basePrice": 450,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "آزمون تعیین سطح ماک", "nameEn": "Mock placement test", "price": 70},
+            {"nameFa": "دوازده جلسه آموزش تکنیک‌های چهار مهارت", "nameEn": "12 sessions on four-skill techniques", "price": 200},
+            {"nameFa": "چهار آزمون ماک کامل با تصحیح", "nameEn": "4 full scored mock exams", "price": 150},
+            {"nameFa": "بازخورد اختصاصی نگارش و اسپیکینگ", "nameEn": "Personal writing and speaking feedback", "price": 120},
+            {"nameFa": "بانک واژگان و عبارات آکادمیک", "nameEn": "Academic vocabulary bank", "price": 70},
+            {"nameFa": "برنامه مطالعه روزانه تا روز آزمون", "nameEn": "Daily study plan to exam day", "price": 70}
+          ]
+        },
+        {
+          "key": "w8-4",
+          "nameFa": "آموزش خصوصی برنامه‌نویسی",
+          "nameEn": "Private Coding Lessons",
+          "descFa": "جلسات خصوصی برنامه‌نویسی همراه با پروژه عملی، بازبینی کد و راهنمای مسیر شغلی.",
+          "descEn": "Private coding sessions with a hands-on project, code review and career-path guidance.",
+          "basePrice": 350,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جلسه تعیین مسیر یادگیری", "nameEn": "Learning path session", "price": 55},
+            {"nameFa": "ده جلسه کدنویسی زنده", "nameEn": "10 live coding sessions", "price": 180},
+            {"nameFa": "پروژه عملی تحت راهنمایی", "nameEn": "Guided hands-on project", "price": 120},
+            {"nameFa": "بازبینی کد و بازخورد", "nameEn": "Code review and feedback", "price": 80},
+            {"nameFa": "منابع تمرین اضافی", "nameEn": "Extra practice resources", "price": 55},
+            {"nameFa": "راهنمای ادامه مسیر شغلی", "nameEn": "Career-path guidance", "price": 55}
+          ]
+        },
+        {
+          "key": "w8-5",
+          "nameFa": "طراحی دوره آموزشی آنلاین",
+          "nameEn": "Online Course Development",
+          "descFa": "طراحی و تولید کامل دوره آنلاین از تحلیل مخاطب و سرفصل‌ها تا ضبط ویدیو و انتشار.",
+          "descEn": "Complete online course production from audience analysis and curriculum to video recording and publishing.",
+          "basePrice": 1500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل مخاطب و اهداف یادگیری", "nameEn": "Audience and learning objective analysis", "price": 300},
+            {"nameFa": "طراحی سرفصل و نقشه درس‌ها", "nameEn": "Curriculum and lesson mapping", "price": 400},
+            {"nameFa": "تهیه اسلاید و محتوای هر جلسه", "nameEn": "Slides and lesson content production", "price": 500},
+            {"nameFa": "ضبط و تدوین ویدیوهای دوره", "nameEn": "Course video recording and editing", "price": 700},
+            {"nameFa": "ساخت آزمون و تکلیف هر فصل", "nameEn": "Chapter quizzes and assignments", "price": 300},
+            {"nameFa": "راه‌اندازی و انتشار در سکوی آموزشی", "nameEn": "Platform setup and publishing", "price": 250}
+          ]
+        },
+        {
+          "key": "w8-6",
+          "nameFa": "تدریس خصوصی در منزل",
+          "nameEn": "In-Home Private Tutoring",
+          "descFa": "بسته هشت‌جلسه‌ای تدریس حضوری در منزل همراه با تمرین، گزارش پیشرفت و ارتباط با خانواده.",
+          "descEn": "An eight-session in-home tutoring package with exercises, progress reports and family communication.",
+          "basePrice": 220,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "هماهنگی و ارزیابی سطح دانش‌آموز", "nameEn": "Coordination and student assessment", "price": 40},
+            {"nameFa": "هشت جلسه تدریس حضوری", "nameEn": "8 in-person sessions", "price": 110},
+            {"nameFa": "تمرین و مرور بین جلسات", "nameEn": "Between-session exercises and review", "price": 40},
+            {"nameFa": "گزارش پیشرفت ماهانه", "nameEn": "Monthly progress report", "price": 35},
+            {"nameFa": "ارتباط مستمر با خانواده", "nameEn": "Ongoing family communication", "price": 35},
+            {"nameFa": "آماده‌سازی برای امتحانات مدرسه", "nameEn": "School exam preparation", "price": 45}
+          ]
+        },
+        {
+          "key": "w8-7",
+          "nameFa": "مشاوره تحصیلی و پذیرش دانشگاهی",
+          "nameEn": "Academic & University Admission Consulting",
+          "descFa": "ارزیابی سوابق، انتخاب دانشگاه‌های مناسب و همراهی در فرایند درخواست و مصاحبه پذیرش.",
+          "descEn": "Profile evaluation, university shortlisting and support through the application and interview process.",
+          "basePrice": 600,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ارزیابی سوابق و هدف‌گذاری تحصیلی", "nameEn": "Profile evaluation and academic goal setting", "price": 120},
+            {"nameFa": "معرفی دانشگاه‌ها و برنامه‌های متناسب", "nameEn": "University and program shortlisting", "price": 180},
+            {"nameFa": "برنامه‌ریزی تقویم درخواست‌ها", "nameEn": "Application timeline planning", "price": 120},
+            {"nameFa": "بازبینی انگیزه‌نامه و رزومه", "nameEn": "Statement and resume review", "price": 150},
+            {"nameFa": "شبیه‌سازی مصاحبه پذیرش", "nameEn": "Admission interview simulation", "price": 100},
+            {"nameFa": "راهنمای بورس و کمک‌هزینه تحصیلی", "nameEn": "Scholarship and funding guidance", "price": 90}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "خدمات ساختمان و تعمیرات خانه",
+      "nameEn": "Home Repair & Maintenance",
+      "icon": "hammer",
+      "services": [
+        {
+          "key": "w9-1",
+          "nameFa": "خدمات عمومی تعمیرات منزل",
+          "nameEn": "General Home Handyman Services",
+          "descFa": "انجام تعمیرات عمومی و جزئی خانه شامل نصب لوازم، اصلاح قفل و درزگیری در یک نوبت کاری.",
+          "descEn": "General minor home repairs including fixture installation, lock fixes and sealing in one work visit.",
+          "basePrice": 180,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازدید و برآورد هزینه کار", "nameEn": "Site visit and cost estimate", "price": 30},
+            {"nameFa": "نصب قفسه، پرده و لوازم دیواری", "nameEn": "Shelf, curtain and wall fixture installation", "price": 50},
+            {"nameFa": "تعمیر لولا، قفل و دستگیره", "nameEn": "Hinge, lock and handle repair", "price": 40},
+            {"nameFa": "تعویض شیرآلات و اتصالات ساده", "nameEn": "Basic faucet and fitting replacement", "price": 60},
+            {"nameFa": "درزگیری و تعمیرات جزئی", "nameEn": "Sealing and minor repairs", "price": 45},
+            {"nameFa": "جمع‌آوری و نظافت محل کار", "nameEn": "Work-area cleanup", "price": 30}
+          ]
+        },
+        {
+          "key": "w9-2",
+          "nameFa": "خدمات لوله‌کشی و رفع نشتی",
+          "nameEn": "Plumbing & Leak Repair",
+          "descFa": "عیب‌یابی و رفع نشتی لوله‌ها، رفع گرفتگی و تعویض شیرآلات با تست فشار پایانی.",
+          "descEn": "Leak detection and repair, drain unclogging and faucet replacement with a final pressure test.",
+          "basePrice": 220,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "عیب‌یابی نشتی با تجهیزات تخصصی", "nameEn": "Leak detection with specialist equipment", "price": 70},
+            {"nameFa": "رفع نشتی لوله و اتصالات", "nameEn": "Pipe and fitting leak repair", "price": 90},
+            {"nameFa": "باز کردن و رفع گرفتگی لوله", "nameEn": "Drain unclogging", "price": 60},
+            {"nameFa": "تعویض شیر و سیفون", "nameEn": "Faucet and trap replacement", "price": 55},
+            {"nameFa": "تعمیر فلاش‌تانک و سیفون مخزنی", "nameEn": "Flush tank and cistern repair", "price": 45},
+            {"nameFa": "تست فشار و تحویل کار", "nameEn": "Pressure test and handover", "price": 35}
+          ]
+        },
+        {
+          "key": "w9-3",
+          "nameFa": "خدمات برق ساختمان",
+          "nameEn": "Home Electrical Services",
+          "descFa": "عیب‌یابی و تعمیرات ایمن برق منزل شامل تعویض کلید و پریز، نصب لوستر و راه‌اندازی ارت.",
+          "descEn": "Safe home electrical troubleshooting and repairs including switch and outlet replacement, lighting and grounding setup.",
+          "basePrice": 250,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "عیب‌یابی مدار و قطعی برق", "nameEn": "Circuit troubleshooting and outage diagnosis", "price": 60},
+            {"nameFa": "تعویض کلید و پریز", "nameEn": "Switch and outlet replacement", "price": 40},
+            {"nameFa": "نصب لوستر و روشنایی", "nameEn": "Chandelier and lighting installation", "price": 70},
+            {"nameFa": "نصب و راه‌اندازی فیوز و ارت", "nameEn": "Breaker and grounding setup", "price": 90},
+            {"nameFa": "رفع اتصالی و بار اضافی", "nameEn": "Short-circuit and overload fixing", "price": 80},
+            {"nameFa": "تست ایمنی مدارها", "nameEn": "Circuit safety testing", "price": 40}
+          ]
+        },
+        {
+          "key": "w9-4",
+          "nameFa": "نقاشی و رنگ‌آمیزی داخلی",
+          "nameEn": "Interior Painting",
+          "descFa": "رنگ‌آمیزی کامل فضای داخلی شامل بتونه‌کاری، آستر و دو دست رنگ نهایی با حفاظت از وسایل.",
+          "descEn": "Full interior painting including putty, primer and two finish coats with furniture protection.",
+          "basePrice": 900,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "حفاظت از مبلمان و کف", "nameEn": "Furniture and floor protection", "price": 135},
+            {"nameFa": "بتونه‌کاری و سمباده‌کاری سطوح", "nameEn": "Putty and sanding work", "price": 250},
+            {"nameFa": "اجرای آستر اولیه", "nameEn": "Primer coat application", "price": 200},
+            {"nameFa": "رنگ نهایی دو دست", "nameEn": "Two finish coats", "price": 400},
+            {"nameFa": "رنگ‌آمیزی درب و قرنیز", "nameEn": "Doors and trim painting", "price": 200},
+            {"nameFa": "نظافت نهایی و تحویل", "nameEn": "Final cleanup and handover", "price": 140}
+          ]
+        },
+        {
+          "key": "w9-5",
+          "nameFa": "مونتاژ و نصب مبلمان و کابینت",
+          "nameEn": "Furniture & Cabinet Assembly",
+          "descFa": "مونتاژ مبلمان پکیجی و نصب کابینت و آویز دیواری با تراز و تنظیم نهایی.",
+          "descEn": "Flat-pack furniture assembly and wall cabinet and shelf mounting with final leveling.",
+          "basePrice": 160,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازدید و برنامه‌ریزی نصب", "nameEn": "Installation planning visit", "price": 30},
+            {"nameFa": "مونتاژ مبلمان بسته‌بندی‌شده", "nameEn": "Flat-pack furniture assembly", "price": 60},
+            {"nameFa": "نصب کابینت و آویز دیواری", "nameEn": "Cabinet and shelf mounting", "price": 70},
+            {"nameFa": "نصب دستگیره و یراق‌آلات", "nameEn": "Handles and hardware fitting", "price": 30},
+            {"nameFa": "تنظیم و تراز نهایی", "nameEn": "Final alignment and leveling", "price": 25},
+            {"nameFa": "بسته‌بندی ضایعات و نظافت", "nameEn": "Waste packing and cleanup", "price": 25}
+          ]
+        },
+        {
+          "key": "w9-6",
+          "nameFa": "نصب درب و پنجره",
+          "nameEn": "Door & Window Installation",
+          "descFa": "اندازه‌گیری دقیق، برداشتن قاب قدیمی و نصب درب یا پنجره جدید با آب‌بندی کامل.",
+          "descEn": "Precise measurement, old frame removal and new door or window installation with full sealing.",
+          "basePrice": 400,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "اندازه‌گیری دقیق و سفارش‌گذاری", "nameEn": "Precise measurement and ordering", "price": 60},
+            {"nameFa": "برداشتن قاب قدیمی", "nameEn": "Old frame removal", "price": 80},
+            {"nameFa": "نصب قاب و تنظیم تراز", "nameEn": "Frame installation and leveling", "price": 120},
+            {"nameFa": "نصب یراق و آب‌بندی", "nameEn": "Hardware fitting and sealing", "price": 90},
+            {"nameFa": "نصب دستگیره و قفل", "nameEn": "Handle and lock installation", "price": 60},
+            {"nameFa": "تست باز و بسته شدن و تحویل", "nameEn": "Operation test and handover", "price": 60}
+          ]
+        },
+        {
+          "key": "w9-7",
+          "nameFa": "تعمیر سیستم گرمایشی و سرمایشی",
+          "nameEn": "HVAC Repair & Servicing",
+          "descFa": "عیب‌یابی و تعمیر کولر و سیستم‌های گرمایشی و سرمایشی شامل شست‌وشو و شارژ گاز.",
+          "descEn": "Diagnosis and repair of cooling and heating systems including coil cleaning and refrigerant recharge.",
+          "basePrice": 350,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "عیب‌یابی کامل دستگاه", "nameEn": "Full system diagnosis", "price": 70},
+            {"nameFa": "شارژ گاز و رفع نشتی", "nameEn": "Refrigerant recharge and leak fix", "price": 150},
+            {"nameFa": "سرویس و شست‌وشوی کویل و فیلترها", "nameEn": "Coil and filter cleaning service", "price": 90},
+            {"nameFa": "تعویض فیلتر و قطعات فرسوده", "nameEn": "Filter and worn-part replacement", "price": 80},
+            {"nameFa": "تنظیم ترموستات و کنترل‌ها", "nameEn": "Thermostat and control tuning", "price": 55},
+            {"nameFa": "تست عملکرد و پشتیبانی پس از سرویس", "nameEn": "Performance test and post-service support", "price": 55}
+          ]
+        },
+        {
+          "key": "w9-8",
+          "nameFa": "کاشی و سرامیک‌کاری",
+          "nameEn": "Tiling Services",
+          "descFa": "اجرای کاشی و سرامیک کف و دیوار با آماده‌سازی سطح، بنده‌گیری و آب‌بندی سرویس‌ها.",
+          "descEn": "Floor and wall tiling with surface preparation, grouting and wet-area waterproofing.",
+          "basePrice": 1200,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "برآورد متراژ و نقشه چینش", "nameEn": "Area measurement and layout plan", "price": 180},
+            {"nameFa": "آماده‌سازی سطح و مورتار پایه", "nameEn": "Surface preparation and base mortar", "price": 300},
+            {"nameFa": "اجرای کاشی کف", "nameEn": "Floor tiling", "price": 500},
+            {"nameFa": "اجرای کاشی دیوار و کارهای لبه", "nameEn": "Wall tiling and trim work", "price": 450},
+            {"nameFa": "بنده‌گیری و شست‌وشوی نهایی", "nameEn": "Grouting and final cleaning", "price": 250},
+            {"nameFa": "آب‌بندی سرویس‌های بهداشتی", "nameEn": "Wet-area waterproofing", "price": 300}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "نظافت و نگهداری اماکن",
+      "nameEn": "Cleaning & Facility Care",
+      "icon": "spray-can",
+      "services": [
+        {
+          "key": "w10-1",
+          "nameFa": "نظافت منزل",
+          "nameEn": "Home Cleaning",
+          "descFa": "نظافت کامل منزل شامل کف، آشپزخانه، سرویس‌ها و شیشه‌های داخلی توسط تیم آموزش‌دیده.",
+          "descEn": "Full home cleaning covering floors, kitchen, bathrooms and interior glass by a trained team.",
+          "basePrice": 120,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "نظافت و برق انداختن کف‌ها", "nameEn": "Floor cleaning and polishing", "price": 40},
+            {"nameFa": "نظافت آشپزخانه و سرویس‌ها", "nameEn": "Kitchen and bathroom cleaning", "price": 50},
+            {"nameFa": "گردگیری و مرتب‌سازی سطوح", "nameEn": "Dusting and surface tidying", "price": 30},
+            {"nameFa": "شست‌وشوی شیشه‌های داخلی", "nameEn": "Interior window cleaning", "price": 25},
+            {"nameFa": "تعویض روتختی و مرتب اتاق‌ها", "nameEn": "Bed linen change and room tidying", "price": 20},
+            {"nameFa": "تخلیه و مدیریت زباله‌ها", "nameEn": "Trash removal and handling", "price": 20}
+          ]
+        },
+        {
+          "key": "w10-2",
+          "nameFa": "نظافت عمیق و سنگ‌شوی",
+          "nameEn": "Deep Cleaning",
+          "descFa": "نظافت عمیق و دوره‌ای خانه شامل چربی‌زدایی آشپزخانه، رسوب‌زدایی سرویس‌ها و برق کف.",
+          "descEn": "Periodic deep cleaning including kitchen degreasing, bathroom descaling and floor buffing.",
+          "basePrice": 250,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "نظافت عمیق و چربی‌زدایی آشپزخانه", "nameEn": "Deep kitchen degreasing", "price": 90},
+            {"nameFa": "رسوب‌زدایی و ضدعفونی سرویس‌ها", "nameEn": "Bathroom descaling and sanitizing", "price": 80},
+            {"nameFa": "شست‌وشوی داخل کابینت و یخچال", "nameEn": "Cabinet and fridge interior washing", "price": 70},
+            {"nameFa": "شست‌وشوی کامل شیشه‌ها", "nameEn": "Full window washing", "price": 60},
+            {"nameFa": "نظافت پشت مبلمان و نقاط کور", "nameEn": "Behind-furniture and blind-spot cleaning", "price": 50},
+            {"nameFa": "برق کف و اجرای موم محافظ", "nameEn": "Floor buffing and protective wax", "price": 40}
+          ]
+        },
+        {
+          "key": "w10-3",
+          "nameFa": "نظافت اداری و تجاری",
+          "nameEn": "Office & Commercial Cleaning",
+          "descFa": "نظافت منظم فضاهای اداری و تجاری با برنامه ساعتی، گزارش بازرسی و مدیریت پسماند.",
+          "descEn": "Regular office and commercial cleaning with scheduled hours, quality inspection reports and waste handling.",
+          "basePrice": 300,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "نظافت روزانه فضاها و راهروها", "nameEn": "Daily area and corridor cleaning", "price": 100},
+            {"nameFa": "نظافت و ضدعفونی سرویس‌های بهداشتی", "nameEn": "Restroom cleaning and sanitation", "price": 70},
+            {"nameFa": "گردگیری میزها و تجهیزات", "nameEn": "Desk and equipment dusting", "price": 60},
+            {"nameFa": "شست‌وشوی شیشه‌های داخلی", "nameEn": "Interior glass cleaning", "price": 55},
+            {"nameFa": "جمع‌آوری زباله و تفکیک بازیافت", "nameEn": "Waste collection and recycling sorting", "price": 45},
+            {"nameFa": "گزارش بازرسی کیفیت نظافت", "nameEn": "Cleaning quality inspection report", "price": 45}
+          ]
+        },
+        {
+          "key": "w10-4",
+          "nameFa": "شست‌وشوی فرش و مبلمان",
+          "nameEn": "Carpet & Upholstery Cleaning",
+          "descFa": "شست‌وشوی تخصصی فرش، مبل و صندلی با شامپو دستگاهی، لکه‌بری و خشک‌کردن سریع.",
+          "descEn": "Specialist carpet, sofa and chair cleaning with machine shampooing, stain removal and quick drying.",
+          "basePrice": 150,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازرسی جنس و تست رنگ‌دهی", "nameEn": "Fabric inspection and colorfastness test", "price": 25},
+            {"nameFa": "جارو عمیق و خارج کردن گردوغبار", "nameEn": "Deep vacuum and dust extraction", "price": 40},
+            {"nameFa": "شامپو و شست‌وشو با دستگاه", "nameEn": "Machine shampoo washing", "price": 70},
+            {"nameFa": "لکه‌بری تخصصی", "nameEn": "Specialty stain removal", "price": 50},
+            {"nameFa": "آب‌گیری و خشک‌کردن سریع", "nameEn": "Extraction and quick drying", "price": 40},
+            {"nameFa": "برس‌کشی و بازسازی پرز سطح", "nameEn": "Grooming and pile restoration", "price": 25}
+          ]
+        },
+        {
+          "key": "w10-5",
+          "nameFa": "نظافت پس از ساخت و بازسازی",
+          "nameEn": "Post-Construction Cleaning",
+          "descFa": "نظافت کامل واحدهای تازه‌ساز شامل جمع‌آوری ضایعات، حذف بقایای چسب و برق‌دادن سطوح.",
+          "descEn": "Full cleaning of newly built units including debris removal, adhesive residue removal and surface polishing.",
+          "basePrice": 600,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "جمع‌آوری و انتقال ضایعات ساخت", "nameEn": "Construction debris removal", "price": 150},
+            {"nameFa": "گردگیری و شست‌وشوی کامل سطوح", "nameEn": "Full surface dusting and washing", "price": 200},
+            {"nameFa": "حذف بقایای چسب و گچ", "nameEn": "Adhesive and plaster residue removal", "price": 180},
+            {"nameFa": "شست‌وشوی شیشه و فریم‌ها", "nameEn": "Window and frame washing", "price": 150},
+            {"nameFa": "برق‌انداختن کف و سنگ", "nameEn": "Floor and stone polishing", "price": 200},
+            {"nameFa": "تحویل نهایی با بازرسی", "nameEn": "Final inspection handover", "price": 90}
+          ]
+        },
+        {
+          "key": "w10-6",
+          "nameFa": "نگهداری فضای سبز",
+          "nameEn": "Garden & Landscape Maintenance",
+          "descFa": "نگهداری منظم باغ و فضای سبز شامل چمن‌زنی، وجین، کوددهی و تنظیم سیستم آبیاری.",
+          "descEn": "Regular garden upkeep including mowing, weeding, fertilizing and irrigation system adjustment.",
+          "basePrice": 200,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "کوتاه‌کردن چمن و درختچه‌ها", "nameEn": "Lawn and shrub trimming", "price": 60},
+            {"nameFa": "وجین و کنترل علف هرز", "nameEn": "Weeding and weed control", "price": 40},
+            {"nameFa": "آبیاری و تنظیم سیستم آبیاری", "nameEn": "Watering and irrigation adjustment", "price": 45},
+            {"nameFa": "کوددهی فصلی", "nameEn": "Seasonal fertilizing", "price": 35},
+            {"nameFa": "جمع‌آوری برگ و پسماند سبز", "nameEn": "Leaf and green-waste collection", "price": 30},
+            {"nameFa": "مشاوره کاشت مناسب فصل", "nameEn": "Seasonal planting advice", "price": 30}
+          ]
+        },
+        {
+          "key": "w10-7",
+          "nameFa": "خدمات کنترل آفت و حشرات",
+          "nameEn": "Pest Control Services",
+          "descFa": "بازرسی، سمپاشی و طعمه‌گذاری استاندارد برای کنترل حشرات و جوندگان با برگه ایمنی.",
+          "descEn": "Standard inspection, spraying and baiting for insect and rodent control with a safety sheet.",
+          "basePrice": 180,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازرسی و شناسایی نوع آفت", "nameEn": "Pest inspection and identification", "price": 50},
+            {"nameFa": "سمپاشی و طعمه‌گذاری استاندارد", "nameEn": "Standard spraying and baiting", "price": 80},
+            {"nameFa": "درزگیری نقاط ورود آفت", "nameEn": "Entry-point sealing", "price": 60},
+            {"nameFa": "نصب ابزار پایش و تله", "nameEn": "Monitoring and trap placement", "price": 40},
+            {"nameFa": "برگه ایمنی و راهنمای بازگشت به فضا", "nameEn": "Safety sheet and re-entry guide", "price": 30},
+            {"nameFa": "جلسه بازبینی پس از خدمات", "nameEn": "Post-service follow-up visit", "price": 40}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "زیبایی و مراقبت شخصی",
+      "nameEn": "Beauty & Personal Care",
+      "icon": "sparkles",
+      "services": [
+        {
+          "key": "w11-1",
+          "nameFa": "میکاپ عروس و مراسم",
+          "nameEn": "Bridal & Occasion Makeup",
+          "descFa": "پکیج کامل میکاپ عروس شامل تست میکاپ، شینیون مو و ترمیم آرایش در طول مراسم.",
+          "descEn": "A complete bridal makeup package including a trial session, hairstyling and event touch-ups.",
+          "basePrice": 300,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "جلسه مشاوره و تست میکاپ", "nameEn": "Consultation and makeup trial", "price": 80},
+            {"nameFa": "میکاپ کامل عروس", "nameEn": "Full bridal makeup application", "price": 150},
+            {"nameFa": "شینیون و مدل‌سازی مو", "nameEn": "Hairstyling and updo", "price": 100},
+            {"nameFa": "آماده‌سازی و آبرسانی پوست", "nameEn": "Skin preparation", "price": 45},
+            {"nameFa": "ترمیم آرایش در طول مراسم", "nameEn": "Touch-ups during the event", "price": 90},
+            {"nameFa": "میکاپ همراهان (هر نفر)", "nameEn": "Companion makeup (per person)", "price": 60}
+          ]
+        },
+        {
+          "key": "w11-2",
+          "nameFa": "خدمات آراستگی مردانه",
+          "nameEn": "Men's Grooming Services",
+          "descFa": "بسته آراستگی مردانه شامل کوتاهی مو، اصلاح ریش و پاک‌سازی صورت در سالن یا محل شما.",
+          "descEn": "A men's grooming package including haircut, beard trim and facial cleanup at a salon or your location.",
+          "basePrice": 90,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "کوتاهی مو و استایل", "nameEn": "Haircut and styling", "price": 30},
+            {"nameFa": "اصلاح ریش و خط ریش", "nameEn": "Beard trim and shaping", "price": 20},
+            {"nameFa": "پاک‌سازی و ماسک صورت", "nameEn": "Facial cleanup and mask", "price": 25},
+            {"nameFa": "ماساژ کوتاه سر و صورت", "nameEn": "Short head and face massage", "price": 15},
+            {"nameFa": "مراقبت ابرو و بینی", "nameEn": "Brow and nose grooming", "price": 15},
+            {"nameFa": "مشاوره محصولات مراقبت روزانه", "nameEn": "Daily care product advice", "price": 15}
+          ]
+        },
+        {
+          "key": "w11-3",
+          "nameFa": "کوتاهی، رنگ و مراقبت مو",
+          "nameEn": "Haircut, Coloring & Care",
+          "descFa": "خدمات کامل سالن مو شامل مشاوره مدل، کوتاهی، رنگ و پروتئین‌تراپی.",
+          "descEn": "Complete salon hair services including style consultation, cut, coloring and protein treatment.",
+          "basePrice": 150,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره مدل مناسب چهره", "nameEn": "Face-suitable style consultation", "price": 25},
+            {"nameFa": "کوتاهی و سشوار", "nameEn": "Cut and blow-dry", "price": 40},
+            {"nameFa": "رنگ ریشه یا رنگ کامل", "nameEn": "Root touch-up or full color", "price": 80},
+            {"nameFa": "پروتئین و ماسک مغذی مو", "nameEn": "Protein and nourishing hair mask", "price": 50},
+            {"nameFa": "درمان موخوره", "nameEn": "Split-end treatment", "price": 30},
+            {"nameFa": "اکستنشن یا بافت مو (اختیاری)", "nameEn": "Extensions or braiding (optional)", "price": 60}
+          ]
+        },
+        {
+          "key": "w11-4",
+          "nameFa": "خدمات ناخن (مانیکور و پدیکور)",
+          "nameEn": "Nail Services (Manicure & Pedicure)",
+          "descFa": "مانیکور و پدیکور کلاسیک همراه با کاشت، ژل و طراحی ناخن در محیطی بهداشتی.",
+          "descEn": "Classic manicure and pedicure with gel, extension and nail art options in a hygienic setting.",
+          "basePrice": 80,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مانیکور کلاسیک", "nameEn": "Classic manicure", "price": 25},
+            {"nameFa": "پدیکور کلاسیک", "nameEn": "Classic pedicure", "price": 30},
+            {"nameFa": "کاشت یا ژل ناخن", "nameEn": "Gel or extension application", "price": 45},
+            {"nameFa": "طراحی ناخن", "nameEn": "Nail art", "price": 20},
+            {"nameFa": "ترمیم کاشت ناخن", "nameEn": "Refill service", "price": 25},
+            {"nameFa": "مراقبت کوتیکول", "nameEn": "Cuticle care", "price": 15}
+          ]
+        },
+        {
+          "key": "w11-5",
+          "nameFa": "مشاوره مراقبت از پوست (غیردرمانی)",
+          "nameEn": "Skincare Routine Consultation (non-medical)",
+          "descFa": "تحلیل نوع پوست و طراحی روتین روزانه مراقبت همراه با لیست محصولات متناسب با بودجه شما.",
+          "descEn": "Skin-type analysis and a daily care routine design with a budget-fit product list.",
+          "basePrice": 120,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل نوع پوست با پرسش‌نامه", "nameEn": "Skin-type questionnaire analysis", "price": 30},
+            {"nameFa": "طراحی روتین صبح و شب", "nameEn": "Morning and evening routine design", "price": 50},
+            {"nameFa": "معرفی ترکیبات مناسب پوست شما", "nameEn": "Suitable ingredient recommendations", "price": 40},
+            {"nameFa": "لیست خرید محصولات در بودجه شما", "nameEn": "Budget-based shopping list", "price": 30},
+            {"nameFa": "راهنمای محافظت در برابر آفتاب", "nameEn": "Sun protection guide", "price": 20},
+            {"nameFa": "جلسه پیگیری بعد از چهار هفته", "nameEn": "Four-week follow-up session", "price": 25}
+          ]
+        },
+        {
+          "key": "w11-6",
+          "nameFa": "خدمات گریم و آراستگی مجالس",
+          "nameEn": "Party Makeup & Styling",
+          "descFa": "میکاپ مجلسی و شینیون مو برای مهمانی‌ها همراه با سرویس در محل شما.",
+          "descEn": "Party makeup and hairstyling for occasions with on-location service available.",
+          "basePrice": 130,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "میکاپ مجلسی کامل", "nameEn": "Full party makeup", "price": 60},
+            {"nameFa": "شینیون یا بافت مو", "nameEn": "Updo or braid styling", "price": 45},
+            {"nameFa": "نصب مژه", "nameEn": "Lash application", "price": 25},
+            {"nameFa": "پاک‌سازی و آماده‌سازی پوست", "nameEn": "Skin prep and cleansing", "price": 20},
+            {"nameFa": "هماهنگی سرویس در محل شما", "nameEn": "On-location service coordination", "price": 30},
+            {"nameFa": "ترمیم سبک آرایش پیش از عکاسی", "nameEn": "Light touch-up before photos", "price": 20}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "تندرستی و تناسب اندام (غیرپزشکی)",
+      "nameEn": "Wellness & Fitness (non-medical)",
+      "icon": "heart-pulse",
+      "services": [
+        {
+          "key": "w12-1",
+          "nameFa": "مربی شخصی تناسب اندام",
+          "nameEn": "Personal Fitness Training",
+          "descFa": "بسته ده‌جلسه‌ای تمرین با مربی شخصی همراه با ارزیابی اولیه، برنامه اختصاصی و ردیابی پیشرفت.",
+          "descEn": "A ten-session personal training package with initial assessment, a custom program and progress tracking.",
+          "basePrice": 400,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ارزیابی آمادگی جسمانی اولیه", "nameEn": "Initial fitness assessment", "price": 60},
+            {"nameFa": "ده جلسه تمرین اختصاصی", "nameEn": "10 dedicated training sessions", "price": 200},
+            {"nameFa": "برنامه تمرینی برای خانه", "nameEn": "Home workout plan", "price": 80},
+            {"nameFa": "تنظیم پیشرفت هفتگی تمرین", "nameEn": "Weekly progression adjustments", "price": 70},
+            {"nameFa": "ردیابی شاخص‌ها و گزارش پیشرفت", "nameEn": "Metric tracking and progress report", "price": 60},
+            {"nameFa": "راهنمای گرم‌کردن و ریکاوری", "nameEn": "Warm-up and recovery guide", "price": 60}
+          ]
+        },
+        {
+          "key": "w12-2",
+          "nameFa": "برنامه تمرینی اختصاصی",
+          "nameEn": "Custom Workout Program",
+          "descFa": "طراحی برنامه تمرینی چهار هفته‌ای متناسب با هدف، تجهیزات و سطح شما با توضیح ویدیویی حرکات.",
+          "descEn": "A four-week workout program tailored to your goals, equipment and level with video exercise explanations.",
+          "basePrice": 90,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "مصاحبه اهداف و بررسی تجهیزات موجود", "nameEn": "Goal intake and equipment review", "price": 20},
+            {"nameFa": "طراحی برنامه چهار هفته‌ای", "nameEn": "Four-week program design", "price": 40},
+            {"nameFa": "توضیح ویدیویی حرکات", "nameEn": "Video exercise explanations", "price": 30},
+            {"nameFa": "یک جلسه اصلاح فرم اجرا", "nameEn": "One form-correction session", "price": 25},
+            {"nameFa": "جدول پیشرفت و ثبت تمرین", "nameEn": "Progress log template", "price": 15},
+            {"nameFa": "جایگزین‌های هر حرکت", "nameEn": "Exercise substitutions", "price": 15}
+          ]
+        },
+        {
+          "key": "w12-3",
+          "nameFa": "برنامه تغذیه و سبک زندگی (غیردرمانی)",
+          "nameEn": "Non-Medical Nutrition & Lifestyle Plan",
+          "descFa": "تحلیل عادات غذایی و طراحی برنامه غذایی چهار هفته‌ای سبک و تعادل‌محور بدون ادعای درمانی.",
+          "descEn": "Eating-habit analysis and a balanced four-week meal plan with no medical treatment claims.",
+          "basePrice": 120,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل عادات غذایی فعلی", "nameEn": "Current eating-habit analysis", "price": 30},
+            {"nameFa": "برنامه غذایی چهار هفته‌ای", "nameEn": "Four-week meal plan", "price": 50},
+            {"nameFa": "لیست خرید و جایگزین‌های مواد غذایی", "nameEn": "Shopping list and food swaps", "price": 25},
+            {"nameFa": "راهنمای وعده‌های ساده و سالم", "nameEn": "Simple healthy meal guide", "price": 25},
+            {"nameFa": "آموزش خواندن برچسب مواد غذایی", "nameEn": "Food-label reading basics", "price": 20},
+            {"nameFa": "جلسه پیگیری و تنظیم برنامه", "nameEn": "Follow-up and plan adjustment session", "price": 30}
+          ]
+        },
+        {
+          "key": "w12-4",
+          "nameFa": "کلاس یوگا و مدیتیشن",
+          "nameEn": "Yoga & Meditation Classes",
+          "descFa": "بسته هشت‌جلسه‌ای کلاس یوگا و مدیتیشن گروهی یا آنلاین همراه با برنامه تمرین روزانه.",
+          "descEn": "An eight-session group or online yoga and meditation package with a daily practice plan.",
+          "basePrice": 150,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "ارزیابی تنفس و انعطاف‌پذیری", "nameEn": "Breath and flexibility assessment", "price": 25},
+            {"nameFa": "هشت جلسه کلاس گروهی", "nameEn": "8 group class sessions", "price": 90},
+            {"nameFa": "برنامه تمرین روزانه خانگی", "nameEn": "Daily home practice plan", "price": 30},
+            {"nameFa": "مدیتیشن راهنمایی‌شده صوتی", "nameEn": "Guided meditation tracks", "price": 25},
+            {"nameFa": "راهنمای تجهیزات پایه", "nameEn": "Basic equipment guide", "price": 25},
+            {"nameFa": "جلسه پرسش و پاسخ اختصاصی", "nameEn": "Personal Q&A session", "price": 25}
+          ]
+        },
+        {
+          "key": "w12-5",
+          "nameFa": "ماساژ ورزشی و ریلکسی",
+          "nameEn": "Sports & Relaxation Massage",
+          "descFa": "جلسات ماساژ ورزشی و ریلکسی توسط متخصص مجرب با برنامه کشش خانگی تکمیلی.",
+          "descEn": "Sports and relaxation massage sessions by an experienced specialist with a complementary home stretching plan.",
+          "basePrice": 110,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره و تعیین نواحی هدف", "nameEn": "Consultation and target areas", "price": 20},
+            {"nameFa": "ماساژ ورزشی ۶۰ دقیقه‌ای", "nameEn": "60-minute sports massage", "price": 55},
+            {"nameFa": "ماساژ ریلکسی ۴۵ دقیقه‌ای", "nameEn": "45-minute relaxation massage", "price": 45},
+            {"nameFa": "رولینگ و کشش کمکی", "nameEn": "Assisted rolling and stretching", "price": 30},
+            {"nameFa": "توصیه کشش‌های خانگی", "nameEn": "Home stretching recommendations", "price": 20},
+            {"nameFa": "امکان سرویس در محل شما", "nameEn": "On-site service option", "price": 25}
+          ]
+        },
+        {
+          "key": "w12-6",
+          "nameFa": "کوچینگ سبک زندگی و سلامت",
+          "nameEn": "Wellness & Lifestyle Coaching",
+          "descFa": "برنامه شش‌جلسه‌ای کوچینگ تغییر عادت برای خواب، انرژی و تعادل زندگی کاری.",
+          "descEn": "A six-session habit-change coaching program for sleep, energy and work-life balance.",
+          "basePrice": 350,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "جلسه ارزیابی سبک زندگی", "nameEn": "Lifestyle assessment session", "price": 80},
+            {"nameFa": "طراحی برنامه تغییر عادت", "nameEn": "Habit-change program design", "price": 120},
+            {"nameFa": "شش جلسه کوچینگ فردی", "nameEn": "6 individual coaching sessions", "price": 180},
+            {"nameFa": "ابزارهای ردیابی روزانه", "nameEn": "Daily tracking tools", "price": 55},
+            {"nameFa": "جلسه مرور ماهانه", "nameEn": "Monthly review session", "price": 60},
+            {"nameFa": "پشتیبانی پیام‌بین‌جلسه‌ای", "nameEn": "Between-session chat support", "price": 55}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "خدمات خودرو",
+      "nameEn": "Automotive Services",
+      "icon": "car",
+      "services": [
+        {
+          "key": "w13-1",
+          "nameFa": "سرویس دوره‌ای خودرو",
+          "nameEn": "Car Periodic Service",
+          "descFa": "سرویس دوره‌ای استاندارد خودرو شامل تعویض روغن، بازرسی ایمنی و گزارش سلامت دیاگ.",
+          "descEn": "Standard periodic car service including oil change, safety inspection and a diagnostic health report.",
+          "basePrice": 120,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "تعویض روغن موتور و فیلتر", "nameEn": "Engine oil and filter change", "price": 50},
+            {"nameFa": "بازرسی و پرکردن مایعات", "nameEn": "Fluid check and top-up", "price": 20},
+            {"nameFa": "بازرسی ترمز و لاستیک", "nameEn": "Brake and tire inspection", "price": 25},
+            {"nameFa": "تعویض فیلتر هوا یا کابین", "nameEn": "Air or cabin filter change", "price": 30},
+            {"nameFa": "دیاگ و گزارش سلامت خودرو", "nameEn": "Diagnostic scan and health report", "price": 30},
+            {"nameFa": "تنظیم فشار باد و بازرسی چرخ‌ها", "nameEn": "Tire pressure and wheel check", "price": 20}
+          ]
+        },
+        {
+          "key": "w13-2",
+          "nameFa": "تعمیر موتور و گیربکس",
+          "nameEn": "Engine & Transmission Repair",
+          "descFa": "عیب‌یابی تخصصی و تعمیر کامل موتور یا گیربکس با تست جاده و پوشش گارانتی تعمیر.",
+          "descEn": "Specialist diagnosis and full engine or transmission repair with a road test and repair warranty.",
+          "basePrice": 1500,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "عیب‌یابی تخصصی با دیاگ پیشرفته", "nameEn": "Advanced diagnostic testing", "price": 250},
+            {"nameFa": "بازکردن و ارزیابی موتور یا گیربکس", "nameEn": "Teardown and assessment", "price": 300},
+            {"nameFa": "تعویض قطعات فرسوده", "nameEn": "Worn part replacement", "price": 500},
+            {"nameFa": "آب‌بندی و مونتاژ مجدد", "nameEn": "Re-sealing and reassembly", "price": 400},
+            {"nameFa": "تست جاده و تنظیم نهایی", "nameEn": "Road test and final tuning", "price": 250},
+            {"nameFa": "پوشش گارانتی تعمیر", "nameEn": "Repair warranty coverage", "price": 250}
+          ]
+        },
+        {
+          "key": "w13-3",
+          "nameFa": "دیتیلینگ و پولیش خودرو",
+          "nameEn": "Car Detailing & Polishing",
+          "descFa": "شست‌وشوی عمیق، پولیش بدنه، واکس محافظ و نظافت کامل داخل خودرو.",
+          "descEn": "Deep washing, paint polishing, protective wax and a full interior clean.",
+          "basePrice": 150,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "شست‌وشوی کامل بدنه و رینگ", "nameEn": "Full body and wheel wash", "price": 30},
+            {"nameFa": "پولیش بدنه و رفع خش سطحی", "nameEn": "Paint polish and swirl removal", "price": 60},
+            {"nameFa": "واکس یا پوشش محافظ", "nameEn": "Wax or sealant coat", "price": 40},
+            {"nameFa": "نظافت کامل داخل خودرو", "nameEn": "Full interior cleaning", "price": 50},
+            {"nameFa": "شست‌وشوی شیشه و جلوپرچراغ", "nameEn": "Glass and headlight cleaning", "price": 25},
+            {"nameFa": "مراقبت لاستیک و جلادارکردن", "nameEn": "Tire dressing", "price": 25}
+          ]
+        },
+        {
+          "key": "w13-4",
+          "nameFa": "نصب لوازم و تجهیزات خودرو",
+          "nameEn": "Car Accessory Installation",
+          "descFa": "نصب تخصصی لوازم جانبی خودرو از دوربین دنده‌عقب تا سیستم صوتی و رکاب.",
+          "descEn": "Specialist installation of car accessories from backup cameras to audio systems and side steps.",
+          "basePrice": 100,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره انتخاب تجهیزات", "nameEn": "Equipment selection advice", "price": 15},
+            {"nameFa": "نصب دوربین و سنسور دنده‌عقب", "nameEn": "Backup camera and sensor install", "price": 40},
+            {"nameFa": "نصب سیستم صوتی", "nameEn": "Audio system installation", "price": 45},
+            {"nameFa": "نصب روکش و کفپوش", "nameEn": "Seat cover and floor mat fitting", "price": 25},
+            {"nameFa": "نصب رکاب یا باربند", "nameEn": "Side step or roof rack install", "price": 35},
+            {"nameFa": "تست و تحویل نهایی", "nameEn": "Testing and final handover", "price": 15}
+          ]
+        },
+        {
+          "key": "w13-5",
+          "nameFa": "تعویض لاستیک و بالانس",
+          "nameEn": "Tire Replacement & Balancing",
+          "descFa": "بازرسی وضعیت لاستیک‌ها، تعویض، بالانس و تنظیم باد چرخ‌ها با کنترل تناسب سایز.",
+          "descEn": "Tire condition inspection, replacement, balancing and inflation with size fitment control.",
+          "basePrice": 80,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازرسی وضعیت لاستیک‌ها", "nameEn": "Tire condition inspection", "price": 15},
+            {"nameFa": "تعویض لاستیک (هر عدد)", "nameEn": "Tire replacement (per tire)", "price": 25},
+            {"nameFa": "بالانس و تنظیم باد", "nameEn": "Balancing and inflation", "price": 20},
+            {"nameFa": "جابجایی چرخ‌ها برای استهلاک یکنواخت", "nameEn": "Wheel rotation for even wear", "price": 20},
+            {"nameFa": "کنترل سایز و تناسب چرخ", "nameEn": "Size and fitment check", "price": 15},
+            {"nameFa": "بازرسی اولیه زاویه فرمان", "nameEn": "Basic alignment check", "price": 20}
+          ]
+        },
+        {
+          "key": "w13-6",
+          "nameFa": "بازرسی فنی پیش از خرید خودرو",
+          "nameEn": "Pre-Purchase Car Inspection",
+          "descFa": "بازرسی جامع خودرو پیش از خرید شامل بدنه، موتور، تعلیق و گزارش مکتوب وضعیت.",
+          "descEn": "Comprehensive pre-purchase inspection covering body, engine, suspension and a written condition report.",
+          "basePrice": 130,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازرسی بدنه و ضخامت رنگ", "nameEn": "Body and paint thickness inspection", "price": 30},
+            {"nameFa": "تست موتور و دیاگ", "nameEn": "Engine test and diagnostic scan", "price": 40},
+            {"nameFa": "بازرسی تعلیق و سیستم ترمز", "nameEn": "Suspension and brake check", "price": 35},
+            {"nameFa": "بازرسی داخل و تجهیزات برقی", "nameEn": "Interior and electrical check", "price": 25},
+            {"nameFa": "گزارش شفاهی و مکتوب وضعیت", "nameEn": "Verbal and written condition report", "price": 40},
+            {"nameFa": "برآورد هزینه تعمیرات آتی", "nameEn": "Upcoming repair estimate", "price": 30}
+          ]
+        },
+        {
+          "key": "w13-7",
+          "nameFa": "خدمات امداد جاده‌ای",
+          "nameEn": "Roadside Assistance",
+          "descFa": "امداد فوری جاده‌ای شامل روشن‌کردن با باتری کمکی، تعویض لاستیک و یدک‌کشی تا ده کیلومتر.",
+          "descEn": "Immediate roadside help including jump-start, on-site tire change and towing up to ten kilometers.",
+          "basePrice": 90,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "ارسال امدادگر در محل", "nameEn": "On-site dispatch", "price": 30},
+            {"nameFa": "روشن‌کردن با باتری کمکی", "nameEn": "Jump-start service", "price": 25},
+            {"nameFa": "تعویض لاستیک در محل", "nameEn": "On-site tire change", "price": 30},
+            {"nameFa": "رساندن سوخت اضطراری", "nameEn": "Emergency fuel delivery", "price": 25},
+            {"nameFa": "یدک‌کشی تا ده کیلومتر", "nameEn": "Towing up to 10 km", "price": 45},
+            {"nameFa": "باز کردن درب قفل‌شده", "nameEn": "Lockout assistance", "price": 25}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "برگزاری مراسم و رویدادها",
+      "nameEn": "Events & Wedding Planning",
+      "icon": "party-popper",
+      "services": [
+        {
+          "key": "w14-1",
+          "nameFa": "برنامه‌ریزی و هماهنگی عروسی",
+          "nameEn": "Wedding Planning & Coordination",
+          "descFa": "مدیریت کامل برگزاری عروسی از انتخاب مکان و تأمین‌کنندگان تا سرپرستی روز مراسم.",
+          "descEn": "Complete wedding management from venue and vendor selection to on-the-day supervision.",
+          "basePrice": 5000,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "جلسه کشف سلیقه و بودجه", "nameEn": "Taste and budget discovery session", "price": 750},
+            {"nameFa": "انتخاب مکان و مدیریت رزرو", "nameEn": "Venue selection and booking management", "price": 1500},
+            {"nameFa": "تدوین برنامه زمان‌بندی روز مراسم", "nameEn": "Wedding-day timeline", "price": 800},
+            {"nameFa": "هماهنگی تأمین‌کنندگان", "nameEn": "Vendor coordination", "price": 1200},
+            {"nameFa": "مدیریت بودجه و قراردادها", "nameEn": "Budget and contract management", "price": 1000},
+            {"nameFa": "سرپرستی کامل در روز مراسم", "nameEn": "On-the-day supervision", "price": 1500}
+          ]
+        },
+        {
+          "key": "w14-2",
+          "nameFa": "خدمات پذیرایی و کترینگ",
+          "nameEn": "Catering Services",
+          "descFa": "طراحی منو، پخت و سرو غذا به تعداد مهمان‌ها با چیدمان پذیرایی و نظافت پس از مراسم.",
+          "descEn": "Menu design, guest-count cooking and service with buffet setup and post-event cleanup.",
+          "basePrice": 2500,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "طراحی منو و جلسه چشیدن غذاها", "nameEn": "Menu design and tasting session", "price": 500},
+            {"nameFa": "پخت و آماده‌سازی به تعداد مهمان", "nameEn": "Guest-count cooking and preparation", "price": 1200},
+            {"nameFa": "چیدمان میز پذیرایی", "nameEn": "Buffet setup", "price": 400},
+            {"nameFa": "تیم سرویس در طول مراسم", "nameEn": "Service staff during the event", "price": 800},
+            {"nameFa": "مدیریت نوشیدنی‌ها", "nameEn": "Beverage management", "price": 400},
+            {"nameFa": "جمع‌آوری و نظافت پس از مراسم", "nameEn": "Post-event cleanup", "price": 375}
+          ]
+        },
+        {
+          "key": "w14-3",
+          "nameFa": "عکاسی و فیلم‌برداری مراسم",
+          "nameEn": "Event Photography & Videography",
+          "descFa": "پوشش کامل تصویری مراسم با عکاسی حرفه‌ای، فیلم‌برداری چند دوربین و آلبوم طراحی‌شده.",
+          "descEn": "Full event visual coverage with professional photography, multi-camera videography and a designed album.",
+          "basePrice": 1800,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "جلسه هماهنگی سبک و برنامه مراسم", "nameEn": "Style and schedule coordination session", "price": 270},
+            {"nameFa": "پوشش عکاسی کامل مراسم", "nameEn": "Full-event photo coverage", "price": 700},
+            {"nameFa": "فیلم‌برداری با چند دوربین", "nameEn": "Multi-camera videography", "price": 800},
+            {"nameFa": "تدوین کلیپ کوتاه مراسم", "nameEn": "Highlight video editing", "price": 600},
+            {"nameFa": "طراحی و چاپ آلبوم", "nameEn": "Designed photo album", "price": 500},
+            {"nameFa": "تحویل آرشیو کامل فایل‌ها", "nameEn": "Full archive delivery", "price": 300}
+          ]
+        },
+        {
+          "key": "w14-4",
+          "nameFa": "دکوراسیون و گل‌آرایی مراسم",
+          "nameEn": "Event Decoration & Floristry",
+          "descFa": "طراحی و اجرای دکور مراسم شامل گل‌آرایی، پس‌زمینه، نور دکور و نصب در محل.",
+          "descEn": "Event decor design and execution including florals, backdrop, decor lighting and on-site installation.",
+          "basePrice": 1200,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "طراحی کانسپت و موودبورد", "nameEn": "Concept and moodboard design", "price": 250},
+            {"nameFa": "گل‌آرایی سفره و جایگاه", "nameEn": "Table and stage florals", "price": 450},
+            {"nameFa": "دیزاین پس‌زمینه و نور دکور", "nameEn": "Backdrop and decor lighting design", "price": 500},
+            {"nameFa": "نصب و چیدمان در محل", "nameEn": "On-site installation", "price": 300},
+            {"nameFa": "اجاره تجهیزات دکور", "nameEn": "Decor equipment rental", "price": 300},
+            {"nameFa": "جمع‌آوری پس از مراسم", "nameEn": "Post-event teardown", "price": 200}
+          ]
+        },
+        {
+          "key": "w14-5",
+          "nameFa": "سیستم صدا و نور مراسم",
+          "nameEn": "Event Sound & Lighting",
+          "descFa": "طراحی و اجرای سیستم صوت و نورپردازی مراسم با اپراتور و تجهیزات پشتیبان.",
+          "descEn": "Event audio and lighting design and operation with an operator and backup equipment.",
+          "basePrice": 800,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "طراحی نقشه صدا و نور", "nameEn": "Sound and lighting plot design", "price": 150},
+            {"nameFa": "نصب سیستم صوت و میکروفن‌ها", "nameEn": "Audio and microphone setup", "price": 250},
+            {"nameFa": "نصب نورپردازی صحنه", "nameEn": "Stage lighting installation", "price": 300},
+            {"nameFa": "اپراتور در طول مراسم", "nameEn": "On-event operator", "price": 200},
+            {"nameFa": "هماهنگی با اجراکنندگان برنامه", "nameEn": "Performer coordination", "price": 120},
+            {"nameFa": "تست و تجهیزات پشتیبان", "nameEn": "Testing and backup gear", "price": 120}
+          ]
+        },
+        {
+          "key": "w14-6",
+          "nameFa": "برگزاری کنفرانس و سمینار سازمانی",
+          "nameEn": "Corporate Conference Organization",
+          "descFa": "برنامه‌ریزی و اجرای کامل کنفرانس‌های سازمانی از رزرو سالن تا ثبت‌نام مهمانان و گزارش نهایی.",
+          "descEn": "Complete corporate conference planning and running from venue booking to guest registration and final reporting.",
+          "basePrice": 3500,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "طراحی برنامه و نقش‌های رویداد", "nameEn": "Agenda and role design", "price": 600},
+            {"nameFa": "رزرو سالن و تجهیزات", "nameEn": "Venue and equipment booking", "price": 900},
+            {"nameFa": "ساخت هویت بصری رویداد", "nameEn": "Event visual identity", "price": 700},
+            {"nameFa": "ثبت‌نام و پذیرش مهمانان", "nameEn": "Guest registration and reception", "price": 550},
+            {"nameFa": "اجرای فنی روز رویداد", "nameEn": "Event-day technical running", "price": 1000},
+            {"nameFa": "مستندسازی و گزارش پس از رویداد", "nameEn": "Post-event documentation and report", "price": 550}
+          ]
+        },
+        {
+          "key": "w14-7",
+          "nameFa": "برنامه‌ریزی جشن تولد و مراسم خانوادگی",
+          "nameEn": "Birthday & Family Celebration Planning",
+          "descFa": "برگزاری جشن تولد و دورهمی خانوادگی با تم اختصاصی، دکور، کیک و سرگرمی مهمانان.",
+          "descEn": "Birthday and family gathering hosting with a custom theme, decor, cake and guest entertainment.",
+          "basePrice": 900,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره تم و برنامه جشن", "nameEn": "Theme and plan consultation", "price": 150},
+            {"nameFa": "دکور و بادکنک‌آرایی", "nameEn": "Decor and balloon styling", "price": 300},
+            {"nameFa": "کیک و میز شیرینی", "nameEn": "Cake and dessert table", "price": 350},
+            {"nameFa": "سرگرمی کودکان یا بازی‌های گروهی", "nameEn": "Kids entertainment or group games", "price": 250},
+            {"nameFa": "عکاسی کوتاه مراسم", "nameEn": "Short photo coverage", "price": 200},
+            {"nameFa": "نظافت پس از جشن", "nameEn": "Post-party cleanup", "price": 135}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "حمل‌ونقل و اسباب‌کشی",
+      "nameEn": "Logistics & Moving",
+      "icon": "truck",
+      "services": [
+        {
+          "key": "w15-1",
+          "nameFa": "اسباب‌کشی داخل شهر",
+          "nameEn": "Local Household Moving",
+          "descFa": "انتقال کامل وسایل خانه داخل شهر شامل بسته‌بندی، بارگیری، حمل و چیدمان در مقصد.",
+          "descEn": "Full in-city household relocation including packing, loading, transport and destination placement.",
+          "basePrice": 600,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازدید و برآورد حجم بار", "nameEn": "Pre-move survey and volume estimate", "price": 90},
+            {"nameFa": "بسته‌بندی وسایل شکننده", "nameEn": "Fragile item packing", "price": 200},
+            {"nameFa": "بارگیری با گروه باربر", "nameEn": "Crew loading", "price": 250},
+            {"nameFa": "حمل با خودروی مناسب", "nameEn": "Appropriate truck transport", "price": 300},
+            {"nameFa": "تخلیه و چیدمان در مقصد", "nameEn": "Unloading and destination placement", "price": 200},
+            {"nameFa": "مونتاژ مبلمان در مقصد", "nameEn": "Destination furniture assembly", "price": 150}
+          ]
+        },
+        {
+          "key": "w15-2",
+          "nameFa": "حمل بار بین‌المللی",
+          "nameEn": "International Freight Shipping",
+          "descFa": "حمل بار بین‌المللی با هماهنگی اسناد، بسته‌بندی صنعتی، بیمه و ترخیص در مبدأ و مقصد.",
+          "descEn": "International shipping with paperwork coordination, industrial packing, insurance and origin and destination clearance.",
+          "basePrice": 4000,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره روش حمل دریایی یا هوایی", "nameEn": "Sea or air shipping mode advisory", "price": 600},
+            {"nameFa": "تهیه اسناد و ترخیص در مبدأ", "nameEn": "Origin paperwork and clearance", "price": 900},
+            {"nameFa": "بسته‌بندی صنعتی و پالت‌بندی", "nameEn": "Industrial packing and palletizing", "price": 700},
+            {"nameFa": "حمل اصلی بین‌المللی", "nameEn": "Main international carriage", "price": 2200},
+            {"nameFa": "بیمه بار", "nameEn": "Cargo insurance", "price": 700},
+            {"nameFa": "ترخیص و تحویل در مقصد", "nameEn": "Destination clearance and delivery", "price": 900}
+          ]
+        },
+        {
+          "key": "w15-3",
+          "nameFa": "بسته‌بندی حرفه‌ای وسایل",
+          "nameEn": "Professional Packing Services",
+          "descFa": "بسته‌بندی استاندارد لوازم خانه یا دفتر با مواد مخصوص، لیبلینگ و نقشه چیدمان.",
+          "descEn": "Standard home or office packing with specialist materials, labeling and a placement map.",
+          "basePrice": 350,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "ارزیابی لوازم و برنامه جعبه‌ها", "nameEn": "Item assessment and box plan", "price": 60},
+            {"nameFa": "بسته‌بندی ظروف و اشیای شیشه‌ای", "nameEn": "Dishware and glass packing", "price": 120},
+            {"nameFa": "بسته‌بندی وسایل برقی و حساس", "nameEn": "Electronics and sensitive item packing", "price": 100},
+            {"nameFa": "لفاف‌کشی و حفاظت مبلمان", "nameEn": "Furniture wrapping and protection", "price": 110},
+            {"nameFa": "لیبلینگ و تهیه نقشه چیدمان", "nameEn": "Labeling and placement map", "price": 55},
+            {"nameFa": "تأمین مواد بسته‌بندی", "nameEn": "Packing materials supply", "price": 80}
+          ]
+        },
+        {
+          "key": "w15-4",
+          "nameFa": "انبارداری کوتاه‌مدت",
+          "nameEn": "Short-Term Storage",
+          "descFa": "نگهداری امن وسایل در انبار استاندارد برای بازه‌های کوتاه با امکان دسترسی برنامه‌ریزی‌شده.",
+          "descEn": "Secure standard-facility storage for short periods with scheduled access options.",
+          "basePrice": 400,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "مشاوره حجم و مدت ذخیره", "nameEn": "Volume and duration advisory", "price": 60},
+            {"nameFa": "حمل تا انبار", "nameEn": "Transport to the facility", "price": 120},
+            {"nameFa": "بسته‌بندی و لیبل استاندارد انبار", "nameEn": "Warehouse-standard packing and labeling", "price": 100},
+            {"nameFa": "نگهداری در فضای امن و خشک", "nameEn": "Secure dry storage", "price": 180},
+            {"nameFa": "دسترسی برنامه‌ریزی‌شده به وسایل", "nameEn": "Scheduled item access", "price": 70},
+            {"nameFa": "بازگشت و تحویل در مقصد", "nameEn": "Return delivery", "price": 120}
+          ]
+        },
+        {
+          "key": "w15-5",
+          "nameFa": "حمل کالای تجاری",
+          "nameEn": "Commercial Goods Transport",
+          "descFa": "حمل منظم کالا برای کسب‌وکارها با بارگیری مکانیزه، پیگیری و رسید تحویل رسمی.",
+          "descEn": "Regular business goods transport with mechanized loading, tracking and an official proof of delivery.",
+          "basePrice": 500,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "برنامه‌ریزی مسیر و زمان‌بندی", "nameEn": "Route and schedule planning", "price": 75},
+            {"nameFa": "بارگیری با لیفتراک یا پالت‌بر", "nameEn": "Forklift or pallet loading", "price": 150},
+            {"nameFa": "حمل درون‌شهری یا بین‌شهری", "nameEn": "City or intercity carriage", "price": 250},
+            {"nameFa": "پیگیری وضعیت بار", "nameEn": "Shipment status tracking", "price": 75},
+            {"nameFa": "هماهنگی تحویل چند مقصد", "nameEn": "Multi-stop delivery coordination", "price": 100},
+            {"nameFa": "تحویل با رسید رسمی", "nameEn": "Proof-of-delivery handover", "price": 80}
+          ]
+        },
+        {
+          "key": "w15-6",
+          "nameFa": "حمل‌ونقل خودرو",
+          "nameEn": "Vehicle Transport",
+          "descFa": "انتقال ایمن خودرو با ناوگان مخصوص، مستندسازی وضعیت، بیمه و کنترل تحویل‌گیری.",
+          "descEn": "Safe vehicle transport with a dedicated carrier, condition documentation, insurance and acceptance check.",
+          "basePrice": 1200,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "بازرسی و مستندسازی وضعیت خودرو", "nameEn": "Vehicle condition documentation", "price": 180},
+            {"nameFa": "بارگیری تخصصی", "nameEn": "Specialized loading", "price": 350},
+            {"nameFa": "حمل با ناوگان مخصوص", "nameEn": "Dedicated carrier transport", "price": 600},
+            {"nameFa": "بیمه حمل", "nameEn": "Transport insurance", "price": 250},
+            {"nameFa": "پیگیری مسیر", "nameEn": "Route tracking", "price": 200},
+            {"nameFa": "تحویل و کنترل تحویل‌گیری", "nameEn": "Delivery and acceptance check", "price": 200}
+          ]
+        }
+      ]
+    },
+    {
+      "nameFa": "املاک و خدمات ملکی",
+      "nameEn": "Real Estate & Property Services",
+      "icon": "building-2",
+      "services": [
+        {
+          "key": "w16-1",
+          "nameFa": "مشاوره خرید و فروش ملک",
+          "nameEn": "Property Buy & Sell Advisory",
+          "descFa": "همراهی کامل در خرید یا فروش ملک از شناسایی گزینه‌ها تا مذاکره و انتقال سند.",
+          "descEn": "Full support in buying or selling property from option sourcing to negotiation and deed transfer.",
+          "basePrice": 1500,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تحلیل نیاز و بودجه خریدار", "nameEn": "Buyer needs and budget analysis", "price": 300},
+            {"nameFa": "شناسایی گزینه‌های منطبق", "nameEn": "Matching option sourcing", "price": 500},
+            {"nameFa": "هماهنگی بازدیدها", "nameEn": "Viewing coordination", "price": 350},
+            {"nameFa": "مذاکره قیمت", "nameEn": "Price negotiation", "price": 600},
+            {"nameFa": "بررسی اسناد ملک با همکاری حقوقی", "nameEn": "Document review with legal support", "price": 400},
+            {"nameFa": "همراهی تا انتقال سند", "nameEn": "Support through deed transfer", "price": 500}
+          ]
+        },
+        {
+          "key": "w16-2",
+          "nameFa": "مدیریت اجاره املاک",
+          "nameEn": "Rental Property Management",
+          "descFa": "مدیریت کامل ملک اجاره‌ای از قیمت‌گذاری و جذب مستأجر تا وصول اجاره و هماهنگی تعمیرات.",
+          "descEn": "Complete rental management from pricing and tenant sourcing to rent collection and repair coordination.",
+          "basePrice": 800,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تعیین قیمت اجاره رقابتی", "nameEn": "Competitive market rent pricing", "price": 150},
+            {"nameFa": "آگهی و جذب مستأجر", "nameEn": "Listing and tenant sourcing", "price": 200},
+            {"nameFa": "بررسی صلاحیت مستأجر", "nameEn": "Tenant screening", "price": 150},
+            {"nameFa": "تنظیم قرارداد اجاره", "nameEn": "Lease agreement preparation", "price": 180},
+            {"nameFa": "وصول اجاره و یادآوری پرداخت", "nameEn": "Rent collection and reminders", "price": 120},
+            {"nameFa": "هماهنگی تعمیرات جزئی", "nameEn": "Minor repair coordination", "price": 150},
+            {"nameFa": "بازدید دوره‌ای از ملک", "nameEn": "Periodic property inspections", "price": 120}
+          ]
+        },
+        {
+          "key": "w16-3",
+          "nameFa": "ارزیابی و قیمت‌گذاری ملک",
+          "nameEn": "Property Valuation",
+          "descFa": "ارزیابی دقیق ارزش ملک با تحلیل مقایسه‌ای بازار و ارائه گزارش مکتوب.",
+          "descEn": "Accurate property valuation with comparative market analysis and a written report.",
+          "basePrice": 450,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "بازدید و ثبت مشخصات ملک", "nameEn": "On-site survey and record", "price": 120},
+            {"nameFa": "تحلیل مقایسه‌ای بازار", "nameEn": "Comparative market analysis", "price": 180},
+            {"nameFa": "بررسی وضعیت سند و مجوزها", "nameEn": "Title and permit status check", "price": 100},
+            {"nameFa": "رصد روندهای محله", "nameEn": "Neighborhood trend scan", "price": 90},
+            {"nameFa": "گزارش ارزش‌گذاری مکتوب", "nameEn": "Written valuation report", "price": 200},
+            {"nameFa": "جلسه ارائه یافته‌ها", "nameEn": "Findings presentation session", "price": 70}
+          ]
+        },
+        {
+          "key": "w16-4",
+          "nameFa": "هماهنگی بازسازی و آماده‌سازی ملک",
+          "nameEn": "Renovation & Property Staging Coordination",
+          "descFa": "مدیریت پروژه بازسازی ملک از طراحی پلن و بودجه تا نظارت اجرا و آماده‌سازی نهایی برای اجاره یا فروش.",
+          "descEn": "Property renovation project management from plan and budget to execution supervision and final staging.",
+          "basePrice": 3000,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "ارزیابی وضعیت ملک و اولویت‌ها", "nameEn": "Property assessment and priorities", "price": 450},
+            {"nameFa": "طراحی پلن بازسازی و بودجه", "nameEn": "Renovation plan and budget", "price": 700},
+            {"nameFa": "انتخاب و هماهنگی پیمانکاران", "nameEn": "Contractor sourcing and coordination", "price": 800},
+            {"nameFa": "نظارت بر اجرا و کیفیت کار", "nameEn": "Execution and quality supervision", "price": 900},
+            {"nameFa": "انتخاب متریال و رنگ‌بندی", "nameEn": "Material and finish selection", "price": 500},
+            {"nameFa": "آماده‌سازی نهایی برای نمایش", "nameEn": "Final staging preparation", "price": 600}
+          ]
+        },
+        {
+          "key": "w16-5",
+          "nameFa": "عکاسی و تور مجازی ملک",
+          "nameEn": "Real Estate Photography & Virtual Tour",
+          "descFa": "عکاسی حرفه‌ای ملک و ساخت تور مجازی برای انتشار جذاب در پورتال‌های املاک.",
+          "descEn": "Professional property photography and a virtual tour for appealing real estate portal listings.",
+          "basePrice": 350,
+          "remoteCapable": false,
+          "details": [
+            {"nameFa": "آماده‌سازی و چیدمان فضای ملک", "nameEn": "Space preparation and light staging", "price": 60},
+            {"nameFa": "عکاسی حرفه‌ای بیست نما", "nameEn": "20-shot professional photography", "price": 130},
+            {"nameFa": "عکاسی هوایی با پهپاد (در صورت مجاز بودن)", "nameEn": "Drone shots (where permitted)", "price": 110},
+            {"nameFa": "ساخت تور مجازی سه‌بعدی", "nameEn": "3D virtual tour build", "price": 180},
+            {"nameFa": "ویرایش رنگ و روتوش تصاویر", "nameEn": "Color edit and retouching", "price": 70},
+            {"nameFa": "تحویل فایل آماده پورتال‌ها", "nameEn": "Portal-ready file delivery", "price": 55}
+          ]
+        },
+        {
+          "key": "w16-6",
+          "nameFa": "مشاوره سرمایه‌گذاری املاک",
+          "nameEn": "Real Estate Investment Consulting",
+          "descFa": "تحلیل مناطق رو به رشد و مدل‌سازی بازده اجاره برای ساخت پرتفوی ملکی منطقی.",
+          "descEn": "Growth-area analysis and rental yield modeling for a sound property portfolio.",
+          "basePrice": 1200,
+          "remoteCapable": true,
+          "details": [
+            {"nameFa": "تعریف هدف و افق سرمایه‌گذاری", "nameEn": "Goal and horizon definition", "price": 200},
+            {"nameFa": "تحلیل مناطق رو به رشد", "nameEn": "Growth-area analysis", "price": 350},
+            {"nameFa": "مدل‌سازی بازده اجاره", "nameEn": "Rental yield modeling", "price": 300},
+            {"nameFa": "بررسی ریسک‌های قانونی و بازار", "nameEn": "Legal and market risk review", "price": 250},
+            {"nameFa": "سند توصیه پرتفوی ملکی", "nameEn": "Portfolio recommendation memo", "price": 300},
+            {"nameFa": "جلسه پیگیری فصلی", "nameEn": "Quarterly follow-up session", "price": 180}
+          ]
+        }
+      ]
+    }
+  ]
+}

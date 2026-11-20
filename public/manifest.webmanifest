@@ -1,0 +1,23 @@
+{
+  "name": "میز خدمات ألو شتاب | Alo Shetab Service Desk",
+  "short_name": "ألو شتاب",
+  "description": "سفارش آنلاین خدمات فنی، خدماتی و تخصصی — از راه دور یا در محل مشتری",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#177a67",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "ثبت سفارش", "url": "/", "description": "سفارش جدید" },
+    { "name": "پیگیری سفارش", "url": "/", "description": "پیگیری با کد رهگیری" }
+  ]
+}

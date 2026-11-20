@@ -1,0 +1,7 @@
+{
+  "url": "https://www.aloshetab.ir/?lang=fa&edition=IRAN",
+  "name": "الو شتاب",
+  "edition": "IR",
+  "version": "3.0.0",
+  "note": "نسخهٔ ایران fa. APKهای رسمی v3.0 (AloShetab-v3.0-IR.apk) از قبل همین آدرس را دارند؛ این فایل قالب بازسازی است. در صورت تغییر آدرس سرویس، با scripts/build_apk_v3.sh بازسازی کنید. فقط https مجاز است."
+}
