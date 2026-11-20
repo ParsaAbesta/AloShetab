@@ -1,0 +1,54 @@
+# ─── الو شتاب — ایمیج Production V5.0 ────────────────────────
+# ساخت:   docker build -t aloshetab:5.0.0 .
+# اجرا:   docker compose up -d
+
+# ── مرحلهٔ ۱: وابستگی‌ها ──
+FROM node:22-alpine AS deps
+WORKDIR /app
+RUN apk add --no-cache openssl
+COPY package.json ./
+RUN npm install --legacy-peer-deps
+
+# ── مرحلهٔ ۲: ساخت ──
+FROM node:22-alpine AS builder
+WORKDIR /app
+RUN apk add --no-cache openssl
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+# پایگاه دادهٔ موقت فقط برای عبور از مرحلهٔ build (صفحه‌ها dynamic هستند)
+ENV DATABASE_URL=file:/tmp/build.db
+RUN npx prisma generate && npx prisma db push --accept-data-loss \
+    && npm run build
+
+# ── مرحلهٔ ۳: اجرا ──
+FROM node:22-alpine AS runner
+WORKDIR /app
+RUN apk add --no-cache openssl \
+    && addgroup -S alo && adduser -S alo -G alo \
+    && mkdir -p /app/db && chown -R alo:alo /app
+
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+ENV DATABASE_URL=file:/app/db/custom.db
+
+COPY --from=builder --chown=alo:alo /app/.next/standalone ./
+COPY --from=builder --chown=alo:alo /app/.next/static ./.next/static
+COPY --from=builder --chown=alo:alo /app/public ./public
+
+# ابزار استقرار: اسکیمای Prisma + اسکریپت کاتالوگ رسمی + دادهٔ کاتالوگ
+COPY --from=builder --chown=alo:alo /app/prisma ./prisma
+COPY --from=builder --chown=alo:alo /app/scripts/seed104.mjs ./scripts/seed104.mjs
+COPY --from=builder --chown=alo:alo /app/scripts/catalog104_enriched.json ./scripts/catalog104_enriched.json
+COPY --from=builder --chown=alo:alo /app/download/alo_shetab_services_rates_1405-08-24.json ./download/alo_shetab_services_rates_1405-08-24.json
+COPY --from=builder --chown=alo:alo /app/package.json ./package.json
+COPY --from=builder --chown=alo:alo /app/node_modules/prisma ./node_modules/prisma
+COPY --from=builder --chown=alo:alo /app/node_modules/@prisma ./node_modules/@prisma
+COPY --from=builder --chown=alo:alo /app/node_modules/.bin/prisma ./node_modules/.bin/prisma
+
+USER alo
+EXPOSE 3000
+VOLUME ["/app/db"]
+
+# راه‌اندازی: ایجاد اسکیما → بارگذاری کاتالوگ (در صورت نیاز) → سرور
+CMD ["sh", "-c", "npx prisma db push --accept-data-loss && if [ \"$SEED_ON_START\" = \"true\" ]; then node scripts/seed104.mjs || echo 'seed skipped (catalog already loaded or source missing)'; fi; node server.js"]
