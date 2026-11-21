@@ -1,0 +1,117 @@
+name: deploy-neon
+
+# AloShetab v5.0-IR - Neon Postgres provisioning + seed + Vercel-ready source push
+# Requirements (repo secrets): DATABASE_URL
+# Run: Actions tab -> deploy-neon -> Run workflow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check release zip exists
+        run: |
+          if [ ! -f alo_shetab_release_v5.0.zip ]; then
+            echo "::error::alo_shetab_release_v5.0.zip not found in repo root"
+            exit 1
+          fi
+
+      - name: Extract source to repo root
+        run: |
+          unzip -o alo_shetab_release_v5.0.zip -d .
+          cat > vercel.json <<'EOF_VERCEL'
+          {
+            "$schema": "https://openapi.vercel.sh/vercel.json",
+            "framework": "nextjs",
+            "regions": ["fra1"],
+            "buildCommand": "npx prisma generate --schema prisma/schema.postgres.prisma && npx prisma db push --schema prisma/schema.postgres.prisma --accept-data-loss --skip-generate && npx next build"
+          }
+          EOF_VERCEL
+          cp prisma/schema.prisma prisma/schema.postgres.prisma
+          sed -i 's/provider = "sqlite"/provider = "postgresql"/' prisma/schema.postgres.prisma
+          cat > .gitignore <<'EOF_GIT'
+          node_modules
+          .next
+          *.log
+          .env
+          EOF_GIT
+          echo "Root entries: $(ls -1 | wc -l)"
+          echo "Models: $(grep -c '^model' prisma/schema.postgres.prisma)"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "AloShetab v5.0: source at repo root + Vercel config" || echo "Nothing new to commit"
+          # If another run moved main forward, rebase first, then push
+          git pull --rebase origin main
+          git push
+
+      - name: Check DATABASE_URL secret
+        env:
+          DB_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if [ -z "$DB_URL" ]; then
+            echo "::error::Secret DATABASE_URL is not set in this repository"
+            exit 1
+          fi
+          case "$DB_URL" in
+            postgresql*|postgres*) echo "Connection string OK" ;;
+            *) echo "::error::DATABASE_URL must start with postgresql://" ; exit 1 ;;
+          esac
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install prisma
+        # --legacy-peer-deps neutralizes the nodemailer conflict (project ^10 vs next-auth peer ^7)
+        run: npm i --no-save --legacy-peer-deps prisma@6.11.1 @prisma/client@6.11.1
+
+      - name: Create tables in Neon
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: npx prisma db push --schema prisma/schema.postgres.prisma --accept-data-loss
+
+      - name: Load all data
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          node scripts/seed104.mjs
+          node scripts/seed_v2.mjs
+          node scripts/seed_p11.mjs
+          node scripts/seed_p13.mjs
+          node scripts/seed_p14.mjs
+          node scripts/seed_p14_contacts.mjs
+
+      - name: Apply v5.0 version
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          cat > fix_version.mjs <<'EOF_FIX'
+          import { PrismaClient } from '@prisma/client';
+          const p = new PrismaClient();
+          await p.setting.upsert({
+            where: { key: 'VERSION' },
+            update: { value: 'v5.0-IR' },
+            create: { key: 'VERSION', value: 'v5.0-IR' },
+          });
+          console.log('VERSION = v5.0-IR');
+          await p.$disconnect();
+          EOF_FIX
+          node fix_version.mjs
+          rm -f fix_version.mjs
+
+      - name: Done
+        run: |
+          echo "ALL OK - Neon seeded, source pushed. Next: Cloudflare workflow."
