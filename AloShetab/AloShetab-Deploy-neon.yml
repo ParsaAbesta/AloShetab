@@ -1,109 +1,117 @@
-نام: deploy-neon
+name: deploy-neon
 
-در:
+# AloShetab v5.0-IR - Neon Postgres provisioning + seed + Vercel-ready source push
+# Requirements (repo secrets): DATABASE_URL
+# Run: Actions tab -> deploy-neon -> Run workflow
+
+on:
   workflow_dispatch:
 
-مجوزها:
-  محتوا: نوشتن
+permissions:
+  contents: write
 
-مشاغل:
-  استقرار:
-    اجرا می‌شود: اوبونتو-آخرین نسخه
-    مراحل:
-      - نام: پرداخت
-        موارد استفاده: actions/checkout@v4
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - نام: بررسی وجود فایل فشرده‌ی انتشار
-        اجرا: |
-          اگر [ ! -f alo_shetab_release_v5.0.zip ]؛ آنگاه
-            echo "::error::alo_shetab_release_v5.0.zip در ریشه مخزن یافت نشد"
-            خروج ۱
+      - name: Check release zip exists
+        run: |
+          if [ ! -f alo_shetab_release_v5.0.zip ]; then
+            echo "::error::alo_shetab_release_v5.0.zip not found in repo root"
+            exit 1
           fi
 
-      - name: استخراج سورس به ریشه مخزن
-        اجرا: |
-          دستور زیر را اجرا کن: -o alo_shetab_release_v5.0.zip -d . (این دستور از نوع فشرده‌سازی است و نیازی به ترجمه ندارد.)
-          گربه > vercel.json <<'EOF_VERCEL'
+      - name: Extract source to repo root
+        run: |
+          unzip -o alo_shetab_release_v5.0.zip -d .
+          cat > vercel.json <<'EOF_VERCEL'
           {
             "$schema": "https://openapi.vercel.sh/vercel.json",
             "framework": "nextjs",
-            "مناطق": ["fra1"],
+            "regions": ["fra1"],
             "buildCommand": "npx prisma generate --schema prisma/schema.postgres.prisma && npx prisma db push --schema prisma/schema.postgres.prisma --accept-data-loss --skip-generate && npx next build"
           }
           EOF_VERCEL
           cp prisma/schema.prisma prisma/schema.postgres.prisma
-          ‎sed -i 's/provider = "sqlite"/provider = "postgresql"/' prisma/schema.postgres.prisma‎‏
-          ‎گربه > .gitignore <<'EOF_GIT'‎
-          ماژول‌های گره
+          sed -i 's/provider = "sqlite"/provider = "postgresql"/' prisma/schema.postgres.prisma
+          cat > .gitignore <<'EOF_GIT'
+          node_modules
           .next
           *.log
           .env
           EOF_GIT
-          دستور echo "ورودی‌های ریشه: $(ls -1 | wc -l)"
-          دستور echo "مدل‌ها: $(grep -c '^model' prisma/schema.postgres.prisma)"
+          echo "Root entries: $(ls -1 | wc -l)"
+          echo "Models: $(grep -c '^model' prisma/schema.postgres.prisma)"
 
-      - نام: کامیت و پوش
-        اجرا: |
+      - name: Commit and push
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "AloShetab نسخه ۵.۰: منبع در مخزن ریشه + پیکربندی Vercel" || echo "چیز جدیدی برای commit کردن وجود ندارد"
+          git commit -m "AloShetab v5.0: source at repo root + Vercel config" || echo "Nothing new to commit"
+          # If another run moved main forward, rebase first, then push
+          git pull --rebase origin main
           git push
 
-      - name: بررسی رمز DATABASE_URL
+      - name: Check DATABASE_URL secret
         env:
           DB_URL: ${{ secrets.DATABASE_URL }}
-        اجرا: |
-          اگر [ -z "$DB_URL" ]; آنگاه
-            echo "::error::Secret DATABASE_URL در این مخزن تنظیم نشده است"
-            خروج ۱
+        run: |
+          if [ -z "$DB_URL" ]; then
+            echo "::error::Secret DATABASE_URL is not set in this repository"
+            exit 1
           fi
-          مورد "$DB_URL" در
-            ‎postgresql*|postgres*)‎ ``رشته اتصال تأیید شد`` ;; ``‎
-            *) echo "::error::DATABASE_URL باید با postgresql:// شروع شود" ; exit 1 ;;
+          case "$DB_URL" in
+            postgresql*|postgres*) echo "Connection string OK" ;;
+            *) echo "::error::DATABASE_URL must start with postgresql://" ; exit 1 ;;
           esac
 
-      - نام: راه‌اندازی گره ۲۲
-        موارد استفاده: actions/setup-node@v4
-        با:
-          نسخه گره: '22'
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-      - نام: نصب پریسما
-        اجرا کنید: npm i --no-save prisma@6.11.1 @prisma/client@6.11.1
+      - name: Install prisma
+        # --legacy-peer-deps neutralizes the nodemailer conflict (project ^10 vs next-auth peer ^7)
+        run: npm i --no-save --legacy-peer-deps prisma@6.11.1 @prisma/client@6.11.1
 
-      - نام: ایجاد جداول در نئون
+      - name: Create tables in Neon
         env:
-          آدرس پایگاه داده: ${{ secrets.DATABASE_URL }}
-        اجرا: npx prisma db push --schema prisma/schema.postgres.prisma --accept-data-loss
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: npx prisma db push --schema prisma/schema.postgres.prisma --accept-data-loss
 
-      - نام: بارگذاری تمام داده‌ها
+      - name: Load all data
         env:
-          آدرس پایگاه داده: ${{ secrets.DATABASE_URL }}
-        اجرا: |
-          اسکریپت‌های گره/seed104.mjs
-          اسکریپت‌های گره/seed_v2.mjs
-          اسکریپت‌های گره/seed_p11.mjs
-          اسکریپت‌های گره/seed_p13.mjs
-          اسکریپت‌های گره/seed_p14.mjs
-          اسکریپت‌های گره/seed_p14_contacts.mjs
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          node scripts/seed104.mjs
+          node scripts/seed_v2.mjs
+          node scripts/seed_p11.mjs
+          node scripts/seed_p13.mjs
+          node scripts/seed_p14.mjs
+          node scripts/seed_p14_contacts.mjs
 
-      - نام: اعمال نسخه v5.0
+      - name: Apply v5.0 version
         env:
-          آدرس پایگاه داده: ${{ secrets.DATABASE_URL }}
-        اجرا: |
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
           cat > fix_version.mjs <<'EOF_FIX'
-          وارد کردن {PrismaClient} از '@prisma/client';
+          import { PrismaClient } from '@prisma/client';
           const p = new PrismaClient();
           await p.setting.upsert({
-            که در آن: {کلید: 'نسخه'},
-            به‌روزرسانی: {مقدار: 'v5.0-IR' },
-            ایجاد: {کلید: 'VERSION'، مقدار: 'v5.0-IR'}،
+            where: { key: 'VERSION' },
+            update: { value: 'v5.0-IR' },
+            create: { key: 'VERSION', value: 'v5.0-IR' },
           });
           console.log('VERSION = v5.0-IR');
           await p.$disconnect();
           EOF_FIX
-          گره fix_version.mjs
+          node fix_version.mjs
           rm -f fix_version.mjs
 
-      - نام: انجام شد
-        اجرا: echo "همه چیز خوب است - به Vercel بروید و این مخزن را وارد کنید"
+      - name: Done
+        run: |
+          echo "ALL OK - Neon seeded, source pushed. Next: Cloudflare workflow."
